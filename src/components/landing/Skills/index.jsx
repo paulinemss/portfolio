@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { ThemeContext } from 'providers/ThemeProvider';
 import { Container, Button } from 'components/common';
-import dev from 'assets/illustrations/skills.svg';
+import dev from 'assets/illustrations/morePauline.png';
 import { Wrapper, SkillsWrapper, Details, Thumbnail } from './styles';
 
 export const Skills = () => {
@@ -22,6 +22,15 @@ export const Skills = () => {
           </p>
           <Button as={AnchorLink} href="#contact">
             Hire me
+          </Button>
+          <Button className="btn-cv">
+            <a
+              href="https://drive.google.com/file/d/1EnCmfitXKk3kRCJC1ws2UoE3qspjlKLi/view?usp=sharing"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Download CV
+            </a>
           </Button>
         </Details>
       </SkillsWrapper>
