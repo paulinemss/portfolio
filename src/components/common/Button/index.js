@@ -14,6 +14,7 @@ export const Button = styled.button`
   user-select: none;
   color: #fff;
   background: #3f81ff;
+  font-family: 'Roboto';
 
   &:focus {
     outline: none;

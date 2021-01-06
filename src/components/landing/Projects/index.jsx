@@ -8,6 +8,34 @@ import { Wrapper, Grid, Item, Content, Stats, Languages } from './styles';
 
 const displayedRepos = ['30days-client', 'your-cause', 'tales-of-anxiety', 'moonlight', 'todolist'];
 
+const details = {
+  '30days-client': {
+    tech: ['JavaScript', 'React', 'NodeJS', 'MongoDB', 'CSS'],
+    github: 'https://github.com/paulinemss/30days-client',
+    url: 'https://thirtydays.netlify.app/',
+  },
+  'your-cause': {
+    tech: ['JavaScript', 'Handlebars', 'NodeJS', 'CSS'],
+    github: 'https://github.com/paulinemss/your-cause',
+    url: 'https://yourcause.herokuapp.com/',
+  },
+  'tales-of-anxiety': {
+    tech: ['JavaScript', 'HTML', 'CSS', 'p5.js'],
+    github: 'https://github.com/paulinemss/tales-of-anxiety',
+    url: 'https://paulinemss.github.io/tales-of-anxiety/',
+  },
+  moonlight: {
+    tech: ['JavaScript', 'React', 'CSS'],
+    github: 'https://github.com/paulinemss/moonlight',
+    url: 'https://moon-light.netlify.app/',
+  },
+  todolist: {
+    tech: ['JavaScript', 'React', 'CSS'],
+    github: 'https://github.com/paulinemss/todolist',
+    url: 'https://todolist-pm.netlify.app/',
+  },
+};
+
 export const Projects = () => {
   const { theme } = useContext(ThemeContext);
   const {
@@ -62,17 +90,15 @@ export const Projects = () => {
                 <Stats theme={theme}>
                   <div>
                     <Star color={theme === 'light' ? '#000' : '#fff'} />
-                    <span>{node.stargazers.totalCount}</span>
                   </div>
                   <div>
                     <Fork color={theme === 'light' ? '#000' : '#fff'} />
-                    <span>{node.forkCount}</span>
                   </div>
                 </Stats>
                 <Stats theme={theme}>
                   <Languages>
-                    {node.languages.nodes.map(({ id, name }) => (
-                      <span key={id}>{name}</span>
+                    {details[node.name].tech.map((name, index) => (
+                      <span key={index}>{name}</span>
                     ))}
                   </Languages>
                 </Stats>
