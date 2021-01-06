@@ -4,18 +4,6 @@
   font-family: 'Lora', serif;
 }
 
-.btn-cv {
-  margin-left: 20px;
-  background: none;
-  border: 1px solid #ADCFD8;
-  color: black;
-}
-
-.btn-cv a {
-  font-family: 'Roboto';
-  color: #99B7BF;
-}
-
 .card-icon:hover path {
   fill: #7A9299;
 }

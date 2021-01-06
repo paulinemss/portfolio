@@ -30,3 +30,15 @@ export const Button = styled.button`
 		background: #7A9299;
 	`}
 `;
+
+export const OutlinedButton = styled(Button)`
+  margin-left: 20px;
+  background: none;
+  border: 1px solid #adcfd8;
+  color: black;
+
+  a {
+    font-family: 'Roboto';
+    color: #99b7bf;
+  }
+`;

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { ThemeContext } from 'providers/ThemeProvider';
-import { Container, Button } from 'components/common';
+import { Container, Button, OutlinedButton } from 'components/common';
 import dev from 'assets/illustrations/morePauline.png';
 import { Wrapper, SkillsWrapper, Details, Thumbnail } from './styles';
 
@@ -24,11 +24,11 @@ export const Skills = () => {
           <Button as={AnchorLink} href="#contact">
             Contact
           </Button>
-          <Button className="btn-cv">
+          <OutlinedButton>
             <a href="https://www.linkedin.com/in/paulinemasse/" target="_blank" rel="noreferrer">
               LinkedIn
             </a>
-          </Button>
+          </OutlinedButton>
         </Details>
       </SkillsWrapper>
     </Wrapper>

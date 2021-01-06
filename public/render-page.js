@@ -163,7 +163,7 @@ var plugins = [{
     "cache_busting_mode": "query",
     "crossOrigin": "anonymous",
     "include_favicon": true,
-    "cacheDigest": "b9f7b61e18c4d8136d8c96f61341d02b"
+    "cacheDigest": "525ca02141786679d6071ace1ea63662"
   }
 }, {
   plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-offline/gatsby-ssr */ "./node_modules/gatsby-plugin-offline/gatsby-ssr.js"),
