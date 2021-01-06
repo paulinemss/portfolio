@@ -21,15 +21,11 @@ export const Skills = () => {
             industry’s standard dummy.
           </p>
           <Button as={AnchorLink} href="#contact">
-            Hire me
+            Contact
           </Button>
           <Button className="btn-cv">
-            <a
-              href="https://drive.google.com/file/d/1EnCmfitXKk3kRCJC1ws2UoE3qspjlKLi/view?usp=sharing"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Download CV
+            <a href="https://www.linkedin.com/in/paulinemasse/" target="_blank" rel="noreferrer">
+              LinkedIn
             </a>
           </Button>
         </Details>

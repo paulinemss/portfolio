@@ -15,3 +15,7 @@
   font-family: 'Roboto';
   color: #99B7BF;
 }
+
+.card-icon:hover path {
+  fill: #7A9299;
+}
