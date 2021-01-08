@@ -28,5 +28,5 @@ export default () => {
     }
   }, [prefersDarkMode]);
 
-  return [theme, toggleTheme];
+  return ['light', toggleTheme];
 };
