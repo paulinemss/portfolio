@@ -1,24 +1,20 @@
 module.exports = {
   defaultTitle: 'Pauline Massé',
-  logo: 'https://portfolio.smakosh.com/favicon/favicon-512.png',
+  logo: 'https://www.paulinemasse.com/favicon/favicon-512.png',
   author: 'Pauline Massé',
-  url: 'https://portfolio.smakosh.com',
+  url: 'https://www.paulinemasse.com/',
   legalName: 'Pauline Massé',
   defaultDescription: 'Pauline Massé, Frontend Developer',
   socialLinks: {
-    twitter: 'http://www.twitter.com/smakosh',
-    github: 'https://github.com/smakosh',
-    linkedin: 'https://www.linkedin.com/in/ismail-ghallou-630149122/',
-    instagram: 'https://instagram.com/smakosh19',
-    youtube: 'https://www.youtube.com/user/smakoshthegamer',
-    google: 'https://plus.google.com/u/0/+IsmailSmakoshGhallou',
+    twitter: 'https://twitter.com/PaulineMss',
+    github: 'https://github.com/paulinemss',
+    linkedin: 'https://www.linkedin.com/in/paulinemasse/',
   },
   googleAnalyticsID: 'UA-88875900-4',
   themeColor: '#6b63ff',
   backgroundColor: '#6b63ff',
   social: {
-    facebook: 'appId',
-    twitter: '@smakosh',
+    twitter: '@PaulineMss',
   },
   address: {
     city: 'City',
@@ -30,5 +26,5 @@ module.exports = {
     email: 'email',
     phone: 'phone number',
   },
-  foundingDate: '2018',
+  foundingDate: '2021',
 };
