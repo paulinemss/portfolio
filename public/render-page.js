@@ -1,12 +1,12 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("/mnt/c/Users/Pauline/Documents/Dev/portfolio/gatsby-portfolio-dev/node_modules/@reach/router/index.js"), require("fs"), require("/mnt/c/Users/Pauline/Documents/Dev/portfolio/gatsby-portfolio-dev/node_modules/lodash/merge.js"), require("path"), require("react"), require("react-dom/server"), require("react-helmet"));
+		module.exports = factory(require("/home/paulinemss/dev/portfolio/node_modules/@reach/router/index.js"), require("fs"), require("/home/paulinemss/dev/portfolio/node_modules/lodash/merge.js"), require("path"), require("react"), require("react-dom/server"), require("react-helmet"));
 	else if(typeof define === 'function' && define.amd)
-		define("lib", ["/mnt/c/Users/Pauline/Documents/Dev/portfolio/gatsby-portfolio-dev/node_modules/@reach/router/index.js", "fs", "/mnt/c/Users/Pauline/Documents/Dev/portfolio/gatsby-portfolio-dev/node_modules/lodash/merge.js", "path", "react", "react-dom/server", "react-helmet"], factory);
+		define("lib", ["/home/paulinemss/dev/portfolio/node_modules/@reach/router/index.js", "fs", "/home/paulinemss/dev/portfolio/node_modules/lodash/merge.js", "path", "react", "react-dom/server", "react-helmet"], factory);
 	else if(typeof exports === 'object')
-		exports["lib"] = factory(require("/mnt/c/Users/Pauline/Documents/Dev/portfolio/gatsby-portfolio-dev/node_modules/@reach/router/index.js"), require("fs"), require("/mnt/c/Users/Pauline/Documents/Dev/portfolio/gatsby-portfolio-dev/node_modules/lodash/merge.js"), require("path"), require("react"), require("react-dom/server"), require("react-helmet"));
+		exports["lib"] = factory(require("/home/paulinemss/dev/portfolio/node_modules/@reach/router/index.js"), require("fs"), require("/home/paulinemss/dev/portfolio/node_modules/lodash/merge.js"), require("path"), require("react"), require("react-dom/server"), require("react-helmet"));
 	else
-		root["lib"] = factory(root["/mnt/c/Users/Pauline/Documents/Dev/portfolio/gatsby-portfolio-dev/node_modules/@reach/router/index.js"], root["fs"], root["/mnt/c/Users/Pauline/Documents/Dev/portfolio/gatsby-portfolio-dev/node_modules/lodash/merge.js"], root["path"], root["react"], root["react-dom/server"], root["react-helmet"]);
+		root["lib"] = factory(root["/home/paulinemss/dev/portfolio/node_modules/@reach/router/index.js"], root["fs"], root["/home/paulinemss/dev/portfolio/node_modules/lodash/merge.js"], root["path"], root["react"], root["react-dom/server"], root["react-helmet"]);
 })(this, function(__WEBPACK_EXTERNAL_MODULE__reach_router__, __WEBPACK_EXTERNAL_MODULE_fs__, __WEBPACK_EXTERNAL_MODULE_lodash_merge__, __WEBPACK_EXTERNAL_MODULE_path__, __WEBPACK_EXTERNAL_MODULE_react__, __WEBPACK_EXTERNAL_MODULE_react_dom_server__, __WEBPACK_EXTERNAL_MODULE_react_helmet__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -40794,7 +40794,7 @@ __webpack_require__.r(__webpack_exports__);
       setTheme('light');
     }
   }, [prefersDarkMode]);
-  return [theme, toggleTheme];
+  return ['light', toggleTheme];
 });
 
 /***/ }),
@@ -40885,9 +40885,9 @@ var ThemeContext = /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_0__["creat
 /***/ }),
 
 /***/ "@reach/router":
-/*!************************************************************************************************************************!*\
-  !*** external "/mnt/c/Users/Pauline/Documents/Dev/portfolio/gatsby-portfolio-dev/node_modules/@reach/router/index.js" ***!
-  \************************************************************************************************************************/
+/*!*************************************************************************************!*\
+  !*** external "/home/paulinemss/dev/portfolio/node_modules/@reach/router/index.js" ***!
+  \*************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -40918,9 +40918,9 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_fs__;
 /***/ }),
 
 /***/ "lodash/merge":
-/*!*****************************************************************************************************************!*\
-  !*** external "/mnt/c/Users/Pauline/Documents/Dev/portfolio/gatsby-portfolio-dev/node_modules/lodash/merge.js" ***!
-  \*****************************************************************************************************************/
+/*!******************************************************************************!*\
+  !*** external "/home/paulinemss/dev/portfolio/node_modules/lodash/merge.js" ***!
+  \******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 

@@ -6,7 +6,7 @@ import Github from 'components/common/Icons/Github';
 import Fork from 'components/common/Icons/Fork';
 import { Wrapper, Grid, Item, Content, Stats, Languages } from './styles';
 
-const displayedRepos = ['30days-client', 'your-cause', 'tales-of-anxiety', 'moonlight', 'todolist'];
+const displayedRepos = ['30days-client', 'your-cause', 'tales-of-anxiety', 'moonlight', 'todolist', 'kata-crawler'];
 
 const details = {
   '30days-client': {
@@ -34,6 +34,11 @@ const details = {
     github: 'https://github.com/paulinemss/todolist',
     url: 'https://todolist-pm.netlify.app/',
   },
+  'kata-crawler': {
+    tech: ['JavaScript', 'Puppeteer'],
+    github: 'https://github.com/paulinemss/kata-crawler',
+    url: 'https://github.com/paulinemss/kata-crawler',
+  },
 };
 
 export const Projects = () => {
@@ -49,7 +54,7 @@ export const Projects = () => {
       {
         github {
           viewer {
-            repositories(first: 50, orderBy: { field: CREATED_AT, direction: DESC }) {
+            repositories(first: 100, orderBy: { field: CREATED_AT, direction: DESC }) {
               edges {
                 node {
                   id
