@@ -35,7 +35,8 @@ export const OutlinedButton = styled(Button)`
   margin-left: 20px;
   background: none;
   border: 1px solid #adcfd8;
-  color: black;
+  color: #99b7bf;
+  align-self: ${props => (props.isSmall ? 'center' : 'stretch')};
 
   a {
     font-family: 'Roboto';
