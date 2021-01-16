@@ -6,7 +6,7 @@ import { Wrapper, IntroWrapper, Overlay } from './styles';
 export const Intro = () => (
   <Wrapper>
     <Overlay />
-    <Header />
+    <Header location="/katas" />
     <IntroWrapper as={Container}>
       <h1>Algorithm Challenges</h1>
       <p>

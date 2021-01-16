@@ -2,12 +2,12 @@ import React, { useContext } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { ThemeContext } from 'providers/ThemeProvider';
 import { Link } from 'gatsby';
-// import ToggleTheme from 'components/theme/Header/ToggleTheme';
 import { Wrapper } from './styles';
 
-const NavbarLinks = ({ desktop }) => {
+const NavbarLinks = ({ desktop, location }) => {
   const { theme } = useContext(ThemeContext);
-  const isHomepage = window.location.pathname === '/';
+  const isHomepage = location === '/home';
+
   if (isHomepage) {
     return (
       <Wrapper desktop={desktop} theme={theme}>

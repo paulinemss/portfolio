@@ -11,7 +11,7 @@ export const Intro = () => {
 
   return (
     <Wrapper>
-      <Header />
+      <Header location="/home" />
       <IntroWrapper as={Container}>
         <Details theme={theme}>
           <h1>Hi there, I'm Pauline.</h1>
