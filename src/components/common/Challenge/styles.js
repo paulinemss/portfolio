@@ -72,5 +72,6 @@ export const KataSolution = styled.div`
   background-color: #fafafa;
   code {
     word-break: break-word;
+    white-space: break-spaces !important;
   }
 `;
