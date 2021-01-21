@@ -1,5 +1,111 @@
 [
   {
+    "timestamp": "2021-01-21T09:04:19.000Z",
+    "level": "7 kyu",
+    "title": "Reverse words",
+    "url": "https://www.codewars.com/kata/5259b20d6021e9e14c0010d4",
+    "solution": "function reverseWords(str) {\n  return str.split(' ').map(e => e.split('').reverse().join('')).join(' ')\n}",
+    "kata": {
+      "id": "5259b20d6021e9e14c0010d4",
+      "name": "Reverse words",
+      "slug": "reverse-words",
+      "category": "reference",
+      "publishedAt": "2013-10-12T20:44:55.489Z",
+      "approvedAt": null,
+      "languages": [
+        "javascript",
+        "python",
+        "haskell",
+        "csharp",
+        "ruby",
+        "java",
+        "typescript",
+        "rust",
+        "c",
+        "cpp",
+        "julia",
+        "php"
+      ],
+      "url": "https://www.codewars.com/kata/5259b20d6021e9e14c0010d4",
+      "rank": {
+        "id": -7,
+        "name": "7 kyu",
+        "color": "white"
+      },
+      "createdAt": "2013-10-12T20:33:17.421Z",
+      "createdBy": {
+        "username": "jnicol",
+        "url": "https://www.codewars.com/users/jnicol"
+      },
+      "description": "Complete the function that accepts a string parameter, and reverses each word in the string. **All** spaces in the string should be retained.\n\n## Examples\n```\n\"This is an example!\" ==> \"sihT si na !elpmaxe\"\n\"double  spaces\"      ==> \"elbuod  secaps\"\n```",
+      "totalAttempts": 185546,
+      "totalCompleted": 33919,
+      "totalStars": 628,
+      "voteScore": 2967,
+      "tags": [
+        "Fundamentals",
+        "Strings",
+        "Data Types"
+      ],
+      "contributorsWanted": true,
+      "unresolved": {
+        "issues": 2,
+        "suggestions": 3
+      }
+    }
+  },
+  {
+    "timestamp": "2021-01-21T09:02:02.000Z",
+    "level": "7 kyu",
+    "title": "Friend or Foe?",
+    "url": "https://www.codewars.com/kata/55b42574ff091733d900002f",
+    "solution": "function friend(friends){\n  return friends.filter(e => e.length === 4);\n}",
+    "kata": {
+      "id": "55b42574ff091733d900002f",
+      "name": "Friend or Foe?",
+      "slug": "friend-or-foe",
+      "category": "reference",
+      "publishedAt": "2015-07-26T00:12:43.788Z",
+      "approvedAt": "2016-11-26T23:01:40.233Z",
+      "languages": [
+        "python",
+        "ruby",
+        "csharp",
+        "javascript",
+        "coffeescript",
+        "haskell"
+      ],
+      "url": "https://www.codewars.com/kata/55b42574ff091733d900002f",
+      "rank": {
+        "id": -7,
+        "name": "7 kyu",
+        "color": "white"
+      },
+      "createdAt": "2015-07-26T00:10:29.086Z",
+      "createdBy": {
+        "username": "Aweson1",
+        "url": "https://www.codewars.com/users/Aweson1"
+      },
+      "approvedBy": {
+        "username": "suic",
+        "url": "https://www.codewars.com/users/suic"
+      },
+      "description": "Make a program that filters a list of strings and returns a list with only your friends name in it.\n\nIf a name has exactly 4 letters in it, you can be sure that it has to be a friend of yours! Otherwise, you can be sure he's not...\n\nEx: Input = [\"Ryan\", \"Kieran\", \"Jason\", \"Yous\"], Output = [\"Ryan\", \"Yous\"]\n\ni.e.\n```haskell\nfriend [\"Ryan\", \"Kieran\", \"Mark\"] `shouldBe` [\"Ryan\", \"Mark\"]\n```\n\nNote: keep the original order of the names in the output.",
+      "totalAttempts": 173621,
+      "totalCompleted": 63649,
+      "totalStars": 419,
+      "voteScore": 5889,
+      "tags": [
+        "Fundamentals"
+      ],
+      "contributorsWanted": true,
+      "unresolved": {
+        "issues": 1,
+        "suggestions": 3
+      }
+    }
+  },
+  {
     "timestamp": "2021-01-14T09:23:14.000Z",
     "level": "6 kyu",
     "title": "Delete occurrences of an element if it occurs more than n times",
@@ -43,10 +149,10 @@
         "url": "https://www.codewars.com/users/GiacomoSorbi"
       },
       "description": "## Enough is enough!\n\nAlice and Bob were on a holiday. Both of them took many pictures of the places they've been, and now they want to show Charlie their entire collection. However, Charlie doesn't like these sessions, since the motive usually repeats. He isn't fond of seeing the Eiffel tower 40 times. He tells them that he will only sit during the session if they show the same motive at most N times. Luckily, Alice and Bob are able to encode the motive as a number. Can you help them to remove numbers such that their list contains each number only up to N times, without changing the order?\n\n## Task\n\nGiven a list lst and a number N, create a new list that contains each number of lst at most N times without reordering. For example if N = 2, and the input is [1,2,3,1,2,1,2,3], you take [1,2,3,1,2], drop the next [1,2] since this would lead to 1 and 2 being in the result 3 times, and then take 3, which leads to [1,2,3,1,2,3].\n\n~~~if:nasm\n## NASM notes\n\nWrite the output numbers into the `out` parameter, and return its length.\n\nThe input array will contain only integers between 1 and 50 inclusive. Use it to your advantage.\n~~~\n\n~~~if:c\nFor C:\n* Assign the return array length to the pointer parameter `*szout`.\n* Do not mutate the input array.\n~~~\n\n## Example\n```python\n  delete_nth ([1,1,1,1],2) # return [1,1]\n  \n  delete_nth ([20,37,20,21],1) # return [20,37,21]\n```\n```ruby\n  delete_nth ([1,1,1,1],2) # return [1,1]\n  \n  delete_nth ([20,37,20,21],1) # return [20,37,21]\n```\n```javascript\n  deleteNth ([1,1,1,1],2) // return [1,1]\n  \n  deleteNth ([20,37,20,21],1) // return [20,37,21]\n```\n```haskell\ndeleteNth [20,37,20,21]       1 `shouldBe` [20,37,21]\ndeleteNth [1,1,3,3,7,2,2,2,2] 3 `shouldBe` [1, 1, 3, 3, 7, 2, 2, 2]\n```\n```csharp\nKata.DeleteNth (new int[] {20,37,20,21}, 1) // return [20,37,21]\nKata.DeleteNth (new int[] {1,1,3,3,7,2,2,2,2}, 3) // return [1, 1, 3, 3, 7, 2, 2, 2]\n```\n```fsharp\ndeleteNth [20;37;20;21] 1 // return [20;37;21]\ndeleteNth [1;1;3;3;7;2;2;2;2] 3 // return [1;1;3;3;7;2;2;2]\n```\n```java\nEnoughIsEnough.deleteNth(new int[] {20,37,20,21}, 1) // return [20,37,21]\nEnoughIsEnough.deleteNth(new int[] {1,1,3,3,7,2,2,2,2}, 3) // return [1, 1, 3, 3, 7, 2, 2, 2]\n```\n```c++\ndeleteNth({20,37,20,21}, 1) // return {20,37,21}\ndeleteNth({1,1,3,3,7,2,2,2,2}, 3) // return {1, 1, 3, 3, 7, 2, 2, 2}\n```\n```scala\ndeleteNth(List(20,37,20,21), 1) // return List(20,37,21)\ndeleteNth(List(1,1,3,3,7,2,2,2,2), 3) // return List(1, 1, 3, 3, 7, 2, 2, 2)\n```\n```c\ndelete_nth(4, {1, 1, 1, 1}, 2, *p)     // returns {1, 1}, 2\ndelete_nth(4, {20, 37, 20, 21}, 1, *p) // returns {20, 37, 21}, 3\n```\n```rust\ndelete_nth(&[20,37,20,21], 1);       // returns vec![20,37,21]\ndelete_nth(&[1,1,3,3,7,2,2,2,2], 3); // returns vec![1, 1, 3, 3, 7, 2, 2, 2])\n```",
-      "totalAttempts": 182034,
-      "totalCompleted": 39414,
-      "totalStars": 1425,
-      "voteScore": 3677,
+      "totalAttempts": 183187,
+      "totalCompleted": 39752,
+      "totalStars": 1433,
+      "voteScore": 3706,
       "tags": [
         "Fundamentals",
         "Lists",
@@ -96,10 +202,10 @@
         "url": "https://www.codewars.com/users/JulianNicholls"
       },
       "description": "Greed is a dice game played with five six-sided dice. Your mission, should you choose to accept it, is to score a throw according to these rules. You will always be given an array with five six-sided dice values.\n\n``` \n Three 1's => 1000 points\n Three 6's =>  600 points\n Three 5's =>  500 points\n Three 4's =>  400 points\n Three 3's =>  300 points\n Three 2's =>  200 points\n One   1   =>  100 points\n One   5   =>   50 point\n```\n\nA single die can only be counted once in each roll. For example, a given \"5\" can only count as part of a \ntriplet (contributing to the 500 points) or as a single 50 points, but not both in the same roll.\n\nExample scoring\n\n```\n Throw       Score\n ---------   ------------------\n 5 1 3 4 1   250:  50 (for the 5) + 2 * 100 (for the 1s)\n 1 1 1 3 1   1100: 1000 (for three 1s) + 100 (for the other 1)\n 2 4 4 5 4   450:  400 (for three 4s) + 50 (for the 5)\n```\n\nIn some languages, it is possible to mutate the input to the function. This is something that you should never do. If you mutate the input, you will not be able to pass all the tests.\n",
-      "totalAttempts": 125760,
-      "totalCompleted": 19808,
+      "totalAttempts": 126669,
+      "totalCompleted": 19928,
       "totalStars": 673,
-      "voteScore": 1623,
+      "voteScore": 1627,
       "tags": [
         "Algorithms"
       ],
@@ -159,10 +265,10 @@
         "url": "https://www.codewars.com/users/smile67"
       },
       "description": "Given a string of words, you need to find the highest scoring word.\n\nEach letter of a word scores points according to its position in the alphabet: `a = 1, b = 2, c = 3` etc.\n\nYou need to return the highest scoring word as a string.\n\nIf two words score the same, return the word that appears earliest in the original string.\n\nAll letters will be lowercase and all inputs will be valid.",
-      "totalAttempts": 172340,
-      "totalCompleted": 32054,
-      "totalStars": 990,
-      "voteScore": 3336,
+      "totalAttempts": 172990,
+      "totalCompleted": 32226,
+      "totalStars": 994,
+      "voteScore": 3347,
       "tags": [
         "Fundamentals",
         "Strings",
@@ -223,10 +329,10 @@
         "url": "https://www.codewars.com/users/jhoffner"
       },
       "description": "Complete the solution so that it splits the string into pairs of two characters.  If the string contains an odd number of characters then it should replace the missing second character of the final pair with an underscore ('_').\n\nExamples:\n\n``` javascript\nsolution('abc') // should return ['ab', 'c_']\nsolution('abcdef') // should return ['ab', 'cd', 'ef']\n```\n``` php\nsolution('abc') // should return ['ab', 'c_']\nsolution('abcdef') // should return ['ab', 'cd', 'ef']\n```\n``` csharp\nSplitString.Solution(\"abc\"); // should return [\"ab\", \"c_\"]\nSplitString.Solution(\"abcdef\"); // should return [\"ab\", \"cd\", \"ef\"]\n```\n``` coffeescript\nsolution('abc') # should return ['ab', 'c_']\nsolution('abcdef') # should return ['ab', 'cd', 'ef']\n```\n``` ruby\nsolution('abc') # should return ['ab', 'c_']\nsolution('abcdef') # should return ['ab', 'cd', 'ef']\n```\n``` elixir\nsolution(\"abc\") # should return [\"ab\", \"c_\"]\nsolution(\"abcdef\") # should return [\"ab\", \"cd\", \"ef\"]\n```\n``` julia\nsolution(\"abc\") # should return [\"ab\", \"c_\"]\nsolution(\"abcdef\") # should return [\"ab\", \"cd\", \"ef\"]\n```\n```python\nsolution('abc') # should return ['ab', 'c_']\nsolution('abcdef') # should return ['ab', 'cd', 'ef']\n```\n``` haskell\nsolution \"abc\" `shouldBe` [\"ab\", \"c_\"]\nsolution \"abcdef\" `shouldBe` [\"ab\", \"cd\", \"ef\"]\n```\n``` go\nSolution(\"abc\") //should return [\"ab\", \"c_\"]\nSolution(\"abcdef\") //should return [\"ab\", \"cd\", \"ef\"]\n```\n```scala\nsolution('abc')    // should return List(\"ab\", \"c_\")\nsolution('abcdef') // should return List(\"ab\", \"cd\", \"ef\")\n```\n```clojure\n(solution \"abc\") ; => [\"ab\" \"c_\"]\n(solution \"abcd\") ; => [\"ab\" \"cd\"]\n```\n```java\nStringSplit.solution(\"abc\") // should return {\"ab\", \"c_\"}\nStringSplit.solution(\"abcdef\") // should return {\"ab\", \"cd\", \"ef\"}\n```\n``` c\nsolution(\"abc\", &count) // should return {\"ab\", \"c_\"} with count == 2\nsolution(\"abcdef\", &count) // should return {\"ab\", \"cd\", \"ef\"} with count == 3\n\nThe returned array and strings will be free'd.\n```\n``` cpp\nsolution(\"abc\") // should return {\"ab\", \"c_\"}\nsolution(\"abcdef\") // should return {\"ab\", \"cd\", \"ef\"}\n```\n```prolog\nsolution(\"abc\",  [\"ab\", \"c_\"]).\nsolution(\"abcd\", [\"ab\", \"cd\"]).\n```\n```groovy\nsolution(\"abc\") == [\"ab\", \"c_\"]\nsolution(\"abcdef\") == [\"ab\", \"cd\", \"ef\"]\n```\n```rust\nsolution(\"abcdef\") // should return [\"ab\", \"cd\", \"ef\"]\nsolution(\"abcdefg\") // should return [\"ab\", \"cd\", \"ef\", \"g_\"]\n```\n",
-      "totalAttempts": 169964,
-      "totalCompleted": 43665,
-      "totalStars": 636,
-      "voteScore": 3430,
+      "totalAttempts": 170747,
+      "totalCompleted": 44017,
+      "totalStars": 644,
+      "voteScore": 3441,
       "tags": [
         "Algorithms",
         "Regular Expressions",
@@ -285,10 +391,10 @@
         "url": "https://www.codewars.com/users/user8476848"
       },
       "description": "There is an array with some numbers. All numbers are equal except for one. Try to find it!\n\n```javascript\nfindUniq([ 1, 1, 1, 2, 1, 1 ]) === 2\nfindUniq([ 0, 0, 0.55, 0, 0 ]) === 0.55\n```\n\n```ruby\nfind_uniq([ 1, 1, 1, 2, 1, 1 ]) == 2\nfind_uniq([ 0, 0, 0.55, 0, 0 ]) == 0.55\n```\n\n```python\nfind_uniq([ 1, 1, 1, 2, 1, 1 ]) == 2\nfind_uniq([ 0, 0, 0.55, 0, 0 ]) == 0.55\n```\n\n```java\nKata.findUniq(new double[]{ 1, 1, 1, 2, 1, 1 }); // => 2\nKata.findUniq(new double[]{ 0, 0, 0.55, 0, 0 }); // => 0.55\n```\n\n```haskell\ngetUnique [1, 1, 1, 2, 1, 1] -- Result is 2\ngetUnique [0, 0, 0.55, 0, 0] -- Result is 0.55\n```\n\n```fsharp\nfindUniq([ 1; 1; 1; 2; 1; 1 ]) = 2\nfindUniq([ 0; 0; 0.55; 0; 0 ]) = 0.55\n```\n\nIt’s guaranteed that array contains at least 3 numbers.\n\nThe tests contain some very huge arrays, so think about performance.\n\nThis is the first kata in series:\n\n1. Find the unique number (this kata)\n2. [Find the unique string](https://www.codewars.com/kata/585d8c8a28bc7403ea0000c3)\n3. [Find The Unique](https://www.codewars.com/kata/5862e0db4f7ab47bed0000e5)\n",
-      "totalAttempts": 278540,
-      "totalCompleted": 47256,
-      "totalStars": 1077,
-      "voteScore": 4280,
+      "totalAttempts": 280077,
+      "totalCompleted": 47618,
+      "totalStars": 1082,
+      "voteScore": 4297,
       "tags": [
         "Fundamentals",
         "Algorithms",
@@ -342,10 +448,10 @@
         "url": "https://www.codewars.com/users/GiacomoSorbi"
       },
       "description": "Write a simple regex to validate a username. Allowed characters are:\n\n- lowercase letters,\n- numbers,\n- underscore\n\nLength should be between 4 and 16 characters (both included).",
-      "totalAttempts": 44525,
-      "totalCompleted": 10214,
-      "totalStars": 157,
-      "voteScore": 933,
+      "totalAttempts": 44623,
+      "totalCompleted": 10255,
+      "totalStars": 159,
+      "voteScore": 938,
       "tags": [
         "Fundamentals",
         "Regular Expressions",
@@ -394,10 +500,10 @@
         "url": "https://www.codewars.com/users/xianpants"
       },
       "description": "Write a function that when given a URL as a string, parses out just the domain name and returns it as a string. For example:\n```ruby\ndomain_name(\"http://github.com/carbonfive/raygun\") == \"github\" \ndomain_name(\"http://www.zombie-bites.com\") == \"zombie-bites\"\ndomain_name(\"https://www.cnet.com\") == \"cnet\"\n```\n```python\ndomain_name(\"http://github.com/carbonfive/raygun\") == \"github\" \ndomain_name(\"http://www.zombie-bites.com\") == \"zombie-bites\"\ndomain_name(\"https://www.cnet.com\") == \"cnet\"\n```\n```javascript\ndomainName(\"http://github.com/carbonfive/raygun\") == \"github\" \ndomainName(\"http://www.zombie-bites.com\") == \"zombie-bites\"\ndomainName(\"https://www.cnet.com\") == \"cnet\"\n```",
-      "totalAttempts": 201465,
-      "totalCompleted": 23906,
-      "totalStars": 941,
-      "voteScore": 1593,
+      "totalAttempts": 203254,
+      "totalCompleted": 24117,
+      "totalStars": 949,
+      "voteScore": 1603,
       "tags": [
         "Fundamentals",
         "Parsing",
@@ -467,10 +573,10 @@
         "url": "https://www.codewars.com/users/jhoffner"
       },
       "description": "<div style=\"border:1px solid;position:relative;padding:1ex 1ex 1ex 11.1em;\"><div style=\"position:absolute;left:0;top:0;bottom:0; width:10em; padding:1ex;text-align:center;border:1px solid;margin:0 1ex 0 0;color:#000;background-color:#eee;font-variant:small-caps\">Part of Series 1/3</div><div>This kata is part of a series on the Morse code. After you solve this kata, you may move to the <a href=\"/kata/decode-the-morse-code-advanced\">next one</a>.</div></div><br>In this kata you have to write a simple <a href=\"https://en.wikipedia.org/wiki/Morse_code\">Morse code</a> decoder. While the Morse code is now mostly superseded by voice and digital data communication channels, it still has its use in some applications around the world.\n\nThe Morse code encodes every character as a sequence of \"dots\" and \"dashes\". For example, the letter <code>A</code> is coded as <code>·−</code>, letter <code>Q</code> is coded as <code>−−·−</code>, and digit <code>1</code> is coded as <code>·−−−−</code>. The Morse code is case-insensitive, traditionally capital letters are used. When the message is written in Morse code, a single space is used to separate the character codes and 3 spaces are used to separate words. For example, the message <code>HEY JUDE</code> in Morse code is <code>···· · −·−−   ·−−− ··− −·· ·</code>.\n\n**NOTE:** Extra spaces before or after the code have no meaning and should be ignored.\n\nIn addition to letters, digits and some punctuation, there are some special service codes, the most notorious of those is the international distress signal <a href=\"https://en.wikipedia.org/wiki/SOS\">SOS</a> (that was first issued by <a href=\"https://en.wikipedia.org/wiki/RMS_Titanic\">Titanic</a>), that is coded as <code>···−−−···</code>. These special codes are treated as single special characters, and usually are transmitted as separate words.\n\nYour task is to implement a function that would take the morse code as input and return a decoded human-readable string.\n\nFor example:\n\n```coffeescript\ndecodeMorse('.... . -.--   .--- ..- -.. .')\n//should return \"HEY JUDE\"\n```\n```cpp\ndecodeMorse('.... . -.--   .--- ..- -.. .')\n//should return \"HEY JUDE\"\n```\n```csharp\nMorseCodeDecoder.Decode(\".... . -.--   .--- ..- -.. .\")\n//should return \"HEY JUDE\"\n```\n```elixir\nMorseCode.decode('.... . -.--   .--- ..- -.. .')\n#=> \"HEY JUDE\"\n```\n```elm\nMorseCode.decode \".... . -.--   .--- ..- -.. .\"\n--should return \"HEY JUDE\"\n```\n```go\nDecodeMorse(\".... . -.--   .--- ..- -.. .\")\n// should return \"HEY JUDE\"\n```\n```haskell\ndecodeMorse \".... . -.--   .--- ..- -.. .\"\n--should return \"HEY JUDE\"\n```\n```java\nMorseCodeDecoder.decode(\".... . -.--   .--- ..- -.. .\")\n//should return \"HEY JUDE\"\n```\n```javascript\ndecodeMorse('.... . -.--   .--- ..- -.. .')\n//should return \"HEY JUDE\"\n```\n```kotlin\ndecodeMorse('.... . -.--   .--- ..- -.. .')\n//should return \"HEY JUDE\"\n```\n```php\ndecode_morse('.... . -.--   .--- ..- -.. .')\n//should return \"HEY JUDE\"\n```\n```python\ndecodeMorse('.... . -.--   .--- ..- -.. .')\n#should return \"HEY JUDE\"\n```\n```ruby\ndecodeMorse('.... . -.--   .--- ..- -.. .')\n#should return \"HEY JUDE\"\n```\n```swift\ndecodeMorse('.... . -.--   .--- ..- -.. .')\n//should return \"HEY JUDE\"\n```\n```typescript\ndecodeMorse('.... . -.--   .--- ..- -.. .')\n//should return \"HEY JUDE\"\n```\n```rust\nMorseDecoder::new().decode_morse(\".... . -.--   .--- ..- -.. .\")\n//should return \"HEY JUDE\"\n```\n```scala\nMorseDecoder.decode(\".... . -.--   .--- ..- -.. .\")\n//should return \"HEY JUDE\"\n```\n```c\ndecode_morse(\".... . -.--   .--- ..- -.. .\")\n// should return \"HEY JUDE\"\n```\n```julia\ndecodemorse(\".... . -.--   .--- ..- -.. .\")\n# should return \"HEY JUDE\"\n```\n\n**NOTE:** For coding purposes you have to use ASCII characters `.` and `-`, not Unicode characters.\n\nThe Morse code table is preloaded for you as a dictionary, feel free to use it:\n+ Coffeescript/C++/Go/JavaScript/Julia/PHP/Python/Ruby/TypeScript: `MORSE_CODE['.--']`\n+ C#: `MorseCode.Get(\".--\")` (returns `string`)\n+ Elixir: `@morse_codes` variable (from `use MorseCode.Constants`). Ignore the unused variable warning for `morse_codes` because it's no longer used and kept only for old solutions.\n+ Elm: `MorseCodes.get : Dict String String`\n+ Haskell: `morseCodes ! \".--\"` (Codes are in a `Map String String`)\n+ Java: `MorseCode.get(\".--\")`\n+ Kotlin: `MorseCode[\".--\"] ?: \"\"` or `MorseCode.getOrDefault(\".--\", \"\")`\n+ Rust: `self.morse_code`\n+ Scala: `morseCodes(\".--\")`\n+ Swift: `MorseCode[\".--\"] ?? \"\"` or `MorseCode[\".--\", default: \"\"]`\n* C: provides parallel arrays, i.e. `morse[2] == \"-.-\"` for `ascii[2] == \"C\"`\n\nAll the test strings would contain valid Morse code, so you may skip checking for errors and exceptions. In C#, tests will fail if the solution code throws an exception, please keep that in mind. This is mostly because otherwise the engine would simply ignore the tests, resulting in a \"valid\" solution.\n\nGood luck!\n\nAfter you complete this kata, you may try yourself at <a href=\"http://www.codewars.com/kata/decode-the-morse-code-advanced\">Decode the Morse code, advanced</a>.\n",
-      "totalAttempts": 655816,
-      "totalCompleted": 58305,
-      "totalStars": 3032,
-      "voteScore": 7046,
+      "totalAttempts": 657814,
+      "totalCompleted": 58541,
+      "totalStars": 3043,
+      "voteScore": 7062,
       "tags": [
         "Algorithms"
       ],
@@ -521,10 +627,10 @@
         "url": "https://www.codewars.com/users/CrazyMerlyn"
       },
       "description": "ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but **exactly** 4 digits or exactly 6 digits. \n\nIf the function is passed a valid PIN string, return `true`, else return `false`.\n\n## Examples \n```\n\"1234\"   -->  true\n\"12345\"  -->  false\n\"a234\"   -->  false\n```\n",
-      "totalAttempts": 408618,
-      "totalCompleted": 64860,
-      "totalStars": 852,
-      "voteScore": 6098,
+      "totalAttempts": 410291,
+      "totalCompleted": 65154,
+      "totalStars": 860,
+      "voteScore": 6110,
       "tags": [
         "Fundamentals",
         "Regular Expressions",
@@ -597,10 +703,10 @@
         "url": "https://www.codewars.com/users/raulbc777"
       },
       "description": "Simple, given a string of words, return the length of the shortest word(s).\n\nString will never be empty and you do not need to account for different data types.\n",
-      "totalAttempts": 324099,
-      "totalCompleted": 99811,
+      "totalAttempts": 325020,
+      "totalCompleted": 100223,
       "totalStars": 849,
-      "voteScore": 9353,
+      "voteScore": 9367,
       "tags": [
         "Fundamentals"
       ],
@@ -653,10 +759,10 @@
         "url": "https://www.codewars.com/users/jhoffner"
       },
       "description": "Welcome. In this kata, you are asked to square every digit of a number and concatenate them.\n\nFor example, if we run 9119 through the function, 811181 will come out, because 9<sup>2</sup> is 81 and 1<sup>2</sup> is 1.\n\n**Note:** The function accepts an integer and returns an integer\n",
-      "totalAttempts": 401987,
-      "totalCompleted": 108914,
-      "totalStars": 1004,
-      "voteScore": 10598,
+      "totalAttempts": 403620,
+      "totalCompleted": 109606,
+      "totalStars": 1013,
+      "voteScore": 10646,
       "tags": [
         "Fundamentals",
         "Mathematics",
@@ -703,10 +809,10 @@
         "url": "https://www.codewars.com/users/BattleRattle"
       },
       "description": "Pete likes to bake some cakes. He has some recipes and ingredients. Unfortunately he is not good in maths. Can you help him to find out, how many cakes he could bake considering his recipes?\n\nWrite a function `cakes()`, which takes the recipe (object) and the available ingredients (also an object) and returns the maximum number of cakes Pete can bake (integer). For simplicity there are no units for the amounts (e.g. 1 lb of flour or 200 g of sugar are simply 1 or 200). Ingredients that are not present in the objects, can be considered as 0.\n\nExamples:\n\n```javascript\n// must return 2\ncakes({flour: 500, sugar: 200, eggs: 1}, {flour: 1200, sugar: 1200, eggs: 5, milk: 200}); \n// must return 0\ncakes({apples: 3, flour: 300, sugar: 150, milk: 100, oil: 100}, {sugar: 500, flour: 2000, milk: 2000}); \n```\n```coffeescript\n# must return 2\ncakes({flour: 500, sugar: 200, eggs: 1}, {flour: 1200, sugar: 1200, eggs: 5, milk: 200}) \n# must return 0\ncakes({apples: 3, flour: 300, sugar: 150, milk: 100, oil: 100}, {sugar: 500, flour: 2000, milk: 2000}) \n```\n```python\n# must return 2\ncakes({flour: 500, sugar: 200, eggs: 1}, {flour: 1200, sugar: 1200, eggs: 5, milk: 200})\n# must return 0\ncakes({apples: 3, flour: 300, sugar: 150, milk: 100, oil: 100}, {sugar: 500, flour: 2000, milk: 2000})\n```\n```haskell\ncakes [(\"flour\",500), (\"sugar\",200), (\"eggs\",1)] [(\"flour\",1200), (\"sugar\",1200), (\"eggs\",5), (\"milk\",200)]  `shouldBe` 2\ncakes [(\"apples\",3), (\"flour\",300), (\"sugar\",150), (\"milk\",100), (\"oil\",100)] [(\"sugar\",500), (\"flour\",2000), (\"milk\",2000)] `shouldBe` 0\n```\n",
-      "totalAttempts": 103355,
-      "totalCompleted": 25619,
-      "totalStars": 653,
-      "voteScore": 2191,
+      "totalAttempts": 103770,
+      "totalCompleted": 25742,
+      "totalStars": 657,
+      "voteScore": 2202,
       "tags": [
         "Algorithms"
       ],
@@ -764,10 +870,10 @@
         "url": "https://www.codewars.com/users/dnolan"
       },
       "description": "In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.\n\n**Example:**\n```php\nhighAndLow(\"1 2 3 4 5\");  // return \"5 1\"\nhighAndLow(\"1 2 -3 4 5\"); // return \"5 -3\"\nhighAndLow(\"1 9 3 4 -5\"); // return \"9 -5\"\n```\n```csharp\nKata.HighAndLow(\"1 2 3 4 5\");  // return \"5 1\"\nKata.HighAndLow(\"1 2 -3 4 5\"); // return \"5 -3\"\nKata.HighAndLow(\"1 9 3 4 -5\"); // return \"9 -5\"\n```\n```fsharp\nhighAndLow \"1 2 3 4 5\"  // return \"5 1\"\nhighAndLow \"1 2 -3 4 5\" // return \"5 -3\"\nhighAndLow \"1 9 3 4 -5\" // return \"9 -5\"\n```\n```javascript\nhighAndLow(\"1 2 3 4 5\");  // return \"5 1\"\nhighAndLow(\"1 2 -3 4 5\"); // return \"5 -3\"\nhighAndLow(\"1 9 3 4 -5\"); // return \"9 -5\"\n```\n```cpp\nhighAndLow(\"1 2 3 4 5\");  // return \"5 1\"\nhighAndLow(\"1 2 -3 4 5\"); // return \"5 -3\"\nhighAndLow(\"1 9 3 4 -5\"); // return \"9 -5\"\n```\n```typescript\nhighAndLow(\"1 2 3 4 5\");  // return \"5 1\"\nhighAndLow(\"1 2 -3 4 5\"); // return \"5 -3\"\nhighAndLow(\"1 9 3 4 -5\"); // return \"9 -5\"\n```\n```coffeescript\nhighAndLow(\"1 2 3 4 5\")  # return \"5 1\"\nhighAndLow(\"1 2 -3 4 5\") # return \"5 -3\"\nhighAndLow(\"1 9 3 4 -5\") # return \"9 -5\"\n```\n```python\nhigh_and_low(\"1 2 3 4 5\")  # return \"5 1\"\nhigh_and_low(\"1 2 -3 4 5\") # return \"5 -3\"\nhigh_and_low(\"1 9 3 4 -5\") # return \"9 -5\"\n```\n```ruby\nhigh_and_low(\"1 2 3 4 5\")  # return \"5 1\"\nhigh_and_low(\"1 2 -3 4 5\") # return \"5 -3\"\nhigh_and_low(\"1 9 3 4 -5\") # return \"9 -5\"\n```\n```crystal\nhigh_and_low(\"1 2 3 4 5\")  # return \"5 1\"\nhigh_and_low(\"1 2 -3 4 5\") # return \"5 -3\"\nhigh_and_low(\"1 9 3 4 -5\") # return \"9 -5\"\n```\n```java\nhighAndLow(\"1 2 3 4 5\")  // return \"5 1\"\nhighAndLow(\"1 2 -3 4 5\") // return \"5 -3\"\nhighAndLow(\"1 9 3 4 -5\") // return \"9 -5\"\n```\n```haskell\nhighAndLow \"1 2 3 4 5\")  # return \"5 1\"\nhighAndLow \"1 2 -3 4 5\") # return \"5 -3\"\nhighAndLow \"1 9 3 4 -5\") # return \"9 -5\"\n```\n```golang\nHighAndLow(\"1 2 3 4 5\")  // return \"5 1\"\nHighAndLow(\"1 2 -3 4 5\") // return \"5 -3\"\nHighAndLow(\"1 9 3 4 -5\") // return \"9 -5\"\n```\n```kotlin\nhighAndLow(\"1 2 3 4 5\")  // return \"5 1\"\nhighAndLow(\"1 2 -3 4 5\") // return \"5 -3\"\nhighAndLow(\"1 9 3 4 -5\") // return \"9 -5\"\n```\n```elixir\nKata.high_and_low(\"1 2 3 4 5\")  # return \"5 1\"\nKata.high_and_low(\"1 2 -3 4 5\") # return \"5 -3\"\nKata.high_and_low(\"1 9 3 4 -5\") # return \"9 -5\"\n```\n\n**Notes:**\n\n- All numbers are valid ```Int32```, no *need* to validate them.\n- There will always be at least one number in the input string.\n- Output string must be two numbers separated by a single space, and highest number is first.",
-      "totalAttempts": 458039,
-      "totalCompleted": 105172,
-      "totalStars": 1250,
-      "voteScore": 10141,
+      "totalAttempts": 459463,
+      "totalCompleted": 105678,
+      "totalStars": 1255,
+      "voteScore": 10164,
       "tags": [
         "Fundamentals",
         "Strings",
@@ -824,10 +930,10 @@
         "url": "https://www.codewars.com/users/jhoffner"
       },
       "description": "Complete the method/function so that it converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized **only** if the original word was capitalized (known as Upper Camel Case, also often referred to as Pascal case). \n\n## Examples\n\n```php\ntoCamelCase(\"the-stealth-warrior\"); // returns \"theStealthWarrior\"\n\ntoCamelCase(\"The_Stealth_Warrior\"); // returns \"TheStealthWarrior\"\n```\n```objc\ntoCamelCase(@\"the-stealth-warrior\"); // => @\"theStealthWarrior\"\n\ntoCamelCase(@\"The_Stealth_Warrior\"); // => @\"TheStealthWarrior\"\n```\n```javascript\ntoCamelCase(\"the-stealth-warrior\") // returns \"theStealthWarrior\"\n\ntoCamelCase(\"The_Stealth_Warrior\") // returns \"TheStealthWarrior\"\n```\n```coffeescript\ntoCamelCase(\"the-stealth-warrior\") # returns \"theStealthWarrior\"\n\ntoCamelCase(\"The_Stealth_Warrior\") # returns \"TheStealthWarrior\"\n```\n```ruby\nto_camel_case(\"the-stealth-warrior\") # returns \"theStealthWarrior\"\n\nto_camel_case(\"The_Stealth_Warrior\") # returns \"TheStealthWarrior\"\n```\n```python\nto_camel_case(\"the-stealth-warrior\") # returns \"theStealthWarrior\"\n\nto_camel_case(\"The_Stealth_Warrior\") # returns \"TheStealthWarrior\"\n```\n```elixir\nto_camel_case(\"the-stealth-warrior\") # returns \"theStealthWarrior\"\n\nto_camel_case(\"The_Stealth_Warrior\") # returns \"TheStealthWarrior\"\n```\n```haskell\ntoCamelCase \"the-stealth-warrior\" -- returns \"theStealthWarrior\"\n\ntoCamelCase \"The_Stealth_Warrior\" -- returns \"TheStealthWarrior\"\n```\n```csharp\nKata.ToCamelCase(\"the-stealth-warrior\") // returns \"theStealthWarrior\"\n\nKata.ToCamelCase(\"The_Stealth_Warrior\") // returns \"TheStealthWarrior\"\n```\n```cpp\nto_camel_case(\"the-stealth-warrior\") // returns \"theStealthWarrior\"\n\nto_camel_case(\"The_Stealth_Warrior\") // returns \"TheStealthWarrior\"\n```\n```r\nto_camel_case(\"the-stealth-warrior\") # returns \"theStealthWarrior\"\n\nto_camel_case(\"The_Stealth_Warrior\") # returns \"TheStealthWarrior\"\n\nto_camel_case(\"mixed-separator_example\") # returns \"mixedSeparatorExample\"\n```\n```go\nToCamelCase(\"the-stealth-warrior\"); // returns \"theStealthWarrior\"\n\nToCamelCase(\"The_Stealth_Warrior\"); // returns \"TheStealthWarrior\"\n```\n```julia\ntocamelcase(\"the-stealth-warrior\") # returns \"theStealthWarrior\"\ntocamelcase(\"The_Stealth_Warrior\") # returns \"TheStealthWarrior\"\n```\n```scala\ntoCamelCase(\"the-stealth-warrior\") // returns \"theStealthWarrior\"\n\ntoCamelCase(\"The_Stealth_Warrior\") // returns \"TheStealthWarrior\"\n```",
-      "totalAttempts": 320518,
-      "totalCompleted": 59347,
-      "totalStars": 1094,
-      "voteScore": 5026,
+      "totalAttempts": 321791,
+      "totalCompleted": 59743,
+      "totalStars": 1103,
+      "voteScore": 5056,
       "tags": [
         "Algorithms",
         "Regular Expressions",
@@ -886,10 +992,10 @@
         "url": "https://www.codewars.com/users/jhoffner"
       },
       "description": "Polycarpus works as a DJ in the best Berland nightclub, and he often uses dubstep music in his performance. Recently, he has decided to take a couple of old songs and make dubstep remixes from them.\n\nLet's assume that a song consists of some number of words (that don't contain WUB). To make the dubstep remix of this song, Polycarpus inserts a certain number of words \"WUB\" before the first word of the song (the number may be zero), after the last word (the number may be zero), and between words (at least one between any pair of neighbouring words), and then the boy glues together all the words, including \"WUB\", in one string and plays the song at the club.\n\nFor example, a song with words \"I AM X\" can transform into a dubstep remix as \"WUBWUBIWUBAMWUBWUBX\" and cannot transform into \"WUBWUBIAMWUBX\".\n\nRecently, Jonny has heard Polycarpus's new dubstep track, but since he isn't into modern music, he decided to find out what was the initial song that Polycarpus remixed. Help Jonny restore the original song.\n\n## Input\nThe input consists of a single non-empty string, consisting only of uppercase English letters, the string's length doesn't exceed 200 characters\n\n## Output\nReturn the words of the initial song that Polycarpus used to make a dubsteb remix. Separate the words with a space.\n\n## Examples\n\n```javascript\nsongDecoder(\"WUBWEWUBAREWUBWUBTHEWUBCHAMPIONSWUBMYWUBFRIENDWUB\")\n  // =>  WE ARE THE CHAMPIONS MY FRIEND\n```\n```ruby\nsong_decoder(\"WUBWEWUBAREWUBWUBTHEWUBCHAMPIONSWUBMYWUBFRIENDWUB\")\n  #  =>  WE ARE THE CHAMPIONS MY FRIEND\n```\n```haskell\nsongDecoder \"WUBWEWUBAREWUBWUBTHEWUBCHAMPIONSWUBMYWUBFRIENDWUB\"\n  `shouldBe` \"WE ARE THE CHAMPIONS MY FRIEND\"\n```\n```python\nsong_decoder(\"WUBWEWUBAREWUBWUBTHEWUBCHAMPIONSWUBMYWUBFRIENDWUB\")\n  # =>  WE ARE THE CHAMPIONS MY FRIEND\n```\n```clojure\n(song-decoder \"WUBWEWUBAREWUBWUBTHEWUBCHAMPIONSWUBMYWUBFRIENDWUB\")\n  ; => WE ARE THE CHAMPIONS MY FRIEND\n```\n```scala\nsongDecoder(\"WUBWEWUBAREWUBWUBTHEWUBCHAMPIONSWUBMYWUBFRIENDWUB\")\n  // =>  WE ARE THE CHAMPIONS MY FRIEND\n```\n```rust\nsongDecoder(\"WUBWEWUBAREWUBWUBTHEWUBCHAMPIONSWUBMYWUBFRIENDWUB\")\n  // =>  WE ARE THE CHAMPIONS MY FRIEND\n```",
-      "totalAttempts": 345547,
-      "totalCompleted": 74225,
-      "totalStars": 1427,
-      "voteScore": 7399,
+      "totalAttempts": 346559,
+      "totalCompleted": 74548,
+      "totalStars": 1432,
+      "voteScore": 7417,
       "tags": [
         "Fundamentals",
         "Strings",
@@ -956,10 +1062,10 @@
         "url": "https://www.codewars.com/users/jhoffner"
       },
       "description": "Return the number (count) of vowels in the given string. \n\nWe will consider `a, e, i, o, u` as vowels for this Kata (but not `y`).\n\nThe input string will only consist of lower case letters and/or spaces.\n",
-      "totalAttempts": 441649,
-      "totalCompleted": 152087,
-      "totalStars": 1109,
-      "voteScore": 13315,
+      "totalAttempts": 443239,
+      "totalCompleted": 152929,
+      "totalStars": 1118,
+      "voteScore": 13366,
       "tags": [
         "Fundamentals",
         "Strings",
@@ -1035,10 +1141,10 @@
         "url": "https://www.codewars.com/users/myjinxin2015"
       },
       "description": "You are given an array(list) `strarr` of strings and an integer `k`. Your task is to return the **first** longest string\nconsisting of k **consecutive** strings taken in the array.\n\n#### Examples:\n```\nstrarr = [\"tree\", \"foling\", \"trashy\", \"blue\", \"abcdef\", \"uvwxyz\"], k = 2\n\nConcatenate the consecutive strings of strarr by 2, we get:\n\ntreefoling   (length 10)  concatenation of strarr[0] and strarr[1]\nfolingtrashy (\"      12)  concatenation of strarr[1] and strarr[2]\ntrashyblue   (\"      10)  concatenation of strarr[2] and strarr[3]\nblueabcdef   (\"      10)  concatenation of strarr[3] and strarr[4]\nabcdefuvwxyz (\"      12)  concatenation of strarr[4] and strarr[5]\n\nTwo strings are the longest: \"folingtrashy\" and \"abcdefuvwxyz\".\nThe first that came is \"folingtrashy\" so \nlongest_consec(strarr, 2) should return \"folingtrashy\".\n\nIn the same way:\nlongest_consec([\"zone\", \"abigail\", \"theta\", \"form\", \"libe\", \"zas\", \"theta\", \"abigail\"], 2) --> \"abigailtheta\"\n```\nn being the length of the string array, if `n = 0` or `k > n` or `k <= 0` return \"\".\n\n#### Note\nconsecutive strings : follow one after another without an interruption",
-      "totalAttempts": 328853,
-      "totalCompleted": 37294,
-      "totalStars": 1883,
-      "voteScore": 3638,
+      "totalAttempts": 329302,
+      "totalCompleted": 37420,
+      "totalStars": 1884,
+      "voteScore": 3641,
       "tags": [
         "Fundamentals"
       ],
@@ -1087,10 +1193,10 @@
         "url": "https://www.codewars.com/users/jhoffner"
       },
       "description": "### Happy Holidays fellow Code Warriors!\nSanta's senior gift organizer Elf developed a way to represent up to 26 gifts by assigning a unique alphabetical character to each gift. After each gift was assigned a character, the gift organizer Elf then joined the characters to form the gift ordering code. \n\nSanta asked his organizer to order the characters in alphabetical order, but the Elf fell asleep from consuming too much hot chocolate and candy canes! Can you help him out?\n\n### Sort the Gift Code\nWrite a function called `sortGiftCode`/`sort_gift_code`/`SortGiftCode` that accepts a string containing up to 26 unique alphabetical characters, and returns a string containing the same characters in alphabetical order.\n\n### Examples:\n```javascript\nsortGiftCode( 'abcdef' ); //=> returns 'abcdef'\nsortGiftCode( 'pqksuvy' ); //=> returns 'kpqsuvy'\nsortGiftCode( 'zyxwvutsrqponmlkjihgfedcba' ); //=> returns 'abcdefghijklmnopqrstuvwxyz'\n```\n```coffeescript\nsortGiftCode( 'abcdef' ); //=> returns 'abcdef'\nsortGiftCode( 'pqksuvy' ); //=> returns 'kpqsuvy'\nsortGiftCode( 'zyxwvutsrqponmlkjihgfedcba' ); //=> returns 'abcdefghijklmnopqrstuvwxyz'\n```\n```ruby\nsort_gift_code( 'abcdef' ) #=> returns 'abcdef'\nsort_gift_code( 'pqksuvy' ) #=> returns 'kpqsuvy'\nsort_gift_code( 'zyxwvutsrqponmlkjihgfedcba' ) #=> returns 'abcdefghijklmnopqrstuvwxyz'\n```\n```python\nsort_gift_code( 'abcdef' ) # 'abcdef'\nsort_gift_code( 'pqksuvy' ) # 'kpqsuvy'\nsort_gift_code( 'zyxwvutsrqponmlkjihgfedcba' ) # 'abcdefghijklmnopqrstuvwxyz'\n```\n```java\nGiftSorter gs = new GiftSorter();\ngs.sortGiftCode( 'abcdef' ); //=>  'abcdef'\ngs.sortGiftCode( 'pqksuvy' ); //=>  'kpqsuvy'\ngs.sortGiftCode( 'zyxwvutsrqponmlkjihgfedcba' ); //=>  'abcdefghijklmnopqrstuvwxyz'\n```\n```haskell\nsortGiftCode \"abcdef\"                      -- => returns \"abcdef\"\nsortGiftCode \"pqksuvy\"                     -- => returns \"kpqsuvy\"\nsortGiftCode \"zyxwvutsrqponmlkjihgfedcba\"  -- => returns \"abcdefghijklmnopqrstuvwxyz\"\n```\n```csharp\nKata.SortGiftCode(\"abcdef\") => \"abcdef\"\nKata.SortGiftCode(\"pqksuvy\") => \"kpqsuvy\"\nKata.SortGiftCode(\"zyxwvutsrqponmlkjihgfedcba\") => \"abcdefghijklmnopqrstuvwxyz\"\n```",
-      "totalAttempts": 25149,
-      "totalCompleted": 11315,
-      "totalStars": 98,
-      "voteScore": 548,
+      "totalAttempts": 25168,
+      "totalCompleted": 11331,
+      "totalStars": 99,
+      "voteScore": 551,
       "tags": [
         "Fundamentals",
         "Hacking Holidays",
@@ -1154,10 +1260,10 @@
         "url": "https://www.codewars.com/users/jhoffner"
       },
       "description": "The two oldest ages function/method needs to be completed. It should take an array of numbers as its argument and return the **two highest numbers within the array**. The returned value should be an array in the format **[second oldest age,  oldest age]**. \n\nThe order of the numbers passed in could be any order. The array will always include at least 2 items.\n\nFor example:\n\n```c\ntwo_oldest_ages( 4, {1, 2, 10, 8} ) // should return {8, 10}\n```\n\n```javascript\ntwoOldestAges( [1, 2, 10, 8] ) // should return [8, 10]\n```\n\n```coffeescript\ntwoOldestAges [34, 45, 12, 98, 0, 23] # should return [45, 98]\n```\n\n```ruby\ntwo_oldest_ages([1, 3, 10, 0]) # should return [3, 10]\n```\n\n```go\nTwoOldestAges([]int{1, 5, 87, 45, 8, 8}) // should return [2]int{45, 87}\n```\n\n```lua\ntwoOldestAges({1, 5, 87, 45, 8, 8}) -- should return {45, 87}\n```\n\n```elixir\ntwo_oldest_ages([1, 5, 87, 45, 8, 8]) # should return [45, 87]\n```\n```csharp\nLargestTwo.TwoOldestAges(new int[] {1, 2, 10, 8}) => new int[] {8, 10}\n```\n\n```kotlin\ntwoOldestAges(listOf(1, 5, 87, 45, 8, 8)) // should return listOf(45, 87)\n```\n```nim\ntwoOldestAges(@[1, 5, 87, 45, 8, 8]) # should return [45, 87]\n```\n\n```python\ntwo_oldest_ages([1, 3, 10, 0]) # should return [3, 10]\n```\n\n```rust\ntwo_oldest_ages(&[1, 3, 10, 0]) // should return [3, 10]\n```\n\n```prolog\ntwo_oldest_ages([1, 5, 87, 45, 8, 8], [45, 87]).\n```\n\n```cfml\ntwoOldestAges( [ 1, 5, 87, 45, 8, 8 ] ) // should return [ 45, 87 ]\n```\n\n```julia\ntwooldestages([1, 3, 10, 0]) # should return [3, 10]\n```\n\n```java\nKata.twoOldestAges(new int[]{1, 2, 10, 8}) // should return {8, 10}\n```\n\n```cpp\ntwo_oldest_ages({1, 2, 10, 8}) // should return {8, 10}\n```\n",
-      "totalAttempts": 61834,
-      "totalCompleted": 15128,
+      "totalAttempts": 62252,
+      "totalCompleted": 15225,
       "totalStars": 107,
-      "voteScore": 1399,
+      "voteScore": 1409,
       "tags": [
         "Algorithms",
         "Arrays",
@@ -1219,10 +1325,10 @@
         "url": "https://www.codewars.com/users/jhoffner"
       },
       "description": "Write a function, `persistence`, that takes in a positive parameter `num` and returns its multiplicative persistence, which is the number of times you must multiply the digits in `num` until you reach a single digit.\n\nFor example:\n\n```c\npersistence(39) === 3;\n//     because 3*9 = 27, 2*7 = 14, 1*4 = 4\n//         and 4 has only one digit\n\npersistence(999) === 4;\n//     because 9*9*9 = 729, 7*2*9 = 126, 1*2*6 = 12,\n// and finally 1*2 = 2\n                \npersistence(4) === 0;\n//     because 4 is already a one-digit number\n```\n```swift\n persistence(for: 39) === 3 // because 3*9 = 27, 2*7 = 14, 1*4=4\n                       // and 4 has only one digit\n                 \n persistence(for: 999) === 4 // because 9*9*9 = 729, 7*2*9 = 126,\n                        // 1*2*6 = 12, and finally 1*2 = 2\n                  \n persistence(for: 4) === 0 // because 4 is already a one-digit number\n```\n```javascript\n persistence(39) === 3 // because 3*9 = 27, 2*7 = 14, 1*4=4\n                       // and 4 has only one digit\n                 \n persistence(999) === 4 // because 9*9*9 = 729, 7*2*9 = 126,\n                        // 1*2*6 = 12, and finally 1*2 = 2\n                  \n persistence(4) === 0 // because 4 is already a one-digit number\n```\n```php\npersistence(39) === 3; // because 3 * 9 = 27, 2 * 7 = 14, 1 * 4 = 4 and 4 has only one digit\npersistence(999) === 4; // because 9 * 9 * 9 = 729, 7 * 2 * 9 = 126, 1 * 2 * 6 = 12, and finally 1 * 2 = 2\npersistence(4) === 0; // because 4 is already a one-digit number\n```\n```coffeescript\n persistence(39) === 3 // because 3*9 = 27, 2*7 = 14, 1*4=4\n                       // and 4 has only one digit\n                 \n persistence(999) === 4 // because 9*9*9 = 729, 7*2*9 = 126,\n                        // 1*2*6 = 12, and finally 1*2 = 2\n                  \n persistence(4) === 0 // because 4 is already a one-digit number\n```\n```csharp\n persistence(39) == 3 // because 3*9 = 27, 2*7 = 14, 1*4=4\n                      // and 4 has only one digit\n                 \n persistence(999) == 4 // because 9*9*9 = 729, 7*2*9 = 126,\n                       // 1*2*6 = 12, and finally 1*2 = 2\n                  \n persistence(4) == 0 // because 4 is already a one-digit number\n```\n```fsharp\npersistence 39 = 3  // because 3*9 = 27, 2*7 = 14, 1*4=4\n                    // and 4 has only one digit\n               \npersistence 999 = 4 // because 9*9*9 = 729, 7*2*9 = 126,\n                    // 1*2*6 = 12, and finally 1*2 = 2\n                \npersistence 4 = 0   // because 4 is already a one-digit number\n```\n```java\n persistence(39) == 3 // because 3*9 = 27, 2*7 = 14, 1*4=4\n                      // and 4 has only one digit\n                 \n persistence(999) == 4 // because 9*9*9 = 729, 7*2*9 = 126,\n                       // 1*2*6 = 12, and finally 1*2 = 2\n                  \n persistence(4) == 0 // because 4 is already a one-digit number\n```\n```clojure\n (persistence 39) ; returns 3, because 3*9=27, 2*7=14, 1*4=4\n                  ; and 4 has only one digit\n                  \n (persistence 999) ; returns 4, because 9*9*9=729, 7*2*9=126,\n                   ; 1*2*6=12, and finally 1*2=2\n\n (persistence 4) ; returns 0, because 4 is already a one-digit number\n```\n```python\npersistence(39) => 3  # Because 3*9 = 27, 2*7 = 14, 1*4=4\n                       # and 4 has only one digit.\n                 \npersistence(999) => 4 # Because 9*9*9 = 729, 7*2*9 = 126,\n                       # 1*2*6 = 12, and finally 1*2 = 2.\n                  \npersistence(4) => 0   # Because 4 is already a one-digit number.\n```\n```haskell\n persistence 39 -- returns 3, because 3*9=27, 2*7=14, 1*4=4\n                -- and 4 has only one digit\n                  \n persistence 999 -- returns 4, because 9*9*9=729, 7*2*9=126,\n                 -- 1*2*6=12, and finally 1*2=2\n\n persistence 4 -- returns 0, because 4 is already a one-digit number\n```\n```ruby\n persistence(39) # returns 3, because 3*9=27, 2*7=14, 1*4=4\n                 # and 4 has only one digit\n                  \n persistence(999) # returns 4, because 9*9*9=729, 7*2*9=126,\n                  # 1*2*6=12, and finally 1*2=2\n\n persistence(4) # returns 0, because 4 is already a one-digit number\n```\n```coffeescript\n persistence(39) # returns 3, because 3*9=27, 2*7=14, 1*4=4\n                 # and 4 has only one digit\n                  \n persistence(999) # returns 4, because 9*9*9=729, 7*2*9=126,\n                  # 1*2*6=12, and finally 1*2=2\n\n persistence(4) # returns 0, because 4 is already a one-digit number\n```\n```elixir\n persistence(39) # returns 3, because 3*9=27, 2*7=14, 1*4=4\n                 # and 4 has only one digit\n                  \n persistence(999) # returns 4, because 9*9*9=729, 7*2*9=126,\n                  # 1*2*6=12, and finally 1*2=2\n\n persistence(4) # returns 0, because 4 is already a one-digit number\n```\n```kotlin\n persistence(39) == 3 // because 3*9 = 27, 2*7 = 14, 1*4=4\n                       // and 4 has only one digit\n                 \n persistence(999) == 4 // because 9*9*9 = 729, 7*2*9 = 126,\n                        // 1*2*6 = 12, and finally 1*2 = 2\n                  \n persistence(4) == 0 // because 4 is already a one-digit number\n```\n```scala\n // because 3*9 = 27, 2*7 = 14, 1*4=4 and 4 has only one digit:\n persistence(39) == 3\n\n // because 9*9*9 = 729, 7*2*9 = 126, 1*2*6 = 12, and finally 1*2 = 2\n persistence(999) == 4\n\n // because 4 is already a one-digit number:\n persistence(4) == 0\n```\n```julia\npersistence(39) # returns 3, because 3*9=27, 2*7=14, 1*4=4\n                # and 4 has only one digit\n                \npersistence(999) # returns 4, because 9*9*9=729, 7*2*9=126,\n                 # 1*2*6=12, and finally 1*2=2\n\npersistence(4) # returns 0, because 4 is already a one-digit number\n```\n```rust\npersistence(39) // returns 3, because 3*9=27, 2*7=14, 1*4=4\n                // and 4 has only one digit\n                \npersistence(999) // returns 4, because 9*9*9=729, 7*2*9=126,\n                 // 1*2*6=12, and finally 1*2=2\n\npersistence(4) // returns 0, because 4 is already a one-digit number\n```\n```prolog\npersistence(39, 3) % because 3*9=27, 2*7=14, 1*4=4\n                   % and 4 has only one digit\n                \npersistence(999, 4) % because 9*9*9=729, 7*2*9=126,\n                    % 1*2*6=12, and finally 1*2=2\n\npersistence(4, 0) % because 4 is already a one-digit number\n```\n",
-      "totalAttempts": 359059,
-      "totalCompleted": 83544,
-      "totalStars": 2196,
-      "voteScore": 8819,
+      "totalAttempts": 360124,
+      "totalCompleted": 83998,
+      "totalStars": 2207,
+      "voteScore": 8843,
       "tags": [
         "Fundamentals",
         "Numbers",
@@ -1302,10 +1408,10 @@
         "url": "https://www.codewars.com/users/GiacomoSorbi"
       },
       "description": "Very simple, given a number, find its opposite.\n\nExamples:\n```\n1: -1\n14: -14\n-34: 34\n```\n\n~~~if:sql\nYou will be given a table: `opposite`, with a column: `number`. Return a table with a column: `res`.\n~~~",
-      "totalAttempts": 223313,
-      "totalCompleted": 110766,
+      "totalAttempts": 224201,
+      "totalCompleted": 111270,
       "totalStars": 474,
-      "voteScore": 7505,
+      "voteScore": 7534,
       "tags": [
         "Fundamentals"
       ],
@@ -1364,10 +1470,10 @@
         "url": "https://www.codewars.com/users/g964"
       },
       "description": "You are going to be given an array of integers. Your job is to take that array and find an index N where the sum of the integers to the left of N is equal to the sum of the integers to the right of N. If there is no index that would make this happen, return `-1`.\n\n__For example:__\n\nLet's say you are given the array `{1,2,3,4,3,2,1}`:  \nYour function will return the index `3`, because at the 3rd position of the array, the sum of left side of the index (`{1,2,3}`) and the sum of the right side of the index (`{3,2,1}`) both equal `6`.\n\n\nLet's look at another one.  \nYou are given the array `{1,100,50,-51,1,1}`:  \nYour function will return the index `1`, because at the 1st position of the array, the sum of left side of the index (`{1}`) and the sum of the right side of the index (`{50,-51,1,1}`) both equal `1`.\n\nLast one:  \nYou are given the array `{20,10,-80,10,10,15,35}`  \nAt index 0 the left side is `{}`  \nThe right side is `{10,-80,10,10,15,35}`  \nThey both are equal to `0` when added. (Empty arrays are equal to 0 in this problem)  \nIndex 0 is the place where the left side and right side are equal.  \n\nNote: Please remember that in most programming/scripting languages the index of an array starts at 0.\n\n__Input:__  \nAn integer array of length `0 < arr < 1000`. The numbers in the array can be any integer positive or negative.\n\n__Output:__  \nThe lowest index `N` where the side to the left of `N` is equal to the side to the right of `N`. If you do not find an index that fits these rules, then you will return `-1`.\n\n__Note:__  \nIf you are given an array with multiple answers, return the lowest correct index.  \n",
-      "totalAttempts": 265429,
-      "totalCompleted": 59080,
-      "totalStars": 1751,
-      "voteScore": 6987,
+      "totalAttempts": 266244,
+      "totalCompleted": 59352,
+      "totalStars": 1756,
+      "voteScore": 7001,
       "tags": [
         "Fundamentals",
         "Algorithms",
@@ -1458,10 +1564,10 @@
         "url": "https://www.codewars.com/users/GiacomoSorbi"
       },
       "description": "Given the triangle of consecutive odd numbers:\n\n```\n             1\n          3     5\n       7     9    11\n   13    15    17    19\n21    23    25    27    29\n...\n```\n\nCalculate the row sums of this triangle from the row index (starting at index 1) e.g.:\n\n```javascript\nrowSumOddNumbers(1); // 1\nrowSumOddNumbers(2); // 3 + 5 = 8\n```\n```ocaml\nrowSumOddNumbers 1 (* 1 *)\nrowSumOddNumbers 2 (* 3 + 5 = 8 *)\n```\n```dart\nrowSumOddNumbers(1); // 1\nrowSumOddNumbers(2); // 3 + 5 = 8\n```\n```lua\nrowSumOddNumbers(1); -- 1\nrowSumOddNumbers(2); -- 3 + 5 = 8\n```\n```php\nrowSumOddNumbers(1); // 1\nrowSumOddNumbers(2); // 3 + 5 = 8\n```\n```reason\nrowSumOddNumbers(1); /* 1 */\nrowSumOddNumbers(2); /* 3 + 5 = 8 */\n```\n```coffeescript\nrowSumOddNumbers(1) # 1\nrowSumOddNumbers(2) # 3 + 5 = 8\n```\n```typescript\nrowSumOddNumbers(1); // 1\nrowSumOddNumbers(2); // 3 + 5 = 8\n```\n```ruby\nrow_sum_odd_numbers(1); # 1\nrow_sum_odd_numbers(2); # 3 + 5 = 8\n```\n```rust\nrow_sum_odd_numbers(1); # 1\nrow_sum_odd_numbers(2); # 3 + 5 = 8\n```\n```python\nrow_sum_odd_numbers(1); # 1\nrow_sum_odd_numbers(2); # 3 + 5 = 8\n```\n\n```java\nrowSumOddNumbers(1); // 1\nrowSumOddNumbers(2); // 3 + 5 = 8\n```\n\n```csharp\nrowSumOddNumbers(1); // 1\nrowSumOddNumbers(2); // 3 + 5 = 8\n```\n\n```fsharp\nrowSumOddNumbers 1 // 1\nrowSumOddNumbers 2 // 3 + 5 = 8\n```\n\n```haskell\nrowSumOddNumbers 1 -- 1\nrowSumOddNumbers 2 -- 3 + 5 = 8\n```\n```r\nrow_sum_odd_numbers(1) # 1\n[1] 1\nrow_sum_odd_numbers(2) # 3 + 5\n[1] 8\n```\n```if:nasm\nrow_sum_odd_numbers:\n```\n```nasm\nmov rdi 1\ncall row_sum_odd_numbers    ; rax <- 1\n\nmov rdi 2\ncall row_sum_odd_numbers   ; rax <- 3 + 5\n```\n\n```clojure\n(row-sum-odd-numbers 1) # 1\n(row-sum-odd-numbers 2) # 3 + 5 = 8\n```\n\n```julia\nrowsumoddnumbers(1) # 1\nrowsumoddnumbers(2) # 3 + 5 = 8\n```\n\n```scala\nrowSumOddNumbers(1) // 1\nrowSumOddNumbers(2) // 3 + 5 = 8\n```\n```swift\nrowSumOddNumbers(1) // 1\nrowSumOddNumbers(2) // 3 + 5 = 8\n```\n```elixir\nSumOfOdd.row_sum_odd_numbers(1) // 1\nSumOfOdd.row_sum_odd_numbers(2) // 3 + 5 = 8\n```\n```prolog\nrow_sum_odd_numbers(1) % 1\nrow_sum_odd_numbers(2) % 3 + 5 = 8\n```\n```haxe\nrowSumOddNumbers(1) // 1\nrowSumOddNumbers(2) // 3 + 5 = 8\n```\n",
-      "totalAttempts": 203531,
-      "totalCompleted": 63476,
+      "totalAttempts": 204197,
+      "totalCompleted": 63788,
       "totalStars": 1478,
-      "voteScore": 5414,
+      "voteScore": 5426,
       "tags": [
         "Fundamentals",
         "Arrays",
@@ -1529,16 +1635,16 @@
         "url": "https://www.codewars.com/users/g964"
       },
       "description": "Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.\n\nExamples input/output:\n```\nXO(\"ooxx\") => true\nXO(\"xooxx\") => false\nXO(\"ooxXm\") => true\nXO(\"zpzpzpp\") => true // when no 'x' and 'o' is present should return true\nXO(\"zzoo\") => false\n```",
-      "totalAttempts": 361604,
-      "totalCompleted": 97514,
-      "totalStars": 805,
-      "voteScore": 9051,
+      "totalAttempts": 362801,
+      "totalCompleted": 97941,
+      "totalStars": 807,
+      "voteScore": 9087,
       "tags": [
         "Fundamentals"
       ],
       "contributorsWanted": true,
       "unresolved": {
-        "issues": 2,
+        "issues": 1,
         "suggestions": 3
       }
     }
@@ -1595,10 +1701,10 @@
         "url": "https://www.codewars.com/users/jhoffner"
       },
       "description": "Deoxyribonucleic acid (DNA) is a chemical found in the nucleus of cells and carries the \"instructions\" for the development and functioning of living organisms.\n\nIf you want to know more http://en.wikipedia.org/wiki/DNA\n\nIn DNA strings, symbols \"A\" and \"T\" are complements of each other, as \"C\" and \"G\". \nYou have function with one side of the DNA (string, except for Haskell); you need to get the other complementary side. DNA strand is never empty or there is no DNA at all (again, except for Haskell).\n\nMore similar exercise are found here http://rosalind.info/problems/list-view/ (source)\n\n```python\nDNA_strand (\"ATTGC\") # return \"TAACG\"\n\nDNA_strand (\"GTAT\") # return \"CATA\"\n```\n\n```javascript\nDNAStrand (\"ATTGC\") // return \"TAACG\"\n\nDNAStrand (\"GTAT\") // return \"CATA\" \n```\n\n```typescript\ndnaStrand(\"ATTGC\") // return \"TAACG\"\n\ndnaStrand(\"GTAT\") // return \"CATA\" \n```\n\n```csharp\nMakeComplement(\"ATTGC\") => \"TAACG\"\n\nMakeComplement(\"GTAT\") => \"CATA\"\n```\n\n```php\nDNA_strand(\"ATTGC\") // returns \"TAACG\"\nDNA_strand(\"GTAT\") // returns \"CATA\"\n```\n\n```ruby\nDNA_strand (\"ATTGC\") # return \"TAACG\"\n\nDNA_strand (\"GTAT\") # return \"CATA\"\n```\n\n```crystal\ndna_strand(\"ATTGC\") # return \"TAACG\"\n\ndna_strand(\"GTAT\") # return \"CATA\"\n```\n\n```java\nDnaStrand.makeComplement(\"ATTGC\") // return \"TAACG\"\n\nDnaStrand.makeComplement(\"GTAT\") // return \"CATA\"\n```\n\n```kotlin\nmakeComplement(\"ATTGC\") // return \"TAACG\"\n\nmakeComplement(\"GTAT\") // return \"CATA\"\n```\n\n\n```haskell\ndnaStrand []        `shouldBe` []\ndnaStrand [A,T,G,C] `shouldBe` [T,A,C,G]\ndnaStrand [G,T,A,T] `shouldBe` [C,A,T,A]\ndnaStrand [A,A,A,A] `shouldBe` [T,T,T,T]\n```\n\n```clojure\n(is (= (dna-strand \"ATTGC\") \"TAACG\"))\n\n(is (= (dna-strand \"GTAT\") \"CATA\"))\n```\n\n```c\ndna_strand(\"ATTGC\") /* return \"TAACG\" */\ndna_strand(\"GTAT\")  /* return \"CATA\"  */\n```\n\n```golang\nDNAStrand(\"ATTGC\") // returns \"TAACG\"\n\nDNAStrand(\"GTAT\") // returns \"CATA\"\n```\n\n```rust\ndna_strand(\"ATTGC\") // returns \"TAACG\"\ndna_strand(\"GTAT\")  // returns \"CATA\"\n```\n\n```julia\ndnastrand(\"ATTGC\") # returns \"TAACG\"\ndnastrand(\"GTAT\")  # returns \"CATA\"\n```\n\n```prolog\ndna_strand(\"ATTGC\") == \"TAACG\"\ndna_strand(\"GTAT\") == \"CATA\"\n```\n\n```elixir\nDna.dna_strand(\"ATTGC\") == \"TAACG\"\nDna.dna_strand(\"GTAT\") == \"CATA\"\n```",
-      "totalAttempts": 271403,
-      "totalCompleted": 92461,
-      "totalStars": 1115,
-      "voteScore": 8378,
+      "totalAttempts": 272146,
+      "totalCompleted": 92815,
+      "totalStars": 1118,
+      "voteScore": 8401,
       "tags": [
         "Fundamentals",
         "Strings",
@@ -1662,10 +1768,10 @@
         "url": "https://www.codewars.com/users/jhoffner"
       },
       "description": "Complete the square sum function so that it squares each number passed into it and then sums the results together.\n\nFor example, for `[1, 2, 2]` it should return `9` because `1^2 + 2^2 + 2^2 = 9`.\n\n```if:racket\nIn Racket, use a list instead of an array, so '(1 2 3) should return 9.\n```\n",
-      "totalAttempts": 178184,
-      "totalCompleted": 61237,
+      "totalAttempts": 178924,
+      "totalCompleted": 61582,
       "totalStars": 452,
-      "voteScore": 4675,
+      "voteScore": 4702,
       "tags": [
         "Fundamentals",
         "Arithmetic",
@@ -1723,10 +1829,10 @@
         "url": "https://www.codewars.com/users/jhoffner"
       },
       "description": "Return the century of the input year. The input will always be a 4 digit string, so there is no need for validation. \n\n### Examples\n```\n\"1999\" --> \"20th\"\n\"2011\" --> \"21st\"\n\"2154\" --> \"22nd\"\n\"2259\" --> \"23rd\"\n\"1124\" --> \"12th\"\n\"2000\" --> \"20th\"\n```",
-      "totalAttempts": 30170,
-      "totalCompleted": 3839,
+      "totalAttempts": 30262,
+      "totalCompleted": 3852,
       "totalStars": 93,
-      "voteScore": 399,
+      "voteScore": 401,
       "tags": [
         "Algorithms",
         "Strings",
@@ -1780,10 +1886,10 @@
         "url": "https://www.codewars.com/users/Blind4Basics"
       },
       "description": "## Welcome to the Codewars Bar!\n\nCodewars Bar recommends you drink 1 glass of water per standard drink so you're not hungover tomorrow morning.\n\nYour fellow coders have bought you several drinks tonight in the form of a string. Return a string suggesting how many glasses of water you should drink to not be hungover.\n\n\n\n## Examples\n\n```\n\"1 beer\"  -->  \"1 glass of water\"\nbecause you drank one standard drink\n\n\"1 shot, 5 beers, 2 shots, 1 glass of wine, 1 beer\"  -->  \"10 glasses of water\"\nbecause you drank ten standard drinks\n```\n\nNote:\n\nTo keep the things simple, we'll consider that any \"numbered thing\" in the string is a drink. Even `\"1 bear\"` -> `\"1 glass of water\"`; or `\"1 chainsaw and 2 pools\"` -> `\"3 glasses of water\"`...\n",
-      "totalAttempts": 13274,
-      "totalCompleted": 3651,
+      "totalAttempts": 13299,
+      "totalCompleted": 3660,
       "totalStars": 52,
-      "voteScore": 504,
+      "voteScore": 506,
       "tags": [
         "Fundamentals",
         "Loops",
@@ -1830,10 +1936,10 @@
         "url": "https://www.codewars.com/users/donaldsebleung"
       },
       "description": "Create a function mispelled(word1, word2):\n\n```javascript\nmispelled('versed', 'xersed'); // returns true\nmispelled('versed', 'applb'); // returns false\nmispelled('versed', 'v5rsed'); // returns true\nmispelled('1versed', 'versed'); // returns true\n```\n```python\nmispelled('versed', 'xersed') # returns True\nmispelled('versed', 'applb') # returns False\nmispelled('versed', 'v5rsed') # returns True\nmispelled('1versed', 'versed') # returns True\n```\n\nIt checks if the word2 differs from word1 by only one character. \n\nThis can include an extra char at the end or the beginning of either of words.\n\nIn the tests that expect `true`, the mispelled word will always differ only by one character.\n",
-      "totalAttempts": 6207,
-      "totalCompleted": 656,
+      "totalAttempts": 6240,
+      "totalCompleted": 658,
       "totalStars": 28,
-      "voteScore": 174,
+      "voteScore": 175,
       "tags": [
         "Fundamentals",
         "Strings",
@@ -1905,10 +2011,10 @@
         "url": "https://www.codewars.com/users/NaMe613"
       },
       "description": "You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.\n\n#Examples:\n~~~if-not:bf\n```\nKata.getMiddle(\"test\") should return \"es\"\n\nKata.getMiddle(\"testing\") should return \"t\"\n\nKata.getMiddle(\"middle\") should return \"dd\"\n\nKata.getMiddle(\"A\") should return \"A\"\n\n```\n~~~\n~~~if:bf\n```\nrunBF(\"test\\0\") should return \"es\"\n\nrunBF(\"testing\\0\") should return \"t\"\n\nrunBF(\"middle\\0\") should return \"dd\"\n\nrunBF(\"A\\0\") should return \"A\"\n\n```\n~~~\n\n#Input\n\nA word (string) of length `0 < str < 1000` (In javascript you may get slightly more than 1000 in some test cases due to an error in the test cases). You do not need to test for this. This is only here to tell you that you do not need to worry about your solution timing out.\n\n\n#Output\n\nThe middle character(s) of the word represented as a string. ",
-      "totalAttempts": 397201,
-      "totalCompleted": 117618,
-      "totalStars": 1046,
-      "voteScore": 10618,
+      "totalAttempts": 398144,
+      "totalCompleted": 118071,
+      "totalStars": 1048,
+      "voteScore": 10646,
       "tags": [
         "Fundamentals",
         "Strings",
@@ -1956,10 +2062,10 @@
         "url": "https://www.codewars.com/users/xcthulhu"
       },
       "description": "Create a function that returns a villain name based on the user's birthday. The birthday will be passed to the function as a valid Date object, so for simplicity, there's no need to worry about converting strings to dates.\n\nThe first name will come from the month, and the last name will come from the last digit of the date:\n\nMonth -> first name\n\n* January -> \"The Evil\"\n* February -> \"The Vile\"\n* March -> \"The Cruel\"\n* April -> \"The Trashy\"\n* May -> \"The Despicable\"\n* June -> \"The Embarrassing\"\n* July -> \"The Disreputable\"\n* August -> \"The Atrocious\"\n* September -> \"The Twirling\"\n* October -> \"The Orange\"\n* November -> \"The Terrifying\"\n* December -> \"The Awkward\"\n\nLast digit of date -> last name\n\n* 0 -> \"Mustache\"\n* 1 -> \"Pickle\"\n* 2 -> \"Hood Ornament\"\n* 3 -> \"Raisin\"\n* 4 -> \"Recycling Bin\"\n* 5 -> \"Potato\"\n* 6 -> \"Tomato\"\n* 7 -> \"House Cat\"\n* 8 -> \"Teaspoon\"\n* 9 -> \"Laundry Basket\"\n\n\nThe returned value should be a string in the form of `\"First Name Last Name\"`.\n\nFor example, a birthday of November 18 would return `\"The Terrifying Teaspoon\"`",
-      "totalAttempts": 19761,
-      "totalCompleted": 3015,
-      "totalStars": 85,
-      "voteScore": 195,
+      "totalAttempts": 20366,
+      "totalCompleted": 3145,
+      "totalStars": 90,
+      "voteScore": 205,
       "tags": [
         "Fundamentals",
         "Arrays",
@@ -2031,10 +2137,10 @@
         "url": "https://www.codewars.com/users/donaldsebleung"
       },
       "description": "# Task\n\n**_Given_** a **_list of digits_**, *return the **_smallest number_** that could be formed from these digits, using the digits only once (ignore duplicates).* \n___\n\n# Notes:\n\n* Only **_positive integers_** *will be passed to the function (> 0 ), no negatives or zeros.*\n___\n# Input >> Output Examples \n\n```\nminValue ({1, 3, 1})  ==> return (13)\n```\n## Explanation:\n**_(13)_** *is the minimum number could be formed from* **_{1, 3, 1}_** , *Without duplications*  \n___\n```\nminValue({5, 7, 5, 9, 7})  ==> return (579)\n```\n## Explanation:\n**_(579)_** *is the minimum number could be formed from* **_{5, 7, 5, 9, 7}_** , *Without duplications* \n___\n\n```\nminValue({1, 9, 3, 1, 7, 4, 6, 6, 7}) return  ==> (134679)\n```\n## Explanation:\n**_(134679)_** *is the minimum number could be formed from* **_{1, 9, 3, 1, 7, 4, 6, 6, 7}_** , *Without duplications* \n___\n___\n\n## [Playing with Numbers Series](https://www.codewars.com/collections/playing-with-numbers)\n\n# [Playing With Lists/Arrays Series](https://www.codewars.com/collections/playing-with-lists-slash-arrays)\n\n# [Bizarre Sorting-katas](https://www.codewars.com/collections/bizarre-sorting-katas)\n\n# [For More Enjoyable Katas](http://www.codewars.com/users/MrZizoScream/authored)\n___\n\n## ALL translations are welcomed\n\n## Enjoy Learning !!\n# Zizou\n",
-      "totalAttempts": 34510,
-      "totalCompleted": 10859,
-      "totalStars": 157,
-      "voteScore": 1335,
+      "totalAttempts": 34584,
+      "totalCompleted": 10903,
+      "totalStars": 158,
+      "voteScore": 1339,
       "tags": [
         "Fundamentals",
         "Numbers",
@@ -2093,10 +2199,10 @@
         "url": "https://www.codewars.com/users/tachyonlabs"
       },
       "description": "You are provided with an array of positive integers and an additional integer `n` (`n > 1`).\n\nCalculate the sum of each value in the array to the `n`th power. Then subtract the sum of the original array.\n\n\n## Examples\n```\n{1, 2, 3}, 3  -->  (1^3 + 2^3 + 3^3 ) - (1 + 2 + 3)  -->  36 - 6  -->  30\n{1, 2}, 5     -->  (1^5 + 2^5) - (1 + 2)             -->  33 - 3  -->  30\n```",
-      "totalAttempts": 8947,
-      "totalCompleted": 4304,
+      "totalAttempts": 8968,
+      "totalCompleted": 4316,
       "totalStars": 29,
-      "voteScore": 522,
+      "voteScore": 523,
       "tags": [
         "Puzzles",
         "Fundamentals",
@@ -2153,10 +2259,10 @@
         "url": "https://www.codewars.com/users/JohanWiltink"
       },
       "description": "Cheesy Cheeseman just got a new monitor! He is happy with it, but he just discovered that his old desktop wallpaper no longer fits. He wants to find a new wallpaper, but does not know which size wallpaper he should be looking for, and alas, he just threw out the new monitor's box. Luckily he remembers the width and the aspect ratio of the monitor from when Bob Mortimer sold it to him. Can you help Cheesy out?\n# The Challenge\n\nGiven an integer `width` and a string `ratio` written as `WIDTH:HEIGHT`, output the screen dimensions as a string written as `WIDTHxHEIGHT`.",
-      "totalAttempts": 10429,
-      "totalCompleted": 3279,
+      "totalAttempts": 10465,
+      "totalCompleted": 3288,
       "totalStars": 37,
-      "voteScore": 412,
+      "voteScore": 413,
       "tags": [
         "Fundamentals",
         "Numbers",
@@ -2209,10 +2315,10 @@
         "url": "https://www.codewars.com/users/g964"
       },
       "description": "Create the function ```consecutive(arr)``` that takes an array of integers and return the minimum number of integers needed to make the contents of ```arr``` consecutive from the lowest number to the highest number.<br/><br/>\nFor example: <br/> If ```arr``` contains [4, 8, 6] then the output should be 2 because two numbers need to be added to the array (5 and 7) to make it a consecutive array of numbers from 4 to 8. Numbers in ```arr``` will be unique.",
-      "totalAttempts": 8739,
-      "totalCompleted": 2110,
+      "totalAttempts": 8764,
+      "totalCompleted": 2120,
       "totalStars": 35,
-      "voteScore": 291,
+      "voteScore": 294,
       "tags": [
         "Fundamentals",
         "Arrays",
@@ -2264,10 +2370,10 @@
         "url": "https://www.codewars.com/users/Blind4Basics"
       },
       "description": "Given an integer as input, can you round it to the next (meaning, \"higher\") multiple of 5?\n\nExamples:\n\n    input:    output:\n    0    ->   0\n    2    ->   5\n    3    ->   5\n    12   ->   15\n    21   ->   25\n    30   ->   30\n    -2   ->   0\n    -5   ->   -5\n    etc.\n\n\nInput may be any positive or negative integer (including 0).\n\nYou can assume that all inputs are valid integers.\n",
-      "totalAttempts": 32571,
-      "totalCompleted": 10393,
+      "totalAttempts": 32774,
+      "totalCompleted": 10445,
       "totalStars": 122,
-      "voteScore": 1601,
+      "voteScore": 1606,
       "tags": [
         "Fundamentals"
       ],
@@ -2323,10 +2429,10 @@
         "url": "https://www.codewars.com/users/smile67"
       },
       "description": "Given an array (arr) as an argument complete the function `countSmileys` that should return the total number of smiling faces.  \n\nRules for a smiling face:\n- Each smiley face must contain a valid pair of eyes. Eyes can be marked as `:` or `;`\n- A smiley face can have a nose but it does not have to. Valid characters for a nose are `-` or `~`\n- Every smiling face must have a smiling mouth that should be marked with either `)` or `D`\n\nNo additional characters are allowed except for those mentioned.  \n\n**Valid smiley face examples:** `:) :D ;-D :~)`  \n**Invalid smiley faces:**  `;( :> :} :]`\n\n## Example\n\n```\ncountSmileys([':)', ';(', ';}', ':-D']);       // should return 2;\ncountSmileys([';D', ':-(', ':-)', ';~)']);     // should return 3;\ncountSmileys([';]', ':[', ';*', ':$', ';-D']); // should return 1;\n```\n\n## Note\n\nIn case of an empty array return 0. You will not be tested with invalid input (input will always be an array). Order of the face (eyes, nose, mouth) elements will always be the same.\n",
-      "totalAttempts": 196740,
-      "totalCompleted": 38759,
-      "totalStars": 873,
-      "voteScore": 3720,
+      "totalAttempts": 197256,
+      "totalCompleted": 38910,
+      "totalStars": 874,
+      "voteScore": 3722,
       "tags": [
         "Fundamentals",
         "Regular Expressions",
@@ -2384,10 +2490,10 @@
         "url": "https://www.codewars.com/users/jhoffner"
       },
       "description": "The maximum sum subarray problem consists in finding the maximum sum of a contiguous subsequence in an array or list of integers:\n\n```haskell\nmaxSequence [-2, 1, -3, 4, -1, 2, 1, -5, 4]\n-- should be 6: [4, -1, 2, 1]\n```\n```javascript\nmaxSequence([-2, 1, -3, 4, -1, 2, 1, -5, 4])\n// should be 6: [4, -1, 2, 1]\n```\n```python\nmax_sequence([-2, 1, -3, 4, -1, 2, 1, -5, 4])\n# should be 6: [4, -1, 2, 1]\n```\n```clojure\n(max-sequence [-2, 1, -3, 4, -1, 2, 1, -5, 4])\n;; should be 6: [4, -1, 2, 1]\n```\n```java\nMax.sequence(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4});\n// should be 6: {4, -1, 2, 1}\n```\n```kotlin\nmaxSequence(listOf(-2, 1, -3, 4, -1, 2, 1, -5, 4));\n// should be 6: listOf(4, -1, 2, 1)\n```\n```c\nmaxSequence({-2, 1, -3, 4, -1, 2, 1, -5, 4}, 9)\n// should return 6, from sub-array: {4, -1, 2, 1}\n```\n```cpp\nmaxSequence({-2, 1, -3, 4, -1, 2, 1, -5, 4});\n//should be 6: {4, -1, 2, 1}\n```\n\nEasy case is when the list is made up of only positive numbers and the maximum sum is the sum of the whole array. If the list is made up of only negative numbers, return 0 instead.\n\nEmpty list is considered to have zero greatest sum. Note that the empty list or array is also a valid sublist/subarray.\n",
-      "totalAttempts": 196809,
-      "totalCompleted": 33135,
-      "totalStars": 1826,
-      "voteScore": 2784,
+      "totalAttempts": 197790,
+      "totalCompleted": 33306,
+      "totalStars": 1837,
+      "voteScore": 2791,
       "tags": [
         "Fundamentals",
         "Algorithms",
@@ -2399,7 +2505,7 @@
       ],
       "contributorsWanted": true,
       "unresolved": {
-        "issues": 3,
+        "issues": 2,
         "suggestions": 5
       }
     }
@@ -2447,10 +2553,10 @@
         "url": "https://www.codewars.com/users/NaMe613"
       },
       "description": "Can you find the needle in the haystack?\n\nWrite a function `findNeedle()` that takes an `array` full of junk but containing one `\"needle\"`\n\nAfter your function finds the needle it should return a message (as a string) that says:\n\n`\"found the needle at position \"` plus the `index` it found the needle, so: \n\n```python\nfind_needle(['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'randomJunk'])\n```\n```ruby\nfind_needle(['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'randomJunk'])\n```\n```elixir\nfind_needle(['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'randomJunk'])\n```\n```javascript\nfindNeedle(['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'randomJunk'])\n```\n```typescript\nfindNeedle(['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'randomJunk'])\n```\n```java\nfindNeedle(new Object[] {\"hay\", \"junk\", \"hay\", \"hay\", \"moreJunk\", \"needle\", \"randomJunk\"})\n```\n```haskell\nfindNeedle [\"hay\", \"junk\", \"hay\", \"hay\", \"moreJunk\", \"needle\", \"randomJunk\"]\n```\n```racket\n(find-needle '(\"hay\" \"junk\" \"hay\" \"hay\" \"moreJunk\" \"needle\",\"randomJunk\"))\n```\n\nshould return `\"found the needle at position 5\"`",
-      "totalAttempts": 120987,
-      "totalCompleted": 40344,
-      "totalStars": 390,
-      "voteScore": 3808,
+      "totalAttempts": 121279,
+      "totalCompleted": 40501,
+      "totalStars": 392,
+      "voteScore": 3820,
       "tags": [
         "Fundamentals",
         "Arrays",
@@ -2502,10 +2608,10 @@
         "url": "https://www.codewars.com/users/jhoffner"
       },
       "description": "Complete the function/method so that it returns the url with anything after the anchor (`#`) removed. \n\n## Examples\n\n```javascript\n// returns 'www.codewars.com'\nremoveUrlAnchor('www.codewars.com#about')\n\n// returns 'www.codewars.com?page=1' \nremoveUrlAnchor('www.codewars.com?page=1') \n```\n\n```c\nremove_url_anchor(\"www.codewars.com#about\")\n// returns \"www.codewars.com\"\n\nremove_url_anchor(\"www.codewars.com?page=1\") \n// returns \"www.codewars.com?page=1\"\n```\n\n```nasm\nurl1:  db    `www.codewars.com#about\\0`\nurl2:  db    `www.codewars.com?page=1\\0`\n    \n    mov rdi, url1\n    call rmurlahr    ; RAX <- `www.codewars.com\\0`\n    \n    mov rdi, url2\n    call rmurlahr    ; RAX <- `www.codewars.com?page=1\\0`\n```\n\n```coffeescript\n# returns 'www.codewars.com'\nremoveUrlAnchor('www.codewars.com#about')\n\n# returns 'www.codewars.com?page=1' \nremoveUrlAnchor('www.codewars.com?page=1') \n```\n\n```ruby\n# returns 'www.codewars.com'\nremove_url_anchor('www.codewars.com#about')\n\n# returns 'www.codewars.com?page=1' \nremove_url_anchor('www.codewars.com?page=1') \n```\n\n```python\n# returns 'www.codewars.com'\nremove_url_anchor('www.codewars.com#about')\n\n# returns 'www.codewars.com?page=1' \nremove_url_anchor('www.codewars.com?page=1') \n```\n\n```csharp\nKata.RemoveUrlAnchor(\"www.codewars.com#about\") => \"www.codewars.com\"\nKata.RemoveUrlAnchor(\"www.codewars.com?page=1\") => \"www.codewars.com?page=1\"\n```\n\n```haskell\nremoveUrlAnchor \"www.codewars.com#about\"  == \"www.codewars.com\"\nremoveUrlAnchor \"www.codewars.com?page=1\" == \"www.codewars.com?page=1\"\n```",
-      "totalAttempts": 46265,
-      "totalCompleted": 14346,
+      "totalAttempts": 46382,
+      "totalCompleted": 14404,
       "totalStars": 152,
-      "voteScore": 1108,
+      "voteScore": 1112,
       "tags": [
         "Fundamentals",
         "Regular Expressions",
@@ -2561,10 +2667,10 @@
         "url": "https://www.codewars.com/users/user5036852"
       },
       "description": "**Short Intro**\n\nSome of you might remember spending afternoons playing Street Fighter 2 in some Arcade back in the 90s or emulating it nowadays with the numerous emulators for retro consoles.\n\nCan you solve this kata? Suuure-You-Can!\n\nUPDATE: a new kata's harder version is available [here](https://www.codewars.com/kata/street-fighter-2-character-selection-part-2/python).\n\n**The Kata**\n\nYou'll have to simulate the video game's character selection screen behaviour, more specifically the selection grid.\nSuch screen looks like this:\n\nScreen:\n\n![screen](https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.fightersgeneration.com%2Fnp5%2Fgm%2Fsf2ce-s2.jpg&f=1 \"Character Selection Screen for Street Fighter 2\")\n\nSelection Grid Layout in text:\n```\n| Ryu  | E.Honda | Blanka  | Guile   | Balrog | Vega    |\n| Ken  | Chun Li | Zangief | Dhalsim | Sagat  | M.Bison |\n```\n\n**Input**\n\n- the list of game characters in a 2x6 grid;\n- the initial position of the selection cursor (top-left is `(0,0)`);\n- a list of moves of the selection cursor (which are `up`, `down`, `left`, `right`);\n\n**Output**\n\n- the list of characters who have been hovered by the selection cursor after all the moves (ordered and with repetition, all the ones after a move, wether successful or not, see tests);\n\n**Rules**\n\nSelection cursor is circular *horizontally* but *not vertically*!\n\nAs you might remember from the game, the selection cursor rotates horizontally but not vertically; that means that if I'm in the leftmost and I try to go left again I'll get to the rightmost (examples: from Ryu to Vega, from Ken to M.Bison) and vice versa from rightmost to leftmost.\n\nInstead, if I try to go further up from the upmost or further down from the downmost, I'll just stay where I am located (examples: you can't go lower than lowest row: Ken, Chun Li, Zangief, Dhalsim, Sagat and M.Bison in the above image; you can't go upper than highest row: Ryu, E.Honda, Blanka, Guile, Balrog and Vega in the above image).\n\n**Test**\n\nFor this easy version the fighters grid layout and the initial position will always be the same in all tests, only the list of moves change.\n\n**Notice**: changing some of the input data might not help you.\n\n**Examples**\n\n1.\n```\nfighters = [\n\t[\"Ryu\", \"E.Honda\", \"Blanka\", \"Guile\", \"Balrog\", \"Vega\"],\n\t[\"Ken\", \"Chun Li\", \"Zangief\", \"Dhalsim\", \"Sagat\", \"M.Bison\"]\n]\ninitial_position = (0,0)\nmoves = ['up', 'left', 'right', 'left', 'left']\n```\nthen I should get:\n```\n['Ryu', 'Vega', 'Ryu', 'Vega', 'Balrog']\n```\nas the characters I've been hovering with the selection cursor during my moves.\nNotice: Ryu is the first just because it \"fails\" the first `up`\nSee test cases for more examples.\n\n2.\n```\nfighters = [\n\t[\"Ryu\", \"E.Honda\", \"Blanka\", \"Guile\", \"Balrog\", \"Vega\"],\n\t[\"Ken\", \"Chun Li\", \"Zangief\", \"Dhalsim\", \"Sagat\", \"M.Bison\"]\n]\ninitial_position = (0,0)\nmoves = ['right', 'down', 'left', 'left', 'left', 'left', 'right']\n```\nResult:\n```\n['E.Honda', 'Chun Li', 'Ken', 'M.Bison', 'Sagat', 'Dhalsim', 'Sagat']\n```\n\n**OFF-TOPIC**\n\nSome music to get in the mood for this kata :\n\n[Street Fighter 2 - selection theme](https://www.youtube.com/watch?v=GR3d9FMBkC8)",
-      "totalAttempts": 27260,
-      "totalCompleted": 5862,
+      "totalAttempts": 27372,
+      "totalCompleted": 5886,
       "totalStars": 458,
-      "voteScore": 903,
+      "voteScore": 907,
       "tags": [
         "Fundamentals",
         "Graphs",
@@ -2616,10 +2722,10 @@
         "url": "https://www.codewars.com/users/narayanswa30663"
       },
       "description": "![](http://www.grindtv.com/wp-content/uploads/2015/08/drone.jpg)\n\nThe other day I saw an amazing video where a guy hacked some wifi controlled lightbulbs by flying a drone past them. Brilliant.\n\nIn this kata we will recreate that stunt... sort of.\n\nYou will be given two strings: `lamps` and `drone`. `lamps` represents a row of lamps, currently off, each represented by `x`. When these lamps are on, they should be represented by `o`.\n\nThe `drone` string represents the position of the drone `T` (any better suggestion for character??) and its flight path up until this point `=`. The drone always flies left to right, and always begins at the start of the row of lamps. Anywhere the drone has flown, including its current position, will result in the lamp at that position switching on.\n\nReturn the resulting `lamps` string. See example tests for more clarity.",
-      "totalAttempts": 8104,
-      "totalCompleted": 1777,
+      "totalAttempts": 8149,
+      "totalCompleted": 1781,
       "totalStars": 19,
-      "voteScore": 275,
+      "voteScore": 277,
       "tags": [
         "Fundamentals",
         "Strings",
@@ -2667,10 +2773,10 @@
         "url": "https://www.codewars.com/users/suic"
       },
       "description": "# Summary\n\nGiven a `Hash` made up of _keys_ and _values_, invert the hash by swapping them.\n\n# Examples\n\n```ruby\nGiven:\n\n  { 'a' => 1,\n    'b' => 2,\n    'c' => 3 }\n\nReturn:\n\n  { 1 => 'a',\n    2 => 'b',\n    3 => 'c' }\n\n\n\nGiven:\n\n  { 'foo'   => 'bar',\n    'hello' => 'world' }\n\nReturn:\n\n  { 'bar'   => 'foo',\n    'world' => 'hello' }\n```\n```python\nGiven:\n\n  { 'a' : 1,\n    'b' : 2,\n    'c' : 3 }\n\nReturn:\n\n  { 1 : 'a',\n    2 : 'b',\n    3 : 'c' }\n\n\n\nGiven:\n\n  { 'foo'   : 'bar',\n    'hello' : 'world' }\n\nReturn:\n\n  { 'bar'   : 'foo',\n    'world' : 'hello' }\n```\n```javascript\nGiven:\n\n  { a: '1',\n    b: '2',\n    c: '3' }\n\nReturn:\n\n  { 1: 'a',\n    2: 'b',\n    3: 'c' }\n\n\n\nGiven:\n\n  { foo:   'bar',\n    hello: 'world' }\n\nReturn:\n\n  { bar:   'foo',\n    world: 'hello' }\n```\n\n# Notes\n * Keys and values may be of any type appropriate for use as a key.\n * All hashes provided as input will have unique values, so the inversion is [involutive](https://en.wikipedia.org/wiki/Involution_%28mathematics%29). In other words, do not worry about identical values stored under different keys.\n\n```if:ruby\nRuby has a built-in `Hash#invert`. This is awesome, but is disabled for this kata so you can solve it yourself.\n```",
-      "totalAttempts": 2208,
-      "totalCompleted": 811,
+      "totalAttempts": 2211,
+      "totalCompleted": 813,
       "totalStars": 8,
-      "voteScore": 166,
+      "voteScore": 167,
       "tags": [
         "Fundamentals"
       ],
@@ -2733,10 +2839,10 @@
         "url": "https://www.codewars.com/users/Azuaron"
       },
       "description": "The goal of this exercise is to convert a string to a new string where each character in the new string is `\"(\"` if that character appears only once in the original string, or `\")\"` if that character appears more than once in the original string. Ignore capitalization when determining if a character is a duplicate.\n\n## Examples\n```\n\"din\"      =>  \"(((\"\n\"recede\"   =>  \"()()()\"\n\"Success\"  =>  \")())())\"\n\"(( @\"     =>  \"))((\" \n```\n\n**Notes**\n\nAssertion messages may be unclear about what they display in some languages. If you read `\"...It Should encode XXX\"`, the `\"XXX\"` is the expected result, not the input!",
-      "totalAttempts": 425333,
-      "totalCompleted": 83729,
-      "totalStars": 1878,
-      "voteScore": 8641,
+      "totalAttempts": 426701,
+      "totalCompleted": 84144,
+      "totalStars": 1887,
+      "voteScore": 8678,
       "tags": [
         "Fundamentals",
         "Strings",
@@ -2792,10 +2898,10 @@
         "url": "https://www.codewars.com/users/joh_pot"
       },
       "description": "Your task is to sort a given string. Each word in the string will contain a single number. This number is the position the word should have in the result.\n\nNote: Numbers can be from 1 to 9. So 1 will be the first word (not 0).\n\nIf the input string is empty, return an empty string.\nThe words in the input String will only contain valid consecutive numbers.\n\n\n## Examples\n\n```\n\"is2 Thi1s T4est 3a\"  -->  \"Thi1s is2 3a T4est\"\n\"4of Fo1r pe6ople g3ood th5e the2\"  -->  \"Fo1r the2 g3ood 4of th5e pe6ople\"\n\"\"  -->  \"\"\n```",
-      "totalAttempts": 294835,
-      "totalCompleted": 68504,
-      "totalStars": 1814,
-      "voteScore": 6983,
+      "totalAttempts": 296819,
+      "totalCompleted": 69240,
+      "totalStars": 1827,
+      "voteScore": 7033,
       "tags": [
         "Fundamentals",
         "Strings",
@@ -2849,10 +2955,10 @@
         "url": "https://www.codewars.com/users/g964"
       },
       "description": "Given a credit card number we can determine who the issuer/vendor is with a few basic knowns.\n\n```if:python\nComplete the function `get_issuer()` that will use the values shown below to determine the card issuer for a given card number. If the number cannot be matched then the function should return the string `Unknown`.\n```\n```if-not:python\nComplete the function `getIssuer()` that will use the values shown below to determine the card issuer for a given card number. If the number cannot be matched then the function should return the string `Unknown`.\n```\n```if:typescript\nWhere `Issuer` is defined with the following enum type.\n~~~typescript\nenum Issuer {\n  VISA = 'VISA',\n  AMEX = 'AMEX',\n  Mastercard = 'Mastercard',\n  Discover = 'Discover',\n  Unknown = 'Unknown',\n}\n~~~\n```\n\n```markdown\n| Card Type  | Begins With          | Number Length |\n|------------|----------------------|---------------|\n| AMEX       | 34 or 37             | 15            |\n| Discover   | 6011                 | 16            |\n| Mastercard | 51, 52, 53, 54 or 55 | 16            |\n| VISA       | 4                    | 13 or 16      |\n```\n\n```if:c,cpp\n**C/C++ note:** The return value in C is not freed.\n```\n\n## Examples\n\n```if-not:python\n~~~js\ngetIssuer(4111111111111111) == \"VISA\"\ngetIssuer(4111111111111) == \"VISA\"\ngetIssuer(4012888888881881) == \"VISA\"\ngetIssuer(378282246310005) == \"AMEX\"\ngetIssuer(6011111111111117) == \"Discover\"\ngetIssuer(5105105105105100) == \"Mastercard\"\ngetIssuer(5105105105105106) == \"Mastercard\"\ngetIssuer(9111111111111111) == \"Unknown\"\n~~~\n```\n```if:python\n~~~py\nget_issuer(4111111111111111) == \"VISA\"\nget_issuer(4111111111111) == \"VISA\"\nget_issuer(4012888888881881) == \"VISA\"\nget_issuer(378282246310005) == \"AMEX\"\nget_issuer(6011111111111117) == \"Discover\"\nget_issuer(5105105105105100) == \"Mastercard\"\nget_issuer(5105105105105106) == \"Mastercard\"\nget_issuer(9111111111111111) == \"Unknown\"\n~~~\n```",
-      "totalAttempts": 27133,
-      "totalCompleted": 4010,
+      "totalAttempts": 27142,
+      "totalCompleted": 4013,
       "totalStars": 87,
-      "voteScore": 544,
+      "voteScore": 545,
       "tags": [
         "Algorithms"
       ],
@@ -2911,10 +3017,10 @@
         "url": "https://www.codewars.com/users/Blind4Basics"
       },
       "description": "## Task\n\n**_Given_** *an array of integers* , **_Find_** **_the maximum product_** *obtained from multiplying 2 adjacent numbers in the array*.\n____\n\n# Notes\n\n* **_Array/list_** size is *at least 2*.\n\n* **_Array/list_** numbers could be a *mixture of positives, negatives also zeroes* .\n___\n\n# Input >> Output Examples\n```cpp\nadjacentElementsProduct([1, 2, 3]); ==> return 6\n```\n```prolog\nadjacent_elements_product([1, 2, 3], 6).\n```\n\n## **_Explanation_**:\n\n* **_The maximum product_** *obtained from multiplying* ` 2 * 3 = 6 `, and **_they're adjacent numbers in the array_**.\n___\n```cpp\nadjacentElementsProduct([9, 5, 10, 2, 24, -1, -48]); ==> return 50\n```\n```prolog\nadjacent_elements_product([9, 5, 10, 2, 24, -1, -48], 50).\n```\n## **_Explanation_**:\n**_Max product_** obtained *from multiplying*   ``` 5 * 10  =  50  ```.\n___\n```cpp\nadjacentElementsProduct([-23, 4, -5, 99, -27, 329, -2, 7, -921])  ==>  return -14\n```\n```prolog\nadjacent_elements_product([-23, 4, -5, 99, -27, 329, -2, 7, -921], -14).\n```\n\n## **_Explanation_**:\n\n* **_The maximum product_** *obtained from multiplying* ` -2 * 7 = -14 `, and **_they're adjacent numbers in the array_**.\n___\n___\n___\n\n# [Playing with Numbers Series](https://www.codewars.com/collections/playing-with-numbers)\n\n# [Playing With Lists/Arrays Series](https://www.codewars.com/collections/playing-with-lists-slash-arrays)\n\n# [For More Enjoyable Katas](http://www.codewars.com/users/MrZizoScream/authored)\n___\n\n## ALL translations are welcomed\n\n## Enjoy Learning !!\n# Zizou\n",
-      "totalAttempts": 18367,
-      "totalCompleted": 6389,
-      "totalStars": 62,
-      "voteScore": 829,
+      "totalAttempts": 18401,
+      "totalCompleted": 6410,
+      "totalStars": 63,
+      "voteScore": 831,
       "tags": [
         "Fundamentals",
         "Numbers",
@@ -2987,10 +3093,10 @@
         "url": "https://www.codewars.com/users/xcthulhu"
       },
       "description": "[Digital root](https://en.wikipedia.org/wiki/Digital_root) is the _recursive sum of all the digits in a number._\n\nGiven `n`, take the sum of the digits of `n`. If that value has more than one digit, continue reducing in this way until a single-digit number is produced. The input will be a non-negative integer.\n\n## Examples\n```\n    16  -->  1 + 6 = 7\n   942  -->  9 + 4 + 2 = 15  -->  1 + 5 = 6\n132189  -->  1 + 3 + 2 + 1 + 8 + 9 = 24  -->  2 + 4 = 6\n493193  -->  4 + 9 + 3 + 1 + 9 + 3 = 29  -->  2 + 9 = 11  -->  1 + 1 = 2\n```\n",
-      "totalAttempts": 514378,
-      "totalCompleted": 112241,
-      "totalStars": 1992,
-      "voteScore": 11049,
+      "totalAttempts": 516328,
+      "totalCompleted": 112796,
+      "totalStars": 2003,
+      "voteScore": 11086,
       "tags": [
         "Algorithms",
         "Mathematics",
@@ -3001,7 +3107,7 @@
       "contributorsWanted": true,
       "unresolved": {
         "issues": 2,
-        "suggestions": 7
+        "suggestions": 6
       }
     }
   },
@@ -3052,10 +3158,10 @@
         "url": "https://www.codewars.com/users/jhoffner"
       },
       "description": "Your task is to make a function that can take any non-negative integer as an argument and return it with its digits in descending order. Essentially, rearrange the digits to create the highest possible number.\n\n### Examples:\nInput: `42145`\nOutput: `54421`\n\nInput: `145263`\nOutput: `654321`\n\nInput: `123456789`\nOutput: `987654321`\n\n",
-      "totalAttempts": 447693,
-      "totalCompleted": 99628,
-      "totalStars": 1285,
-      "voteScore": 9752,
+      "totalAttempts": 449244,
+      "totalCompleted": 100230,
+      "totalStars": 1290,
+      "voteScore": 9785,
       "tags": [
         "Fundamentals",
         "Functions",
@@ -3101,10 +3207,10 @@
         "url": "https://www.codewars.com/users/xcthulhu"
       },
       "description": "Write an algorithm that takes an array and moves all of the zeros to the end, preserving the order of the other elements.\n\n```php\nmoveZeros([false,1,0,1,2,0,1,3,\"a\"]) // returns[false,1,1,2,1,3,\"a\",0,0]\n```\n```javascript\nmoveZeros([false,1,0,1,2,0,1,3,\"a\"]) // returns[false,1,1,2,1,3,\"a\",0,0]\n```\n```python\nmove_zeros([False,1,0,1,2,0,1,3,\"a\"]) # returns[False,1,1,2,1,3,\"a\",0,0]\n```\n```coffeescript\nmoveZeros [false,1,0,1,2,0,1,3,\"a\"] # returns[false,1,1,2,1,3,\"a\",0,0]\n```\n```csharp\nKata.MoveZeroes(new int[] {1, 2, 0, 1, 0, 1, 0, 3, 0, 1}) => new int[] {1, 2, 1, 1, 3, 1, 0, 0, 0, 0}\n```",
-      "totalAttempts": 283921,
-      "totalCompleted": 49497,
-      "totalStars": 897,
-      "voteScore": 3809,
+      "totalAttempts": 285370,
+      "totalCompleted": 49928,
+      "totalStars": 899,
+      "voteScore": 3822,
       "tags": [
         "Algorithms",
         "Interview Questions",
@@ -3164,10 +3270,10 @@
         "url": "https://www.codewars.com/users/jhoffner"
       },
       "description": "Jaden Smith, the son of Will Smith, is the star of films such as The Karate Kid (2010) and After Earth (2013). Jaden is also known for [some of his philosophy that he delivers via Twitter](https://twitter.com/jaden). When writing on Twitter, he is known for almost always capitalizing every word. For simplicity, you'll have to capitalize each word, check out how contractions are expected to be in the example below.\n\nYour task is to convert strings to how they would be written by Jaden Smith. The strings are actual quotes from Jaden Smith, but they are not capitalized in the same way he originally typed them.\n\nExample:\n\n    Not Jaden-Cased: \"How can mirrors be real if our eyes aren't real\"\n    Jaden-Cased:     \"How Can Mirrors Be Real If Our Eyes Aren't Real\"\n\n```if:java    \nNote that the **Java version** expects a return value of null for an empty string or null.\n```\n\n[Link to Jaden's former Twitter account @officialjaden via archive.org](https://web.archive.org/web/20190624190255/https://twitter.com/officialjaden)",
-      "totalAttempts": 391374,
-      "totalCompleted": 94279,
-      "totalStars": 1204,
-      "voteScore": 8296,
+      "totalAttempts": 392465,
+      "totalCompleted": 94729,
+      "totalStars": 1207,
+      "voteScore": 8334,
       "tags": [
         "Fundamentals",
         "Strings",
@@ -3229,10 +3335,10 @@
         "url": "https://www.codewars.com/users/xDranik"
       },
       "description": "Write a function that takes in a string of one or more words, and returns the same string, but with all five or more letter words reversed (Just like the name of this Kata). Strings passed in will consist of only letters and spaces. Spaces will be included only when more than one word is present.\n\nExamples:\nspinWords( \"Hey fellow warriors\" ) => returns \"Hey wollef sroirraw\" \nspinWords( \"This is a test\") => returns \"This is a test\" \nspinWords( \"This is another test\" )=> returns \"This is rehtona test\"\n",
-      "totalAttempts": 439134,
-      "totalCompleted": 99090,
-      "totalStars": 1342,
-      "voteScore": 10570,
+      "totalAttempts": 441076,
+      "totalCompleted": 99654,
+      "totalStars": 1347,
+      "voteScore": 10619,
       "tags": [
         "Algorithms",
         "Strings",
@@ -3285,10 +3391,10 @@
         "url": "https://www.codewars.com/users/jhoffner"
       },
       "description": "Jamie is a programmer, and James' girlfriend. She likes diamonds, and wants a diamond string from James. Since James doesn't know how to make this happen, he needs your help.\n\n## Task\n\nYou need to return a string that looks like a diamond shape when printed on the screen, using asterisk (`*`) characters. Trailing spaces should be removed, and every line must be terminated with a newline character (`\\n`).\n\nReturn `null/nil/None/...` if the input is an even number or negative, as it is not possible to print a diamond of even or negative size.\n\n\n## Examples\n\nA size 3 diamond:\n\n```\n *\n***\n *\n```\n\n...which would appear as a string of `\" *\\n***\\n *\\n\"`\n\n\nA size 5 diamond:\n\n```\n  *\n ***\n*****\n ***\n  *\n```\n\n...that is: \n```\n\"  *\\n ***\\n*****\\n ***\\n  *\\n\"\n```\n",
-      "totalAttempts": 143748,
-      "totalCompleted": 18867,
-      "totalStars": 959,
-      "voteScore": 1830,
+      "totalAttempts": 143891,
+      "totalCompleted": 18917,
+      "totalStars": 966,
+      "voteScore": 1834,
       "tags": [
         "Fundamentals",
         "Strings",
@@ -3344,10 +3450,10 @@
         "url": "https://www.codewars.com/users/jhoffner"
       },
       "description": "An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.\n\n```haskell\nisIsogram \"Dermatoglyphics\" == true\nisIsogram \"aba\" == false\nisIsogram \"moOse\" == false -- ignore letter case\n```\n```javascript\nisIsogram(\"Dermatoglyphics\") == true\nisIsogram(\"aba\") == false\nisIsogram(\"moOse\") == false // -- ignore letter case\n```\n```python\nis_isogram(\"Dermatoglyphics\" ) == true\nis_isogram(\"aba\" ) == false\nis_isogram(\"moOse\" ) == false # -- ignore letter case\n```\n```ruby\nis_isogram(\"Dermatoglyphics\" ) == true\nis_isogram(\"aba\" ) == false\nis_isogram(\"moOse\" ) == false # -- ignore letter case\n```\n```C\nis_isogram(\"Dermatoglyphics\" ) == true;\nis_isogram(\"aba\" ) == false;\nis_isogram(\"moOse\" ) == false; // -- ignore letter case\n```\n```julia\nisisogram(\"Dermatoglyphics\" ) == true\nisisogram(\"aba\" ) == false\nisisogram(\"moOse\" ) == false # -- ignore letter case\n```\n",
-      "totalAttempts": 342911,
-      "totalCompleted": 86896,
-      "totalStars": 1128,
-      "voteScore": 8765,
+      "totalAttempts": 344108,
+      "totalCompleted": 87359,
+      "totalStars": 1138,
+      "voteScore": 8799,
       "tags": [
         "Fundamentals",
         "Strings",
@@ -3400,11 +3506,11 @@
         "username": "jhoffner",
         "url": "https://www.codewars.com/users/jhoffner"
       },
-      "description": "Implement the function unique_in_order which takes as argument a sequence and returns a list of items without any elements with the same value next to each other and preserving the original order of elements.\r\n\r\nFor example:\r\n\r\n```cpp\r\nuniqueInOrder(\"AAAABBBCCDAABBB\") == {'A', 'B', 'C', 'D', 'A', 'B'}\r\nuniqueInOrder(\"ABBCcAD\")         == {'A', 'B', 'C', 'c', 'A', 'D'}\r\nuniqueInOrder([1,2,2,3,3])       == {1,2,3}\r\n```\r\n```javascript\r\nuniqueInOrder('AAAABBBCCDAABBB') == ['A', 'B', 'C', 'D', 'A', 'B']\r\nuniqueInOrder('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']\r\nuniqueInOrder([1,2,2,3,3])       == [1,2,3]\r\n```\r\n```python\r\nunique_in_order('AAAABBBCCDAABBB') == ['A', 'B', 'C', 'D', 'A', 'B']\r\nunique_in_order('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']\r\nunique_in_order([1,2,2,3,3])       == [1,2,3]\r\n```\r\n```ruby\r\nunique_in_order('AAAABBBCCDAABBB') == ['A', 'B', 'C', 'D', 'A', 'B']\r\nunique_in_order('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']\r\nunique_in_order([1,2,2,3,3])       == [1,2,3]\r\n```\r\n```haskell\r\nuniqueInOrder \"AAAABBBCCDAABBB\" == \"ABCDAB\"\r\nuniqueInOrder \"ABBCcAD\"         == \"ABCcAD\"\r\nuniqueInOrder [1,2,2,3,3]       == [1,2,3]\r\n```\r\n```crystal\r\nunique_in_order(\"AAAABBBCCDAABBB\") == ['A', 'B', 'C', 'D', 'A', 'B']\r\nunique_in_order(\"ABBCcAD\")         == ['A', 'B', 'C', 'c', 'A', 'D']\r\nunique_in_order([1,2,2,3,3])       == [1,2,3]\r\n```\r\n",
-      "totalAttempts": 436257,
-      "totalCompleted": 74159,
-      "totalStars": 1459,
-      "voteScore": 6412,
+      "description": "Implement the function unique_in_order which takes as argument a sequence and returns a list of items without any elements with the same value next to each other and preserving the original order of elements.\n\nFor example:\n\n```cpp\nuniqueInOrder(\"AAAABBBCCDAABBB\") == {'A', 'B', 'C', 'D', 'A', 'B'}\nuniqueInOrder(\"ABBCcAD\")         == {'A', 'B', 'C', 'c', 'A', 'D'}\nuniqueInOrder([1,2,2,3,3])       == {1,2,3}\n```\n```javascript\nuniqueInOrder('AAAABBBCCDAABBB') == ['A', 'B', 'C', 'D', 'A', 'B']\nuniqueInOrder('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']\nuniqueInOrder([1,2,2,3,3])       == [1,2,3]\n```\n```python\nunique_in_order('AAAABBBCCDAABBB') == ['A', 'B', 'C', 'D', 'A', 'B']\nunique_in_order('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']\nunique_in_order([1,2,2,3,3])       == [1,2,3]\n```\n```ruby\nunique_in_order('AAAABBBCCDAABBB') == ['A', 'B', 'C', 'D', 'A', 'B']\nunique_in_order('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']\nunique_in_order([1,2,2,3,3])       == [1,2,3]\n```\n```haskell\nuniqueInOrder \"AAAABBBCCDAABBB\" == \"ABCDAB\"\nuniqueInOrder \"ABBCcAD\"         == \"ABCcAD\"\nuniqueInOrder [1,2,2,3,3]       == [1,2,3]\n```\n```crystal\nunique_in_order(\"AAAABBBCCDAABBB\") == ['A', 'B', 'C', 'D', 'A', 'B']\nunique_in_order(\"ABBCcAD\")         == ['A', 'B', 'C', 'c', 'A', 'D']\nunique_in_order([1,2,2,3,3])       == [1,2,3]\n```\n",
+      "totalAttempts": 437996,
+      "totalCompleted": 74529,
+      "totalStars": 1467,
+      "voteScore": 6431,
       "tags": [
         "Fundamentals",
         "Advanced Language Features",
@@ -3454,10 +3560,10 @@
         "url": "https://www.codewars.com/users/jhoffner"
       },
       "description": "Bob is preparing to pass IQ test. The most frequent task in this test is `to find out which one of the given numbers differs from the others`. Bob observed that one number usually differs from the others in **evenness**. Help Bob — to check his answers, he needs a program that among the given numbers finds one that is different in evenness, and return a position of this number.\n\n`!` Keep in mind that your task is to help Bob solve a `real IQ test`, which means indexes of the elements start from `1 (not 0)`\n\n##Examples :\n\n```csharp\nIQ.Test(\"2 4 7 8 10\") => 3 // Third number is odd, while the rest of the numbers are even\n\nIQ.Test(\"1 2 1 1\") => 2 // Second number is even, while the rest of the numbers are odd\n```\n```javascript\niqTest(\"2 4 7 8 10\") => 3 // Third number is odd, while the rest of the numbers are even\n\niqTest(\"1 2 1 1\") => 2 // Second number is even, while the rest of the numbers are odd\n```\n```typescript\niqTest(\"2 4 7 8 10\") => 3 // Third number is odd, while the rest of the numbers are even\n\niqTest(\"1 2 1 1\") => 2 // Second number is even, while the rest of the numbers are odd\n```\n```ruby\niq_test(\"2 4 7 8 10\") => 3 // Third number is odd, while the rest of the numbers are even\n\niq_test(\"1 2 1 1\") => 2 // Second number is even, while the rest of the numbers are odd\n```\n \n```python\niq_test(\"2 4 7 8 10\") => 3 // Third number is odd, while the rest of the numbers are even\n\niq_test(\"1 2 1 1\") => 2 // Second number is even, while the rest of the numbers are odd\n```\n  \n",
-      "totalAttempts": 376999,
-      "totalCompleted": 64892,
-      "totalStars": 1513,
-      "voteScore": 6595,
+      "totalAttempts": 378109,
+      "totalCompleted": 65205,
+      "totalStars": 1517,
+      "voteScore": 6614,
       "tags": [
         "Fundamentals",
         "Logic"
@@ -3517,10 +3623,10 @@
         "url": "https://www.codewars.com/users/jhoffner"
       },
       "description": "Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string). \n\nExamples:\n\n```javascript\nsolution('abc', 'bc') // returns true\nsolution('abc', 'd') // returns false\n```\n```coffeescript\nsolution('abc', 'bc') # returns true\nsolution('abc', 'd') # returns false\n```\n```python\nsolution('abc', 'bc') # returns true\nsolution('abc', 'd') # returns false\n```\n```go\nsolution(\"abc\", \"bc\") // returns true\nsolution(\"abc\", \"d\") // returns false\n```\n```prolog\nsolution(\"abc\", \"bc\"). % match\n\\+ solution(\"abc\", \"d\"). % no match\n```\n```clojure\n(solution \"abc\" \"bc\") ; returns true\n(solution \"abc\" \"d'\" ; returns false\n```",
-      "totalAttempts": 161856,
-      "totalCompleted": 39047,
-      "totalStars": 327,
-      "voteScore": 2723,
+      "totalAttempts": 162734,
+      "totalCompleted": 39300,
+      "totalStars": 329,
+      "voteScore": 2740,
       "tags": [
         "Fundamentals",
         "Strings",
@@ -3567,8 +3673,8 @@
         "url": "https://www.codewars.com/users/jhoffner"
       },
       "description": "Implement a function which takes a sequence of objects and a property name, and returns a sequence containing the named property of each object.\n\nFor example:\n```javascript\npluck([{a:1}, {a:2}], 'a')      // -> [1,2]\npluck([{a:1, b:3}, {a:2}], 'b') // -> [3, undefined]\n```\n\n```python\npluck([{'a':1}, {'a':2}], 'a')        # -> [1,2]\npluck([{'a':1, 'b':3}, {'a':2}], 'b') # -> [3, None]\n```\n\nIf an object is missing the property, you should just leave it as `undefined/None` in the output array.",
-      "totalAttempts": 14893,
-      "totalCompleted": 4193,
+      "totalAttempts": 14901,
+      "totalCompleted": 4197,
       "totalStars": 59,
       "voteScore": 234,
       "tags": [
@@ -3623,9 +3729,9 @@
         "url": "https://www.codewars.com/users/myjinxin2015"
       },
       "description": "Given a string of digits confirm whether the sum of all the individual even digits are greater than the sum of all the indiviudal odd digits. Always a string of numbers will be given.\n\n* If the sum of even numbers is greater than the odd numbers return: `\"Even is greater than Odd\"`\n\n* If the sum of odd numbers is greater than the sum of even numbers return: `\"Odd is greater than Even\"`\n  \n* If the total of both even and odd numbers are identical return: `\"Even and Odd are the same\"`\n  \n",
-      "totalAttempts": 4569,
-      "totalCompleted": 1783,
-      "totalStars": 32,
+      "totalAttempts": 4591,
+      "totalCompleted": 1791,
+      "totalStars": 33,
       "voteScore": 280,
       "tags": [
         "Fundamentals"
@@ -3677,10 +3783,10 @@
         "url": "https://www.codewars.com/users/jhoffner"
       },
       "description": "Usually when you buy something, you're asked whether your credit card number, phone number or answer to your most secret question is still correct. However, since someone could look over your shoulder, you don't want that shown on your screen. Instead, we mask it.\n\nYour task is to write a function `maskify`, which changes all but the last four characters into `'#'`.\n\n## Examples\n```javascript\nmaskify(\"4556364607935616\") == \"############5616\"\nmaskify(     \"64607935616\") ==      \"#######5616\"\nmaskify(               \"1\") ==                \"1\"\nmaskify(                \"\") ==                 \"\"\n\n// \"What was the name of your first pet?\"\nmaskify(\"Skippy\")                                   == \"##ippy\"\nmaskify(\"Nananananananananananananananana Batman!\") == \"####################################man!\"\n```\n\n```coffeescript\nmaskify(\"4556364607935616\") == \"############5616\"\nmaskify(     \"64607935616\") ==      \"#######5616\"\nmaskify(               \"1\") ==                \"1\"\nmaskify(                \"\") ==                 \"\"\n\n# \"What was the name of your first pet?\"\nmaskify(\"Skippy\")                                   == \"##ippy\"\nmaskify(\"Nananananananananananananananana Batman!\") == \"####################################man!\"\n```\n\n```python\nmaskify(\"4556364607935616\") == \"############5616\"\nmaskify(     \"64607935616\") ==      \"#######5616\"\nmaskify(               \"1\") ==                \"1\"\nmaskify(                \"\") ==                 \"\"\n\n# \"What was the name of your first pet?\"\nmaskify(\"Skippy\")                                   == \"##ippy\"\nmaskify(\"Nananananananananananananananana Batman!\") == \"####################################man!\"\n```\n\n```haskell\nmaskify \"4556364607935616\" == \"############5616\"\nmaskify      \"64607935616\" ==      \"#######5616\"\nmaskify                \"1\" ==                \"1\"\nmaskify                 \"\" ==                 \"\"\n\n-- \"What was the name of your first pet?\"\nmaskify \"Skippy\" == \"##ippy\"\nmaskify \"Nananananananananananananananana Batman!\"\n     -- \"####################################man!\"\n```\n\n```ruby\nmaskify('4556364607935616') # should return '############5616'\nmaskify('64607935616')      # should return '#######5616'\nmaskify('1')                # should return '1'\nmaskify('')                 # should return ''\n\n# \"What was the name of your first pet?\"\nmaskify('Skippy')                                   # should return '##ippy'\nmaskify('Nananananananananananananananana Batman!') # should return '####################################man!'\n```\n\n```csharp\nKata.Maskify(\"4556364607935616\"); // should return \"############5616\"\nKata.Maskify(\"64607935616\");      // should return \"#######5616\"\nKata.Maskify(\"1\");                // should return \"1\"\nKata.Maskify(\"\");                 // should return \"\"\n\n// \"What was the name of your first pet?\"\nKata.Maskify(\"Skippy\");                                   // should return \"##ippy\"\nKata.Maskify(\"Nananananananananananananananana Batman!\"); // should return \"####################################man!\"\n```\n\n```java\nMaskify.Maskify(\"4556364607935616\"); // should return \"############5616\"\nMaskify.Maskify(\"64607935616\");      // should return \"#######5616\"\nMaskify.Maskify(\"1\");                // should return \"1\"\nMaskify.Maskify(\"\");                 // should return \"\"\n\n// \"What was the name of your first pet?\"\nMaskify.Maskify(\"Skippy\");                                   // should return \"##ippy\"\nMaskify.Maskify(\"Nananananananananananananananana Batman!\"); // should return \"####################################man!\"\n```\n\n```rust\nmaskify(\"4556364607935616\") == String::from(\"############5616\");\nmaskify(\"64607935616\") == String::from(\"#######5616\");\nmaskify(\"1\") == String::from(\"1\");\nmaskify(\"\") == String::from(\"\");\n\n// \"What was the name of your first pet?\"\nmaskify(\"Skippy\") == String::from(\"##ippy\");\nmaskify(\"Nananananananananananananananana Batman!\") ==String::from(\"####################################man!\");\n```",
-      "totalAttempts": 250345,
-      "totalCompleted": 72675,
-      "totalStars": 754,
-      "voteScore": 7410,
+      "totalAttempts": 251225,
+      "totalCompleted": 73061,
+      "totalStars": 758,
+      "voteScore": 7427,
       "tags": [
         "Algorithms",
         "Utilities",
@@ -3746,10 +3852,10 @@
         "url": "https://www.codewars.com/users/OverZealous"
       },
       "description": "It's the academic year's end, fateful moment of your school report.\nThe averages must be calculated. All the students come to you and entreat you to calculate their average for them.\nEasy ! You just need to write a script.\n\nReturn the average of the given array rounded **down** to its nearest integer.\n\nThe array will never be empty.\n",
-      "totalAttempts": 71518,
-      "totalCompleted": 30993,
-      "totalStars": 212,
-      "voteScore": 2704,
+      "totalAttempts": 71776,
+      "totalCompleted": 31097,
+      "totalStars": 214,
+      "voteScore": 2716,
       "tags": [
         "Algorithms",
         "Arrays",
@@ -3800,10 +3906,10 @@
         "url": "https://www.codewars.com/users/smile67"
       },
       "description": "The first input array is the key to the correct answers to an exam, like [\"a\", \"a\", \"b\", \"d\"]. The second one contains a student's submitted answers. \n\nThe two arrays are not empty and are the same length. Return the score for this array of answers, giving +4 for each correct answer, -1 for each incorrect answer, and +0 for each blank answer, represented as an empty string (in C the space character is used).\n\nIf the score < 0, return 0.\n\nFor example:\n```\ncheckExam([\"a\", \"a\", \"b\", \"b\"], [\"a\", \"c\", \"b\", \"d\"]) → 6\ncheckExam([\"a\", \"a\", \"c\", \"b\"], [\"a\", \"a\", \"b\",  \"\"]) → 7\ncheckExam([\"a\", \"a\", \"b\", \"c\"], [\"a\", \"a\", \"b\", \"c\"]) → 16\ncheckExam([\"b\", \"c\", \"b\", \"a\"], [\"\",  \"a\", \"a\", \"c\"]) → 0\n```\n",
-      "totalAttempts": 42939,
-      "totalCompleted": 11405,
+      "totalAttempts": 43093,
+      "totalCompleted": 11457,
       "totalStars": 152,
-      "voteScore": 1252,
+      "voteScore": 1260,
       "tags": [
         "Fundamentals",
         "Arrays",
@@ -3854,10 +3960,10 @@
         "url": "https://www.codewars.com/users/FArekkusu"
       },
       "description": "# A wolf in sheep's clothing\n\nWolves have been reintroduced to Great Britain. You are a sheep farmer, and are now plagued by wolves which pretend to be sheep. Fortunately, you are good at spotting them. \n\nWarn the sheep in front of the wolf that it is about to be eaten. Remember that you are standing **at the front of the queue** which is at the end of the array:\n\n```\n[sheep, sheep, sheep, sheep, sheep, wolf, sheep, sheep]      (YOU ARE HERE AT THE FRONT OF THE QUEUE)\n   7      6      5      4      3            2      1\n```\n\nIf the wolf is the closest animal to you, return `\"Pls go away and stop eating my sheep\"`. Otherwise, return `\"Oi! Sheep number N! You are about to be eaten by a wolf!\"` where `N` is the sheep's position in the queue.\n\n**Note:** there will always be exactly one wolf in the array.\n\n## Examples\n\n```javascript\nwarnTheSheep([\"sheep\", \"sheep\", \"sheep\", \"wolf\", \"sheep\"]) === \"Oi! Sheep number 1! You are about to be eaten by a wolf!\"\n\nwarnTheSheep([\"sheep\", \"sheep\", \"wolf\"]) === \"Pls go away and stop eating my sheep\"\n```\n```python\nwarn_the_sheep([\"sheep\", \"sheep\", \"sheep\", \"wolf\", \"sheep\"]) == 'Oi! Sheep number 1! You are about to be eaten by a wolf!'\n\nwarn_the_sheep(['sheep', 'sheep', 'wolf']) == 'Pls go away and stop eating my sheep'\n```",
-      "totalAttempts": 32429,
-      "totalCompleted": 9065,
+      "totalAttempts": 32536,
+      "totalCompleted": 9101,
       "totalStars": 132,
-      "voteScore": 929,
+      "voteScore": 934,
       "tags": [
         "Fundamentals",
         "Arrays",
@@ -3918,10 +4024,10 @@
         "url": "https://www.codewars.com/users/JohanWiltink"
       },
       "description": "I'm new to coding and now I want to get the sum of two arrays...actually the sum of all their elements. I'll appreciate for your help.\n\nP.S. Each array includes only integer numbers. Output is a number too.",
-      "totalAttempts": 63130,
-      "totalCompleted": 29676,
-      "totalStars": 159,
-      "voteScore": 2720,
+      "totalAttempts": 63361,
+      "totalCompleted": 29788,
+      "totalStars": 161,
+      "voteScore": 2728,
       "tags": [
         "Bugs",
         "Fundamentals",
@@ -3992,10 +4098,10 @@
         "url": "https://www.codewars.com/users/jhoffner"
       },
       "description": "### Count the number of Duplicates\n\nWrite a function that will return the count of **distinct case-insensitive** alphabetic characters and numeric digits that occur more than \nonce in the input string. \nThe input string can be assumed to contain only alphabets (both uppercase and lowercase) and numeric digits.\n\n\n### Example\n\"abcde\" -> 0             `# no characters repeats more than once`  \n\"aabbcde\" -> 2           `# 'a' and 'b'`  \n\"aabBcde\" -> 2           ``# 'a' occurs twice and 'b' twice (`b` and `B`)``  \n\"indivisibility\" -> 1    `# 'i' occurs six times`  \n\"Indivisibilities\" -> 2  `# 'i' occurs seven times and 's' occurs twice`  \n\"aA11\" -> 2              `# 'a' and '1'`  \n\"ABBA\" -> 2              `# 'A' and 'B' each occur twice`\n",
-      "totalAttempts": 462517,
-      "totalCompleted": 88010,
-      "totalStars": 2042,
-      "voteScore": 8769,
+      "totalAttempts": 464084,
+      "totalCompleted": 88523,
+      "totalStars": 2047,
+      "voteScore": 8811,
       "tags": [
         "Fundamentals",
         "Strings",
@@ -4003,7 +4109,7 @@
       ],
       "contributorsWanted": true,
       "unresolved": {
-        "issues": 4,
+        "issues": 5,
         "suggestions": 6
       }
     }
@@ -4042,8 +4148,8 @@
         "url": "https://www.codewars.com/users/JohanWiltink"
       },
       "description": "Your task is to remove all **consecutive duplicate** words from a string, leaving only first words entries. For example:\n\n```\n\"alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta\"\n\n--> \"alpha beta gamma delta alpha beta gamma delta\"\n```",
-      "totalAttempts": 6245,
-      "totalCompleted": 1645,
+      "totalAttempts": 6289,
+      "totalCompleted": 1651,
       "totalStars": 40,
       "voteScore": 273,
       "tags": [
@@ -4104,10 +4210,10 @@
         "url": "https://www.codewars.com/users/jhoffner"
       },
       "description": "## Task\n\nYou will be given an array of numbers. You have to sort the odd numbers in ascending order while leaving the even numbers at their original positions.\n\n### Examples\n\n```\n[7, 1]  =>  [1, 7]\n[5, 8, 6, 3, 4]  =>  [3, 8, 6, 5, 4]\n[9, 8, 7, 6, 5, 4, 3, 2, 1, 0]  =>  [1, 8, 3, 6, 5, 4, 7, 2, 9, 0]\n```",
-      "totalAttempts": 176909,
-      "totalCompleted": 39686,
-      "totalStars": 1284,
-      "voteScore": 4169,
+      "totalAttempts": 177552,
+      "totalCompleted": 39873,
+      "totalStars": 1289,
+      "voteScore": 4182,
       "tags": [
         "Fundamentals",
         "Arrays",
@@ -4116,7 +4222,7 @@
       "contributorsWanted": false,
       "unresolved": {
         "issues": 0,
-        "suggestions": 1
+        "suggestions": 2
       }
     }
   },
@@ -4164,7 +4270,8 @@
         "reason",
         "racket",
         "dart",
-        "elm"
+        "elm",
+        "pascal"
       ],
       "url": "https://www.codewars.com/kata/5667e8f4e3f572a8f2000039",
       "rank": {
@@ -4182,17 +4289,17 @@
         "url": "https://www.codewars.com/users/raulbc777"
       },
       "description": "This time no story, no theory. The examples below show you how to write function `accum`:\n\n**Examples:**\n```\naccum(\"abcd\") -> \"A-Bb-Ccc-Dddd\"\naccum(\"RqaEzty\") -> \"R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy\"\naccum(\"cwAt\") -> \"C-Ww-Aaa-Tttt\"\n```\n\nThe parameter of accum is a string which includes only letters from `a..z` and `A..Z`.\n\n\n\n\n",
-      "totalAttempts": 401205,
-      "totalCompleted": 100449,
-      "totalStars": 1581,
-      "voteScore": 10805,
+      "totalAttempts": 403341,
+      "totalCompleted": 101310,
+      "totalStars": 1600,
+      "voteScore": 10869,
       "tags": [
         "Fundamentals"
       ],
       "contributorsWanted": true,
       "unresolved": {
         "issues": 0,
-        "suggestions": 3
+        "suggestions": 2
       }
     }
   },
@@ -4246,10 +4353,10 @@
         "url": "https://www.codewars.com/users/jhoffner"
       },
       "description": "Trolls are attacking your comment section!\n\nA common way to deal with this situation is to remove all of the vowels from the trolls' comments, neutralizing the threat.\n\nYour task is to write a function that takes a string and return a new string with all vowels removed.\n\nFor example, the string \"This website is for losers LOL!\" would become \"Ths wbst s fr lsrs LL!\".\n\nNote: for this kata `y` isn't considered a vowel.",
-      "totalAttempts": 414743,
-      "totalCompleted": 116467,
-      "totalStars": 1132,
-      "voteScore": 10390,
+      "totalAttempts": 416620,
+      "totalCompleted": 117153,
+      "totalStars": 1135,
+      "voteScore": 10440,
       "tags": [
         "Fundamentals",
         "Strings",
@@ -4319,10 +4426,10 @@
         "url": "https://www.codewars.com/users/Unnamed"
       },
       "description": "You are given an array (which will have a length of at least 3, but could be very large) containing integers. The array is either entirely comprised of odd integers or entirely comprised of even integers except for a single integer `N`. Write a method that takes the array as an argument and returns this \"outlier\" `N`.\n\n## Examples\n\n```python\n[2, 4, 0, 100, 4, 11, 2602, 36]\nShould return: 11 (the only odd number)\n\n[160, 3, 1719, 19, 11, 13, -21]\nShould return: 160 (the only even number)\n```",
-      "totalAttempts": 394264,
-      "totalCompleted": 94028,
-      "totalStars": 1467,
-      "voteScore": 9789,
+      "totalAttempts": 395453,
+      "totalCompleted": 94522,
+      "totalStars": 1473,
+      "voteScore": 9823,
       "tags": [
         "Algorithms"
       ],
@@ -4377,10 +4484,10 @@
         "url": "https://www.codewars.com/users/smile67"
       },
       "description": "Given an array of ones and zeroes, convert the equivalent binary value to an integer.\n\nEg: `[0, 0, 0, 1]` is treated as `0001` which is the binary representation of `1`.\n\nExamples:\n```\nTesting: [0, 0, 0, 1] ==> 1\nTesting: [0, 0, 1, 0] ==> 2\nTesting: [0, 1, 0, 1] ==> 5\nTesting: [1, 0, 0, 1] ==> 9\nTesting: [0, 0, 1, 0] ==> 2\nTesting: [0, 1, 1, 0] ==> 6\nTesting: [1, 1, 1, 1] ==> 15\nTesting: [1, 0, 1, 1] ==> 11\n```\n\nHowever, the arrays can have varying lengths, not just limited to `4`.",
-      "totalAttempts": 176609,
-      "totalCompleted": 56603,
-      "totalStars": 659,
-      "voteScore": 5447,
+      "totalAttempts": 177030,
+      "totalCompleted": 56829,
+      "totalStars": 664,
+      "voteScore": 5459,
       "tags": [
         "Fundamentals",
         "Arrays",
@@ -4439,10 +4546,10 @@
         "url": "https://www.codewars.com/users/jhoffner"
       },
       "description": "Create a function taking a positive integer as its parameter and returning a string containing the Roman Numeral representation of that integer.\n\nModern Roman numerals are written by expressing each digit separately starting with the left most digit and skipping any digit with a value of zero. In Roman numerals 1990 is rendered: 1000=M, 900=CM, 90=XC; resulting in MCMXC. 2008 is written as 2000=MM, 8=VIII; or MMVIII. 1666 uses each Roman symbol in descending order: MDCLXVI.\n\nExample:\n```javascript\nsolution(1000); // should return 'M'\n```\n```coffeescript\nsolution(1000) # should return 'M'\n```\n```ruby\nsolution(1000) # should return 'M'\n```\n```python\nsolution(1000) # should return 'M'\n```\n```haskell\nsolution 1000 -- should return \"M\"\n```\n```java\nconversion.solution(1000); //should return \"M\"\n```\n```typescript\nsolution(1000); // should return 'M'\n```\n```cpp\nsolution(1000); // should return \"M\"\n```\n```php\nsolution(1000); // should return \"M\"\n```\n```csharp\nRomanConvert.Solution(1000) -- should return \"M\"\n```\n```swift\nsolution(1000) // should return \"M\"\n```\n```elixir\nsolution(1000) # should return \"M\"\n```\n```r\nsolution(1000) # should return \"M\"\n```\n```c\nsolution(1000); // => \"M\"\n```\n```nim\nsolution(1000) # should return \"M\"\n```\n```lua\nromanEncoder(1000) -- should return 'M'\n```\n```scala\nRoman.encode(1000) // should return \"M\"\n```\n\nHelp:\n```\nSymbol\tValue\nI\t      1\nV\t      5\nX\t      10\nL\t      50\nC\t      100\nD\t      500\nM\t      1,000\n```\n\nRemember that there can't be more than 3 identical symbols in a row.\n\n\nMore about roman numerals - http://en.wikipedia.org/wiki/Roman_numerals\n",
-      "totalAttempts": 123915,
-      "totalCompleted": 23933,
-      "totalStars": 1598,
-      "voteScore": 2496,
+      "totalAttempts": 124144,
+      "totalCompleted": 24015,
+      "totalStars": 1601,
+      "voteScore": 2503,
       "tags": [
         "Algorithms",
         "Encoding",
@@ -4488,10 +4595,10 @@
         "url": "https://www.codewars.com/users/JohanWiltink"
       },
       "description": "Who is the killer?\n=\n### Some people have been killed!\nYou have managed to narrow the suspects down to just a few. Luckily, you know every person who those suspects have seen on the day of the murders.\n\n### Task.\nGiven a dictionary with all the names of the suspects and everyone that they have seen on that day which may look like this:\n```python\n{'James': ['Jacob', 'Bill', 'Lucas'],\n 'Johnny': ['David', 'Kyle', 'Lucas'],\n 'Peter': ['Lucy', 'Kyle']}\n```\n```javascript\n{'James': ['Jacob', 'Bill', 'Lucas'],\n 'Johnny': ['David', 'Kyle', 'Lucas'],\n 'Peter': ['Lucy', 'Kyle']}\n```\nand also a list of the names of the dead people:\n```python\n['Lucas', 'Bill']\n```\n```javascript\n['Lucas', 'Bill']\n```\nreturn the name of the one killer, in our case ```'James'``` because he is the only person that saw both ```'Lucas'``` and ```'Bill'```",
-      "totalAttempts": 2350,
-      "totalCompleted": 857,
+      "totalAttempts": 2381,
+      "totalCompleted": 872,
       "totalStars": 33,
-      "voteScore": 210,
+      "voteScore": 214,
       "tags": [
         "Fundamentals",
         "Dictionary",
@@ -4539,10 +4646,10 @@
         "url": "https://www.codewars.com/users/jhoffner"
       },
       "description": "The following code could use a bit of object-oriented artistry. While it's a simple method and works just fine as it is, in a larger system it's best to organize methods into classes/objects. (Or, at least, something similar depending on your language)\n\nRefactor the following code so that it belongs to a Person class/object. Each Person instance will have a greet method. The Person instance should be instantiated with a name so that it no longer has to be passed into each greet method call. \n\nHere is how the final refactored code would be used:\n\n```javascript\nvar joe = new Person('Joe');\njoe.greet('Kate'); // should return 'Hello Kate, my name is Joe'\njoe.name           // should == 'Joe'\n```\n```coffeescript\njoe = new Person('Joe')\njoe.greet('Kate') # should return 'Hello Kate, my name is Joe'\njoe.name          # should == 'Joe'\n```\n```ruby\njoe = Person.new('Joe')\njoe.greet('Kate') # should return 'Hello Kate, my name is Joe'\njoe.name          # should == 'Joe'\n```\n```rust\nlet joe = Person::new(\"Joe\");\njoe.greet(\"Kate\"); // should return \"Hello Kate, my name is Joe\"\njoe.name;          // should == \"Joe\"\n```\n```python\njoe = Person('Joe')\njoe.greet('Kate') # should return 'Hello Kate, my name is Joe'\njoe.name          # should == 'Joe'\n```",
-      "totalAttempts": 27690,
-      "totalCompleted": 7461,
+      "totalAttempts": 27739,
+      "totalCompleted": 7480,
       "totalStars": 53,
-      "voteScore": 376,
+      "voteScore": 377,
       "tags": [
         "Refactoring",
         "Object-oriented Programming",
@@ -4599,10 +4706,10 @@
         "url": "https://www.codewars.com/users/Voile"
       },
       "description": "In this Kata, you will be given an array of numbers in which two numbers occur once and the rest occur only twice. Your task will be to return the sum of the numbers that occur only once. \n\nFor example, `repeats([4,5,7,5,4,8]) = 15` because only the numbers `7` and `8` occur once, and their sum is `15`. Every other number occurs twice. \n\nMore examples in the test cases. \n\n<!-- C# documentation -->\n```if:csharp\n<h1>Documentation:</h1>\n<h2>Kata.Repeats Method (List&lt;Int32&gt;)</h2>\n\nTakes a list where all ints are repeated twice, except two ints, and returns the sum of the ints of a list where those ints only occur once.\n\n<span style=\"font-size:20px\">Syntax</span>\n<div style=\"margin-top:-10px;padding:2px;background-color:Grey;position:relative;left:20px;width:600px;\">\n  <div style=\"background-color:White;color:Black;border:1px;display:block;padding:10px;padding-left:18px;font-family:Consolas,Courier,monospace;\">\n    <span style=\"color:Blue;\">public</span>\n    <span style=\"color:Blue;\">static</span>\n    <span style=\"color:Blue;\">int</span> Repeats(</br>\n    <span style=\"position:relative;left:62px;\">List&lt;<span style=\"color:Blue;\">int</span>&gt; source</span></br>\n    )\n  </div>\n</div>\n</br>\n<div style=\"position:relative;left:20px;\">\n  <strong>Parameters</strong>\n  </br>\n  <i>source</i>\n  </br>\n  <span style=\"position:relative;left:50px;\">Type: <a href=\"https://msdn.microsoft.com/en-us/library/6sh2ey19(v=vs.110).aspx\">System.Collections.Generic.List</a>&lt;Int32&gt;</span></br>\n  <span style=\"position:relative;left:50px;\">The list to process.</span>\n  </br></br>\n  <strong>Return Value</strong>\n  </br>\n  <span>Type: <a href=\"https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx\">System.Int32</a></span></br>\n  The sum of the elements of the list where those elements have no duplicates.\n</div>\n```\n<!-- end C# documentation -->\n\nGood luck!\n\nIf you like this Kata, please try: \n\n[Sum of prime-indexed elements](https://www.codewars.com/kata/59f38b033640ce9fc700015b)\n\n[Sum of integer combinations](https://www.codewars.com/kata/59f3178e3640cef6d90000d5)",
-      "totalAttempts": 14440,
-      "totalCompleted": 6284,
+      "totalAttempts": 14453,
+      "totalCompleted": 6291,
       "totalStars": 89,
-      "voteScore": 745,
+      "voteScore": 746,
       "tags": [
         "Algorithms"
       ],
@@ -4659,10 +4766,10 @@
         "url": "https://www.codewars.com/users/NaMe613"
       },
       "description": "## Number of people in the bus\nThere is a bus moving in the city, and it takes and drop some people in each bus stop.\n\nYou are provided with a list (or array) of integer arrays (or tuples). Each integer array has two items which represent number of people get into bus (The first item) and number of people get off the bus (The second item) in a bus stop.\n\nYour task is to return number of people who are still in the bus after the last bus station (after the last array). Even though it is the last bus stop, the bus is not empty and some people are still in the bus, and they are probably sleeping there :D \n\nTake a look on the test cases.\n\nPlease keep in mind that the test cases ensure that the number of people in the bus is always >= 0. So the return integer can't be negative.\n\nThe second value in the first integer array is 0, since the bus is empty in the first bus stop.",
-      "totalAttempts": 112225,
-      "totalCompleted": 48037,
-      "totalStars": 685,
-      "voteScore": 4593,
+      "totalAttempts": 112580,
+      "totalCompleted": 48257,
+      "totalStars": 689,
+      "voteScore": 4606,
       "tags": [
         "Fundamentals"
       ],
@@ -4727,10 +4834,10 @@
         "url": "https://www.codewars.com/users/A.Partridge"
       },
       "description": "```if-not:julia,racket,rust\n<p>Write a function named setAlarm which receives two parameters. The first parameter, <em>employed</em>, is true whenever you are employed and the second parameter, <em>vacation</em> is true whenever you are on vacation.</p>\n```\n```if:racket\n<p>Write a function named set-alarm which receives two parameters. The first parameter, <em>employed</em>, is true whenever you are employed and the second parameter, <em>vacation</em> is true whenever you are on vacation.</p>\n```\n```if:julia\n<p>Write a function named setalarm which receives two parameters. The first parameter, <em>employed</em>, is true whenever you are employed and the second parameter, <em>vacation</em> is true whenever you are on vacation.</p>\n```\n```if:rust\n<p>Write a function named set_alarm which receives two parameters. The first parameter, <em>employed</em>, is true whenever you are employed and the second parameter, <em>vacation</em> is true whenever you are on vacation.</p>\n```\n\n<p>The function should return true if you are employed and not on vacation (because these are the circumstances under which you need to set an alarm). It should return false otherwise. Examples:</p>\n\n~~~if-not:julia,racket,rust\n```javascript\nsetAlarm(true, true) -> false\nsetAlarm(false, true) -> false\nsetAlarm(false, false) -> false\nsetAlarm(true, false) -> true\n```\n~~~\n```julia\nsetalarm(true, true) -> false\nsetalarm(false, true) -> false\nsetalarm(false, false) -> false\nsetalarm(true, false) -> true\n```\n```racket\n(set-alarm #t #t) ; #f\n(set-alarm #f #t) ; #f\n(set-alarm #f #f) ; #f\n(set-alarm #t #f) ; #t\n```\n```rust\nset_alarm(true, true) -> false\nset_alarm(false, true) -> false\nset_alarm(false, false) -> false\nset_alarm(true, false) -> true\n```",
-      "totalAttempts": 41497,
-      "totalCompleted": 21351,
-      "totalStars": 111,
-      "voteScore": 2073,
+      "totalAttempts": 41684,
+      "totalCompleted": 21458,
+      "totalStars": 112,
+      "voteScore": 2084,
       "tags": [
         "Fundamentals",
         "Booleans",
@@ -4788,10 +4895,10 @@
         "url": "https://www.codewars.com/users/jhoffner"
       },
       "description": "## A square of squares\nYou like building blocks. You especially like building blocks that are squares. And what you even like more, is to arrange them into a square of square building blocks!\n\nHowever, sometimes, you can't arrange them into a square. Instead, you end up with an ordinary rectangle! Those blasted things! If you just had a way to know, whether you're currently working in vain… Wait! That's it! You just have to check if your number of building blocks is a _perfect square_.\n\n## Task\n\nGiven an integral number, determine if it's a [square number](https://en.wikipedia.org/wiki/Square_number):\n\n> In mathematics, a __square number__ or __perfect square__ is an integer that is the square of an integer; in other words, it is the product of some integer with itself.\n\nThe tests will _always_ use some integral number, so don't worry about that in dynamic typed languages.\n\n### Examples\n\n```\n-1  =>  false\n 0  =>  true\n 3  =>  false\n 4  =>  true\n25  =>  true\n26  =>  false\n```",
-      "totalAttempts": 398939,
-      "totalCompleted": 107482,
-      "totalStars": 925,
-      "voteScore": 9466,
+      "totalAttempts": 400236,
+      "totalCompleted": 107977,
+      "totalStars": 927,
+      "voteScore": 9498,
       "tags": [
         "Fundamentals"
       ],
@@ -4842,10 +4949,10 @@
         "url": "https://www.codewars.com/users/gabbek"
       },
       "description": "The purpose of this kata is to work out just how many bottles of duty free whiskey you would have to buy such that the saving over the normal high street price would effectively cover the cost of your holiday. \n\nYou will be given the high street price (normPrice), the duty free discount (discount) and the cost of the holiday. \n\nFor example, if a bottle cost £10 normally and the discount in duty free was 10%, you would save £1 per bottle. If your holiday cost £500, the answer you should return would be 500.\n\nAll inputs will be integers. Please return an integer. Round down.\n",
-      "totalAttempts": 29271,
-      "totalCompleted": 10738,
-      "totalStars": 69,
-      "voteScore": 1083,
+      "totalAttempts": 29373,
+      "totalCompleted": 10771,
+      "totalStars": 70,
+      "voteScore": 1085,
       "tags": [
         "Fundamentals",
         "Numbers",
@@ -4856,7 +4963,7 @@
       ],
       "contributorsWanted": true,
       "unresolved": {
-        "issues": 4,
+        "issues": 5,
         "suggestions": 2
       }
     }
@@ -4898,10 +5005,10 @@
         "url": "https://www.codewars.com/users/sandbochs"
       },
       "description": "What is an anagram? Well, two words are anagrams of each other if they both contain the same letters. For example:\n\n```\n'abba' & 'baab' == true\n\n'abba' & 'bbaa' == true\n\n'abba' & 'abbba' == false\n\n'abba' & 'abca' == false\n```\n\nWrite a function that will find all the anagrams of a word from a list. You will be given two inputs a word and an array with words. You should return an array of all the anagrams or an empty array if there are none. For example:\n\n```javascript\nanagrams('abba', ['aabb', 'abcd', 'bbaa', 'dada']) => ['aabb', 'bbaa']\n\nanagrams('racer', ['crazer', 'carer', 'racar', 'caers', 'racer']) => ['carer', 'racer']\n\nanagrams('laser', ['lazing', 'lazy',  'lacer']) => []\n```\n\n",
-      "totalAttempts": 185990,
-      "totalCompleted": 42709,
-      "totalStars": 826,
-      "voteScore": 3408,
+      "totalAttempts": 186957,
+      "totalCompleted": 42965,
+      "totalStars": 827,
+      "voteScore": 3420,
       "tags": [
         "Algorithms",
         "Strings",
@@ -4957,10 +5064,10 @@
         "url": "https://www.codewars.com/users/jhoffner"
       },
       "description": "### Sudoku Background\n\nSudoku is a game played on a 9x9 grid. The goal of the game is to fill all cells of the grid with digits from 1 to 9, so that each column, each row, and each of the nine 3x3 sub-grids (also known as blocks) contain all of the digits from 1 to 9. <br/>\n(More info at: http://en.wikipedia.org/wiki/Sudoku)\n\n### Sudoku Solution Validator\n\nWrite a function `validSolution`/`ValidateSolution`/`valid_solution()` that accepts a 2D array representing a Sudoku board, and returns true if it is a valid solution, or false otherwise. The cells of the sudoku board may also contain 0's, which will represent empty cells. Boards containing one or more zeroes are considered to be invalid solutions.\n\nThe board is always 9 cells by 9 cells, and every cell only contains integers from 0 to 9.\n \n\n### Examples\n\n```\nvalidSolution([\n  [5, 3, 4, 6, 7, 8, 9, 1, 2],\n  [6, 7, 2, 1, 9, 5, 3, 4, 8],\n  [1, 9, 8, 3, 4, 2, 5, 6, 7],\n  [8, 5, 9, 7, 6, 1, 4, 2, 3],\n  [4, 2, 6, 8, 5, 3, 7, 9, 1],\n  [7, 1, 3, 9, 2, 4, 8, 5, 6],\n  [9, 6, 1, 5, 3, 7, 2, 8, 4],\n  [2, 8, 7, 4, 1, 9, 6, 3, 5],\n  [3, 4, 5, 2, 8, 6, 1, 7, 9]\n]); // => true\n```\n\n```\nvalidSolution([\n  [5, 3, 4, 6, 7, 8, 9, 1, 2], \n  [6, 7, 2, 1, 9, 0, 3, 4, 8],\n  [1, 0, 0, 3, 4, 2, 5, 6, 0],\n  [8, 5, 9, 7, 6, 1, 0, 2, 0],\n  [4, 2, 6, 8, 5, 3, 7, 9, 1],\n  [7, 1, 3, 9, 2, 4, 8, 5, 6],\n  [9, 0, 1, 5, 3, 7, 2, 1, 4],\n  [2, 8, 7, 4, 1, 9, 6, 3, 5],\n  [3, 0, 0, 4, 8, 1, 1, 7, 9]\n]); // => false\n```",
-      "totalAttempts": 190939,
-      "totalCompleted": 22613,
-      "totalStars": 1337,
-      "voteScore": 2690,
+      "totalAttempts": 191750,
+      "totalCompleted": 22734,
+      "totalStars": 1347,
+      "voteScore": 2703,
       "tags": [
         "Algorithms",
         "Data Structures",
@@ -5019,10 +5126,10 @@
         "url": "https://www.codewars.com/users/jhoffner"
       },
       "description": "ROT13 is a simple letter substitution cipher that replaces a letter with the letter 13 letters after it in the alphabet. ROT13 is an example of the Caesar cipher.\n\nCreate a function that takes a string and returns the string ciphered with Rot13. \nIf there are numbers or special characters included in the string, they should be returned as they are. Only letters from the latin/english alphabet should be shifted, like in the original Rot13 \"implementation\".\n\n```if:python\nPlease note that using `encode` is considered cheating.\n```\n\n```if:r\n**Note:** As R is a natively vectorized language, you should write `rot13()` such that the argument `x` may be a character vector of any length. The return value should always be a character vector of the same length as `x`.\n```",
-      "totalAttempts": 187916,
-      "totalCompleted": 33689,
-      "totalStars": 913,
-      "voteScore": 2690,
+      "totalAttempts": 189062,
+      "totalCompleted": 33902,
+      "totalStars": 919,
+      "voteScore": 2704,
       "tags": [
         "Fundamentals",
         "Ciphers",
@@ -5090,10 +5197,10 @@
         "url": "https://www.codewars.com/users/Unnamed"
       },
       "description": "Given an array of integers, find the one that appears an odd number of times.\n\nThere will always be only one integer that appears an odd number of times.\n",
-      "totalAttempts": 437299,
-      "totalCompleted": 122686,
-      "totalStars": 2227,
-      "voteScore": 11503,
+      "totalAttempts": 438820,
+      "totalCompleted": 123395,
+      "totalStars": 2232,
+      "voteScore": 11549,
       "tags": [
         "Fundamentals"
       ],
@@ -5163,10 +5270,10 @@
         "url": "https://www.codewars.com/users/jhoffner"
       },
       "description": "If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.\n\nFinish the solution so that it returns the sum of all the multiples of 3 or 5 **below** the number passed in. \n\n> Note: If the number is a multiple of **both** 3 and 5, only count it *once*.\n> Also, if a number is negative, return 0(for languages that do have them)\n  \n###### *Courtesy of projecteuler.net*\n",
-      "totalAttempts": 501349,
-      "totalCompleted": 151588,
-      "totalStars": 1456,
-      "voteScore": 14123,
+      "totalAttempts": 503749,
+      "totalCompleted": 152436,
+      "totalStars": 1467,
+      "voteScore": 14205,
       "tags": [
         "Algorithms",
         "Mathematics",
@@ -5217,10 +5324,10 @@
         "url": "https://www.codewars.com/users/jhoffner"
       },
       "description": "Complete the solution so that it strips all text that follows any of a set of comment markers passed in. Any whitespace at the end of the line should also be stripped out. \n\n**Example:**\n\nGiven an input string of:\n```\napples, pears # and bananas\ngrapes\nbananas !apples\n```\n\nThe output expected would be:\n```\napples, pears\ngrapes\nbananas\n```\n\nThe code would be called like so:\n\n```javascript\nvar result = solution(\"apples, pears # and bananas\\ngrapes\\nbananas !apples\", [\"#\", \"!\"])\n// result should == \"apples, pears\\ngrapes\\nbananas\"\n\n```\n\n```kotlin\nvar result = solution(\"apples, pears # and bananas\\ngrapes\\nbananas !apples\", charArrayOf('#', '!'))\n// result should == \"apples, pears\\ngrapes\\nbananas\"\n\n```\n\n```coffeescript\nresult = solution(\"apples, pears # and bananas\\ngrapes\\nbananas !apples\", [\"#\", \"!\"])\n# result should == \"apples, pears\\nograpes\\nbananas\"\n\n```\n\n```ruby\nresult = solution(\"apples, pears # and bananas\\ngrapes\\nbananas !apples\", [\"#\", \"!\"])\n# result should == \"apples, pears\\ngrapes\\nbananas\"\n\n```\n\n```crystal\nresult = solution(\"apples, pears # and bananas\\ngrapes\\nbananas !apples\", [\"#\", \"!\"])\n# result should == \"apples, pears\\ngrapes\\nbananas\"\n\n```\n\n```python\nresult = solution(\"apples, pears # and bananas\\ngrapes\\nbananas !apples\", [\"#\", \"!\"])\n# result should == \"apples, pears\\ngrapes\\nbananas\"\n\n```\n\n```csharp\nstring stripped = StripCommentsSolution.StripComments(\"apples, pears # and bananas\\ngrapes\\nbananas !apples\", new [] { \"#\", \"!\" })\n// result should == \"apples, pears\\ngrapes\\nbananas\"\n```\n\n```julia\nresult = stripcomments(\"apples, pears # and bananas\\ngrapes\\nbananas !apples\", [\"#\", \"!\"])\n# result should == \"apples, pears\\ngrapes\\nbananas\"\n```",
-      "totalAttempts": 232595,
-      "totalCompleted": 21294,
-      "totalStars": 954,
-      "voteScore": 1679,
+      "totalAttempts": 233500,
+      "totalCompleted": 21411,
+      "totalStars": 958,
+      "voteScore": 1687,
       "tags": [
         "Algorithms",
         "Strings",
@@ -5281,10 +5388,10 @@
         "url": "https://www.codewars.com/users/xDranik"
       },
       "description": "Write a function that accepts an array of 10 integers (between 0 and 9), that returns a string of those numbers in the form of a phone number.\n\n<h3>Example:</h3>\n\n```javascript\ncreatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) // => returns \"(123) 456-7890\"\n```\n```cpp\ncreatePhoneNumber(int[10]{1, 2, 3, 4, 5, 6, 7, 8, 9, 0}) // => returns \"(123) 456-7890\"\n```\n```crystal\ncreate_phone_number([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) # => returns \"(123) 456-7890\"\n```\n```ruby\ncreatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) # => returns \"(123) 456-7890\"\n```\n```coffeescript\ncreatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) # => returns \"(123) 456-7890\"\n```\n```java\nKata.createPhoneNumber(new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 0}) // => returns \"(123) 456-7890\"\n```\n```dart\ncreatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) // => returns \"(123) 456-7890\"\n```\n```haskell\ncreatePhoneNumber [1,2,3,4,5,6,7,8,9,0] -- => returns \"(123) 456-7890\"\n```\n```csharp\nKata.CreatePhoneNumber(new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 0}) // => returns \"(123) 456-7890\"\n```\n```python\ncreate_phone_number([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) # => returns \"(123) 456-7890\"\n```\n```scala\nKata.createPhoneNumber(Seq(1, 2, 3, 4, 5, 6, 7, 8, 9, 0)) # => returns \"(123) 456-7890\"\n```\n```php\ncreatePhoneNumber([1,2,3,4,5,6,7,8,9,0]); // => returns \"(123) 456-7890\"\n```\n```f#\ncreatePhoneNumber [1; 2; 3; 4; 5; 6; 7; 8; 9; 0] // => returns \"(123) 456-7890\"\n```\n```clojure\n(create-phone-number [1 2 3 4 5 6 7 8 9 0]) ;; => returns \"(123) 456-7890\"\n```\n```rust\ncreate_phone_number(&[1,2,3,4,5,6,7,8,9,0]); // returns \"(123) 456-7890\"\n```\n```go\nCreatePhoneNumber([10]uint{1,2,3,4,5,6,7,8,9,0})  // returns \"(123) 456-7890\"\n```\n```c\ncreate_phone_number(phnum, (const unsigned char[]){1,2,3,4,5,6,7,8,9,0});\n    /* phnum <- \"(123) 456-7890\" */\n```\n```nasm\nphnum:  resb 15\nnums:   db  1,2,3,4,5,6,7,8,9,0\n\nmov rdi, phnum\nmov rsi, nums\ncall create_phone_number  ; RAX <- phnum <- \"(123) 456-7890\" \n```\n```typescript\ncreatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) // => returns \"(123) 456-7890\"\n```\n```julia\ncreatephonenumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) # -> returns \"(123) 456-7890\"\n```\n```cfml\ncreatePhoneNumber( [1, 2, 3, 4, 5, 6, 7, 8, 9, 0] ) // => returns \"(123) 456-7890\"\n```\n\nThe returned format must be correct in order to complete this challenge. <br/>\nDon't forget the space after the closing parentheses!",
-      "totalAttempts": 312433,
-      "totalCompleted": 112104,
-      "totalStars": 1276,
-      "voteScore": 8427,
+      "totalAttempts": 314255,
+      "totalCompleted": 112877,
+      "totalStars": 1282,
+      "voteScore": 8458,
       "tags": [
         "Algorithms",
         "Arrays",
@@ -5347,10 +5454,10 @@
         "url": "https://www.codewars.com/users/xDranik"
       },
       "description": "Write a function called that takes a string of parentheses, and determines if the order of the parentheses is valid. The function should return `true` if the string is valid, and `false` if it's invalid.\n\n## Examples\n\n```\n\"()\"              =>  true\n\")(()))\"          =>  false\n\"(\"               =>  false\n\"(())((()())())\"  =>  true\n```\n\n## Constraints\n\n`0 <= input.length <= 100`\n\n~~~if-not:javascript,go\nAlong with opening (`(`) and closing (`)`) parenthesis, input may contain any valid ASCII characters.  Furthermore, the input string may be empty and/or not contain any parentheses at all.  Do **not** treat other forms of brackets as parentheses (e.g. `[]`, `{}`, `<>`).\n~~~",
-      "totalAttempts": 293147,
-      "totalCompleted": 46591,
-      "totalStars": 1177,
-      "voteScore": 3917,
+      "totalAttempts": 294673,
+      "totalCompleted": 46810,
+      "totalStars": 1183,
+      "voteScore": 3935,
       "tags": [
         "Algorithms",
         "Validation",
@@ -5408,10 +5515,10 @@
         "url": "https://www.codewars.com/users/marcinbunsch"
       },
       "description": "Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.\n\nIt should remove all values from list `a`, which are present in list `b`.\n\n```c\narray_diff({1, 2}, 2, {1}, 1, *z) == {2} (z == 1)\n```\n```javascript\narrayDiff([1,2],[1]) == [2]\n```\n```ruby\narray_diff([1,2],[1]) == [2]\n```\n```python\narray_diff([1,2],[1]) == [2]\n```\n```coffeescript\narrayDiff([1,2],[1]) == [2]\n```\n```haskell\ndifference [1,2] [1] == [2]\n```\n```csharp\nKata.ArrayDiff(new int[] {1, 2}, new int[] {1}) => new int[] {2}\n```\n```fsharp\narrayDiff [|1|] [|1; 2|] = [|2|]\n```\n```rust\narray_diff(vec![1,2], vec![1]) == vec![2]\n```\n```clojure\n(= (array-diff [1 2] [1]) [2])\n```\n```groovy\nKata.arrayDiff([1,2],[1]) == [2]\n```\n```julia\narraydiff([1,2],[1]) == [2]\n```\n```nim\narrayDiff(@[1,2],@[1]) == @[2]\n```\n```php\narrayDiff([1,2],[1]) == [2]\n```\n```r\narray_diff(c(1, 2), 1) == 2\n```\n```prolog\narray_diff([1, 2], [1], [2]). % Result = [2]\n```\n\nIf a value is present in `b`, all of its occurrences must be removed from the other:\n\n```c\narray_diff({1, 2, 2, 2, 3}, 5, {2}, 1, *z) == {1, 3} (z == 2)\n```\n```javascript\narrayDiff([1,2,2,2,3],[2]) == [1,3]\n```\n```ruby\narray_diff([1,2],[1]) == [2]\n```\n```python\narray_diff([1,2,2,2,3],[2]) == [1,3]\n```\n```coffeescript\narrayDiff([1,2,2,2,3],[2]) == [1,3]\n```\n```haskell\ndifference [1,2,2,2,3] [2] == [1,3]\n```\n```csharp\nKata.ArrayDiff(new int[] {1, 2, 2, 2, 3}, new int[] {2}) => new int[] {1, 3}\n```\n```fsharp\narrayDiff [|2|] [|1; 2; 2; 2; 3|] = [|1; 3|]\n```\n```rust\narray_diff(vec![1,2,2,2,3], vec![2]) == vec![1,3]\n```\n```clojure\n(= (array-diff [1,2,2,2,3] [2]) [1,3])\n```\n```groovy\nKata.arrayDiff([1,2,2,2,3],[2]) == [1,3]\n```\n```julia\narraydiff([1,2,2,2,3],[2]) == [1,3]\n```\n```nim\narrayDiff(@[1,2,2,2,3],@[2]) == @[1,3]\n```\n```php\narrayDiff([1,2,2,2,3],[2]) == [1,3]\n```\n```r\narray_diff(c(1, 2, 2, 2, 3), 2) == c(1, 3)\n```\n```prolog\narray_diff([1, 2, 2, 2, 3], [2], [1, 3]). % Result = [1, 3]\n```\n~~~ if:c\nNOTE: In C, assign return array length to pointer *z\n~~~\n",
-      "totalAttempts": 415931,
-      "totalCompleted": 93206,
-      "totalStars": 1371,
-      "voteScore": 9122,
+      "totalAttempts": 418115,
+      "totalCompleted": 93749,
+      "totalStars": 1379,
+      "voteScore": 9174,
       "tags": [
         "Fundamentals",
         "Arrays",
@@ -5460,10 +5567,10 @@
         "url": "https://www.codewars.com/users/BattleRattle"
       },
       "description": "Write a function, which takes a non-negative integer (seconds) as input and returns the time in a human-readable format (`HH:MM:SS`)\n\n* `HH` = hours, padded to 2 digits, range: 00 - 99\n* `MM` = minutes, padded to 2 digits, range: 00 - 59\n* `SS` = seconds, padded to 2 digits, range: 00 - 59\n\nThe maximum time never exceeds 359999 (`99:59:59`)\n\nYou can find some examples in the test fixtures.",
-      "totalAttempts": 168192,
-      "totalCompleted": 53092,
-      "totalStars": 872,
-      "voteScore": 3774,
+      "totalAttempts": 168867,
+      "totalCompleted": 53340,
+      "totalStars": 873,
+      "voteScore": 3789,
       "tags": [
         "Algorithms",
         "Dates/Time",
@@ -5516,10 +5623,10 @@
         "url": "https://www.codewars.com/users/BattleRattle"
       },
       "description": "You probably know the \"like\" system from Facebook and other pages. People can \"like\" blog posts, pictures or other items. We want to create the text that should be displayed next to such an item.\n\nImplement a function `likes :: [String] -> String`, which must take in input array, containing the names of people who like an item. It must return the display text as shown in the examples:\n\n```haskell\nlikes [] -- must be \"no one likes this\"\nlikes [\"Peter\"] -- must be \"Peter likes this\"\nlikes [\"Jacob\", \"Alex\"] -- must be \"Jacob and Alex like this\"\nlikes [\"Max\", \"John\", \"Mark\"] -- must be \"Max, John and Mark like this\"\nlikes [\"Alex\", \"Jacob\", \"Mark\", \"Max\"] -- must be \"Alex, Jacob and 2 others like this\"\n```\n```csharp\nKata.Likes(new string[0]) => \"no one likes this\"\nKata.Likes(new string[] {\"Peter\"}) => \"Peter likes this\"\nKata.Likes(new string[] {\"Jacob\", \"Alex\"}) => \"Jacob and Alex like this\"\nKata.Likes(new string[] {\"Max\", \"John\", \"Mark\"}) => \"Max, John and Mark like this\"\nKata.Likes(new string[] {\"Alex\", \"Jacob\", \"Mark\", \"Max\"}) => \"Alex, Jacob and 2 others like this\"\n```\n```c\n* return must be an allocated string\n* do not mutate input\n\nlikes({})\n    // should return \"no one likes this\"\n\nlikes({\"Peter\"})\n    // should return \"Peter likes this\"\n\nlikes({\"Jacob\", \"Alex\"})\n    // should return \"Jacob and Alex like this\"\n\nlikes({\"Max\",\"John\",\"Mark\"})\n    // should return \"Max, John and Mark like this\"\n\nlikes({\"Alex\", \"Jacob\", \"Mark\", \"Max\"})\n    // should return \"Alex, Jacob and 2 others like this\"\n```\n```cpp\nlikes {} // must be \"no one likes this\"\nlikes {\"Peter\"} // must be \"Peter likes this\"\nlikes {\"Jacob\", \"Alex\"} // must be \"Jacob and Alex like this\"\nlikes {\"Max\", \"John\", \"Mark\"} // must be \"Max, John and Mark like this\"\nlikes {\"Alex\", \"Jacob\", \"Mark\", \"Max\"} // must be \"Alex, Jacob and 2 others like this\"\n```\n```java\nlikes {} // must be \"no one likes this\"\nlikes {\"Peter\"} // must be \"Peter likes this\"\nlikes {\"Jacob\", \"Alex\"} // must be \"Jacob and Alex like this\"\nlikes {\"Max\", \"John\", \"Mark\"} // must be \"Max, John and Mark like this\"\nlikes {\"Alex\", \"Jacob\", \"Mark\", \"Max\"} // must be \"Alex, Jacob and 2 others like this\"\n```\n```julia\nlikes([]) # must be \"no one likes this\"\nlikes([\"Peter\"]) # must be \"Peter likes this\"\nlikes([\"Jacob\", \"Alex\"]) # must be \"Jacob and Alex like this\"\nlikes([\"Max\", \"John\", \"Mark\"]) # must be \"Max, John and Mark like this\"\nlikes([\"Alex\", \"Jacob\", \"Mark\", \"Max\"]) # must be \"Alex, Jacob and 2 others like this\"\n```\n```python\nlikes([]) # must be \"no one likes this\"\nlikes([\"Peter\"]) # must be \"Peter likes this\"\nlikes([\"Jacob\", \"Alex\"]) # must be \"Jacob and Alex like this\"\nlikes([\"Max\", \"John\", \"Mark\"]) # must be \"Max, John and Mark like this\"\nlikes([\"Alex\", \"Jacob\", \"Mark\", \"Max\"]) # must be \"Alex, Jacob and 2 others like this\"\n```\n\nFor 4 or more names, the number in `and 2 others` simply increases.\n",
-      "totalAttempts": 424542,
-      "totalCompleted": 112318,
-      "totalStars": 1956,
-      "voteScore": 9084,
+      "totalAttempts": 426660,
+      "totalCompleted": 113108,
+      "totalStars": 1967,
+      "voteScore": 9128,
       "tags": [
         "Fundamentals",
         "Formatting",
@@ -5573,10 +5680,10 @@
         "url": "https://www.codewars.com/users/jhoffner"
       },
       "description": "The main idea is to count all the occurring characters in a string. If you have a string like `aba`, then the result should be `{'a': 2, 'b': 1}`.\n\nWhat if the string is empty? Then the result should be empty object literal, `{}`.",
-      "totalAttempts": 69154,
-      "totalCompleted": 24718,
-      "totalStars": 352,
-      "voteScore": 1810,
+      "totalAttempts": 69383,
+      "totalCompleted": 24860,
+      "totalStars": 357,
+      "voteScore": 1819,
       "tags": [
         "Fundamentals",
         "Strings",
@@ -5626,10 +5733,10 @@
         "url": "https://www.codewars.com/users/AKJ.IO"
       },
       "description": "The marketing team is spending way too much time typing in hashtags.   \nLet's help them with our own Hashtag Generator!\n\nHere's the deal:\n\n- It must start with a hashtag (`#`).\n- All words must have their first letter capitalized.\n- If the final result is longer than 140 chars it must return `false`.\n- If the input or the result is an empty string it must return `false`.\n\n\n## Examples\n\n```\n\" Hello there thanks for trying my Kata\"  =>  \"#HelloThereThanksForTryingMyKata\"\n\"    Hello     World   \"                  =>  \"#HelloWorld\"\n\"\"                                        =>  false\n```",
-      "totalAttempts": 130251,
-      "totalCompleted": 25446,
-      "totalStars": 344,
-      "voteScore": 1900,
+      "totalAttempts": 130639,
+      "totalCompleted": 25638,
+      "totalStars": 347,
+      "voteScore": 1915,
       "tags": [
         "Algorithms",
         "Strings",
@@ -5678,10 +5785,10 @@
         "url": "https://www.codewars.com/users/user2505876"
       },
       "description": "Move the first letter of each word to the end of it, then add \"ay\" to the end of the word. Leave punctuation marks untouched.\n\n## Examples\n\n```javascript\npigIt('Pig latin is cool'); // igPay atinlay siay oolcay\npigIt('Hello world !');     // elloHay orldway !\n```\n```objc\npigIt(@\"Pig latin is cool\"); // => @\"igPay atinlay siay oolcay\"\npigIt(@\"Hello world !\");     // => @\"elloHay orldway !\"\n```\n```ruby\npig_it('Pig latin is cool') # igPay atinlay siay oolcay\npig_it('Hello world !')     # elloHay orldway !\n```\n```python\npig_it('Pig latin is cool') # igPay atinlay siay oolcay\npig_it('Hello world !')     # elloHay orldway !\n```\n```csharp\nKata.PigIt(\"Pig latin is cool\"); // igPay atinlay siay oolcay\nKata.PigIt(\"Hello world !\");     // elloHay orldway !\n```\n```C++\npig_it(\"Pig latin is cool\");   // igPay atinlay siay oolcay\npig_it(\"Hello world !\");       // elloHay orldway\n```\n```Java\nPigLatin.pigIt('Pig latin is cool'); // igPay atinlay siay oolcay\nPigLatin.pigIt('Hello world !');     // elloHay orldway !\n```\n```clojure\n(piglatin/pig-it \"Pig latin is cool\") ; \"igPay atinlay siay oolcay\"\n(piglatin/pig-it \"Hello world !\")     ; \"elloHay orldway !\"\n```\n",
-      "totalAttempts": 347464,
-      "totalCompleted": 60858,
-      "totalStars": 970,
-      "voteScore": 4294,
+      "totalAttempts": 349286,
+      "totalCompleted": 61232,
+      "totalStars": 979,
+      "voteScore": 4315,
       "tags": [
         "Algorithms"
       ],
@@ -5729,10 +5836,10 @@
         "url": "https://www.codewars.com/users/jhoffner"
       },
       "description": "Write a function that, given a string of text (possibly with punctuation and line-breaks),\nreturns an array of the top-3 most occurring words, in descending order of the number of occurrences.\n\nAssumptions:\n------------\n\n- A word is a string of letters (A to Z) optionally containing one or more apostrophes (') in ASCII. (No need to handle fancy punctuation.)\n- Matches should be case-insensitive, and the words in the result should be lowercased.\n- Ties may be broken arbitrarily.\n- If a text contains fewer than three unique words, then either the top-2 or top-1 words should be returned, or an empty array if a text contains no words.\n\nExamples:\n------------\n\n```\ntop_3_words(\"In a village of La Mancha, the name of which I have no desire to call to\nmind, there lived not long since one of those gentlemen that keep a lance\nin the lance-rack, an old buckler, a lean hack, and a greyhound for\ncoursing. An olla of rather more beef than mutton, a salad on most\nnights, scraps on Saturdays, lentils on Fridays, and a pigeon or so extra\non Sundays, made away with three-quarters of his income.\")\n# => [\"a\", \"of\", \"on\"]\n\ntop_3_words(\"e e e e DDD ddd DdD: ddd ddd aa aA Aa, bb cc cC e e e\")\n# => [\"e\", \"ddd\", \"aa\"]\n\ntop_3_words(\"  //wont won't won't\")\n# => [\"won't\", \"wont\"]\n```\n\n```if:java\nFor java users, the calls will actually be in the form: `TopWords.top3(String s)`, expecting you to return a `List<String>`.\n```\n\nBonus points (not really, but just for fun):\n------------\n\n1. Avoid creating an array whose memory footprint is roughly as big as the input text.\n2. Avoid sorting the entire array of unique words.",
-      "totalAttempts": 101718,
-      "totalCompleted": 6763,
-      "totalStars": 609,
-      "voteScore": 644,
+      "totalAttempts": 102265,
+      "totalCompleted": 6805,
+      "totalStars": 615,
+      "voteScore": 651,
       "tags": [
         "Algorithms",
         "Strings",
@@ -5784,10 +5891,10 @@
         "url": "https://www.codewars.com/users/matt%20c"
       },
       "description": "Create a function that transforms any positive number to a string representing the number in words.  The function should work for all numbers between 0 and 999999.\n\n### Examples\n\n```\nnumber2words(0)  ==>  \"zero\"\nnumber2words(1)  ==>  \"one\"\nnumber2words(9)  ==>  \"nine\"\nnumber2words(10)  ==>  \"ten\"\nnumber2words(17)  ==>  \"seventeen\"\nnumber2words(20)  ==>  \"twenty\"\nnumber2words(21)  ==>  \"twenty-one\"\nnumber2words(45)  ==>  \"forty-five\"\nnumber2words(80)  ==>  \"eighty\"\nnumber2words(99)  ==>  \"ninety-nine\"\nnumber2words(100)  ==>  \"one hundred\"\nnumber2words(301)  ==>  \"three hundred one\"\nnumber2words(799)  ==>  \"seven hundred ninety-nine\"\nnumber2words(800)  ==>  \"eight hundred\"\nnumber2words(950)  ==>  \"nine hundred fifty\"\nnumber2words(1000)  ==>  \"one thousand\"\nnumber2words(1002)  ==>  \"one thousand two\"\nnumber2words(3051)  ==>  \"three thousand fifty-one\"\nnumber2words(7200)  ==>  \"seven thousand two hundred\"\nnumber2words(7219)  ==>  \"seven thousand two hundred nineteen\"\nnumber2words(8330)  ==>  \"eight thousand three hundred thirty\"\nnumber2words(99999)  ==>  \"ninety-nine thousand nine hundred ninety-nine\"\nnumber2words(888888)  ==>  \"eight hundred eighty-eight thousand eight hundred eighty-eight\"\n```",
-      "totalAttempts": 25102,
-      "totalCompleted": 1861,
-      "totalStars": 384,
-      "voteScore": 272,
+      "totalAttempts": 25192,
+      "totalCompleted": 1871,
+      "totalStars": 387,
+      "voteScore": 273,
       "tags": [
         "Fundamentals",
         "Numbers",
@@ -5835,10 +5942,10 @@
         "url": "https://www.codewars.com/users/suic"
       },
       "description": "Your job is to write a function which increments a string, to create a new string.\n\n- If the string already ends with a number, the number should be incremented by 1.\n- If the string does not end with a number. the number 1 should be appended to the new string.\n\nExamples:\n\n`foo -> foo1`\n\n`foobar23 -> foobar24`\n\n`foo0042 -> foo0043`\n\n`foo9 -> foo10`\n\n`foo099 -> foo100`\n\n*Attention: If the number has leading zeros the amount of digits should be considered.*\n",
-      "totalAttempts": 204586,
-      "totalCompleted": 17245,
-      "totalStars": 1150,
-      "voteScore": 2007,
+      "totalAttempts": 205465,
+      "totalCompleted": 17334,
+      "totalStars": 1156,
+      "voteScore": 2012,
       "tags": [
         "Fundamentals",
         "Regular Expressions",
@@ -5905,10 +6012,10 @@
         "url": "https://www.codewars.com/users/jhoffner"
       },
       "description": "The rgb function is incomplete. Complete it so that passing in RGB decimal values will result in a hexadecimal representation being returned. Valid decimal values for RGB are 0 - 255. Any values that fall out of that range must be rounded to the closest valid value.\n\nNote: Your answer should always be 6 characters long, the shorthand with 3 will not work here.\n\nThe following are examples of  expected output values:\n```lua\nkata.rgb(255, 255, 255) -- returns FFFFFF\nkata.rgb(255, 255, 300) -- returns FFFFFF\nkata.rgb(0, 0, 0) -- returns 000000\nkata.rgb(148, 0, 211) -- returns 9400D3\n```\n```javascript\nrgb(255, 255, 255) // returns FFFFFF\nrgb(255, 255, 300) // returns FFFFFF\nrgb(0,0,0) // returns 000000\nrgb(148, 0, 211) // returns 9400D3\n```\n```coffeescript\nrgb(255, 255, 255) # returns FFFFFF\nrgb(255, 255, 300) # returns FFFFFF\nrgb(0,0,0) # returns 000000\nrgb(148, 0, 211) # returns 9400D3\n```\n```ruby\nrgb(255, 255, 255) # returns FFFFFF\nrgb(255, 255, 300) # returns FFFFFF\nrgb(0,0,0) # returns 000000\nrgb(148, 0, 211) # returns 9400D3\n```\n```python\nrgb(255, 255, 255) # returns FFFFFF\nrgb(255, 255, 300) # returns FFFFFF\nrgb(0,0,0) # returns 000000\nrgb(148, 0, 211) # returns 9400D3\n```\n```elixir\nKata.rgb(255, 255, 255) # returns FFFFFF\nKata.rgb(255, 255, 300) # returns FFFFFF\nKata.rgb(0,0,0) # returns 000000\nKata.rgb(148, 0, 211) # returns 9400D3\n```\n```csharp\nRgb(255, 255, 255) # returns FFFFFF\nRgb(255, 255, 300) # returns FFFFFF\nRgb(0,0,0) # returns 000000\nRgb(148, 0, 211) # returns 9400D3\n```\n```fsharp\nrgb 255  255  255 // returns FFFFFF\nrgb 255  255  300 // returns FFFFFF\nrgb 0 0 0 // returns 000000\nrgb 148  0  211 // returns 9400D3\n```\n```c\nchar output[7] = {0};\n\nrgb(255, 255, 255, output); \noutput == \"FFFFFF\";\n\nrgb(255, 255, 300, output); \noutput == \"FFFFFF\";\n\nrgb(0, 0, 0, output); \noutput == \"000000\";\n\nrgb(148, 0, 211, output);\noutput == \"9400D3\";\n```\n```cpp\nrgb(255, 255, 255) # returns FFFFFF\nrgb(255, 255, 300) # returns FFFFFF\nrgb(0,0,0) # returns 000000\nrgb(148, 0, 211) # returns 9400D3\n```\n```r\nrgb(255, 255, 255)\n[1] \"FFFFFF\"\n\nrgb(255, 255, 300)\n[1] \"FFFFFF\"\n\nrgb(0, 0, 0)\n[1] \"000000\"\n\nrgb(148, 0, 211)\n[1] \"9400D3\"\n```\n```dart\nrgb(255, 255, 255) // returns FFFFFF\nrgb(255, 255, 300) // returns FFFFFF\nrgb(0, 0, 0)       // returns 000000\nrgb(148, 0, 211)   // returns 9400D3\n```\n```if:nasm\n<code>\nchar \\*rgb(int r, int g, int b, char \\*outp)\n</code>\n```\n```nasm\nmov rdi, 255\nmov rsi, 255\nmov rdx, 255\nmov rcx, outp\ncall rgb        ; rax <- FFFFFF\n\nmov rdi, 255\nmov rsi, 255\nmov rdx, 300\nmov rcx, outp\ncall rgb        ; rax <- FFFFFF\n\nmov rdi, 0\nmov rsi, 0\nmov rdx, 0\nmov rcx, outp\ncall rgb        ; rax <- 000000\n\nmov rdi, 148\nmov rsi,   0\nmov rdx, 211\nmov rcx, outp\ncall rgb        ; rax <- 9400D3\n```\n```julia\nrgb(255, 255, 255) # returns FFFFFF\nrgb(255, 255, 300) # returns FFFFFF\nrgb(0, 0, 0) # returns 000000\nrgb(148, 0, 211) # returns 9400D3\n```\n```kotlin\nrgb(255, 255, 255) // returns FFFFFF\nrgb(255, 255, 300) // returns FFFFFF\nrgb(0, 0, 0) // returns 000000\nrgb(148, 0, 211) // returns 9400D3\n```\n```racket\n(rgb 255 255 255) ;; returns FFFFFF\n(rgb 255 255 300) ;; returns FFFFFF\n(rgb 0 0 0) ;; returns 000000\n(rgb 148 0 211) ;; returns 9400D3\n```\n```scala\nrgb(255, 255, 255) // FFFFFF\nrgb(255, 255, 300) // FFFFFF\nrgb(0, 0, 0)       // 000000\nrgb(148, 0, 211)   // 9400D3\n```\n```php\nrgb(255, 255, 255); // returns FFFFFF\nrgb(255, 255, 300); // returns FFFFFF\nrgb(0, 0, 0); // returns 000000\nrgb(148, 0, 211); // returns 9400D3\n```\n",
-      "totalAttempts": 201022,
-      "totalCompleted": 43079,
-      "totalStars": 886,
-      "voteScore": 3255,
+      "totalAttempts": 201868,
+      "totalCompleted": 43338,
+      "totalStars": 894,
+      "voteScore": 3266,
       "tags": [
         "Algorithms"
       ],
@@ -5972,10 +6079,10 @@
         "url": "https://www.codewars.com/users/jhoffner"
       },
       "description": "Your task in order to complete this Kata is to write a function which formats a duration, given as a number of seconds, in a human-friendly way.\n\nThe function must accept a non-negative integer. If it is zero, it just returns `\"now\"`. Otherwise,  the duration is expressed as a combination of `years`, `days`, `hours`, `minutes` and `seconds`.\n\nIt is much easier to understand with an example:\n\n```Fortran\nformatDuration (62)    // returns \"1 minute and 2 seconds\"\nformatDuration (3662)  // returns \"1 hour, 1 minute and 2 seconds\"\n```\n```c\nformatDuration (62)    // returns \"1 minute and 2 seconds\"\nformatDuration (3662)  // returns \"1 hour, 1 minute and 2 seconds\"\n```\n```nasm\nmov edi, 62\ncall fmtduration      ; RAX <- `1 minute and 2 seconds\\0`\n\nmov edi, 3662\ncall fmtduration      ; RAX <- `1 hour, 1 minute and 2 seconds\\0`\n```\n```cpp\nformat_duration(62)    // returns \"1 minute and 2 seconds\"\nformat_duration(3662)  // returns \"1 hour, 1 minute and 2 seconds\"\n```\n```javascript\nformatDuration(62)    // returns \"1 minute and 2 seconds\"\nformatDuration(3662)  // returns \"1 hour, 1 minute and 2 seconds\"\n```\n```python\nformat_duration(62)    # returns \"1 minute and 2 seconds\"\nformat_duration(3662)  # returns \"1 hour, 1 minute and 2 seconds\"\n```\n```ruby\nformat_duration(62)    # returns \"1 minute and 2 seconds\"\nformat_duration(3662)  # returns \"1 hour, 1 minute and 2 seconds\"\n```\n```elixir\nformat_duration(62)    # returns \"1 minute and 2 seconds\"\nformat_duration(3662)  # returns \"1 hour, 1 minute and 2 seconds\"\n```\n```php\nformat_duration(62)    # returns \"1 minute and 2 seconds\"\nformat_duration(3662)  # returns \"1 hour, 1 minute and 2 seconds\"\n```\n```haskell\nformatDuration 62     -- returns \"1 minute and 2 seconds\"\nformatDuration 3662   -- returns \"1 hour, 1 minute and 2 seconds\"\n```\n```java\nTimeFormatter.formatDuration(62)   //returns \"1 minute and 2 seconds\"\nTimeFormatter.formatDuration(3662) //returns \"1 hour, 1 minute and 2 seconds\"\n```\n```groovy\nKata.formatDuration(62)   //returns \"1 minute and 2 seconds\"\nKata.formatDuration(3662) //returns \"1 hour, 1 minute and 2 seconds\"\n```\n```shell\nduration 62            # echos \"1 minute and 2 seconds\"\nduration 3662          # echos \"1 hour, 1 minute and 2 seconds\"\n```\n```julia\nformatduration(62)    # returns \"1 minute and 2 seconds\"\nformatduration(3662)  # returns \"1 hour, 1 minute and 2 seconds\"\n```\n```racket\n(format-duration 62)    ; returns \"1 minute and 2 seconds\"\n(format-duration 3662)  ; returns \"1 hour, 1 minute and 2 seconds\"\n```\n```rust\nformat_duration(62)    // returns \"1 minute and 2 seconds\"\nformat_duration(3662)  // returns \"1 hour, 1 minute and 2 seconds\"\n```\n\n**For the purpose of this Kata, a year is 365 days and a day is 24 hours.**\n\nNote that spaces are important.\n\n\n### Detailed rules\n\nThe resulting expression is made of components like `4 seconds`, `1 year`, etc.  In general, a positive integer and one of the valid units of time, separated by a space. The unit of time is used in plural if the integer is greater than 1.\n\nThe components are separated by a comma and a space (`\", \"`). Except the last component, which is separated by `\" and \"`, just like it would be written in English. \n\nA more significant units of time will occur before than a least significant one. Therefore, `1 second and 1 year` is not correct, but `1 year and 1 second` is.\n\nDifferent components have different unit of times. So there is not repeated units like in `5 seconds and 1 second`.\n\nA component will not appear at all if its value happens to be zero.  Hence, `1 minute and 0 seconds` is not valid, but it should be just `1 minute`.\n\n A unit of time must be used \"as much as possible\". It means that the function should not return `61 seconds`, but `1 minute and 1 second` instead.  Formally, the duration specified by  of a component must not be greater than any valid more significant unit of time.\n",
-      "totalAttempts": 261674,
-      "totalCompleted": 29520,
-      "totalStars": 1685,
-      "voteScore": 3102,
+      "totalAttempts": 262912,
+      "totalCompleted": 29672,
+      "totalStars": 1690,
+      "voteScore": 3113,
       "tags": [
         "Algorithms",
         "Formats",
@@ -6029,10 +6136,10 @@
         "url": "https://www.codewars.com/users/jhoffner"
       },
       "description": "Write a function done_or_not/`DoneOrNot` passing a board (list[list_lines]) as parameter. If the board is valid return 'Finished!', otherwise return 'Try again!'\n\nSudoku rules:\n\nComplete the Sudoku puzzle so that each and every row, column, and region contains the numbers one through nine only once.\n\nRows:\n\n<img src=\"http://www.sudokuessentials.com/images/Row.gif\">\n\nThere are 9 rows in a traditional Sudoku puzzle. Every row must contain the numbers 1, 2, 3, 4, 5, 6, 7, 8, and 9. There may not be any duplicate numbers in any row. In other words, there can not be any rows that are identical.\n\nIn the illustration the numbers 5, 3, 1, and 2 are the \"givens\". They can not be changed. The remaining numbers in black are the numbers that you fill in to complete the row.\n\nColumns:\n\n<img src=\"http://www.sudokuessentials.com/images/Column.gif\">\n\nThere are 9 columns in a traditional Sudoku puzzle. Like the Sudoku rule for rows, every column must also contain the numbers 1, 2, 3, 4, 5, 6, 7, 8, and 9. Again, there may not be any duplicate numbers in any column. Each column will be unique as a result.\n\nIn the illustration the numbers 7, 2, and 6 are the \"givens\". They can not be changed. You fill in the remaining numbers as shown in black to complete the column.\n\nRegions\n\n<img src=\"http://www.sudokuessentials.com/images/Region.gif\">\n\nA region is a 3x3 box like the one shown to the left. There are 9 regions in a traditional Sudoku puzzle.\n\nLike the Sudoku requirements for rows and columns, every region must also contain the numbers 1, 2, 3, 4, 5, 6, 7, 8, and 9. Duplicate numbers are not permitted in any region. Each region will differ from the other regions.\n\nIn the illustration the numbers 1, 2, and 8 are the \"givens\". They can not be changed. Fill in the remaining numbers as shown in black to complete the region. \n\nValid board example:\n\n<img src=\"http://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Sudoku-by-L2G-20050714_solution.svg/364px-Sudoku-by-L2G-20050714_solution.svg.png\">\n\nFor those who don't know the game, here are some information about rules and how to play Sudoku: http://en.wikipedia.org/wiki/Sudoku and http://www.sudokuessentials.com/",
-      "totalAttempts": 94149,
-      "totalCompleted": 10556,
-      "totalStars": 776,
-      "voteScore": 1189,
+      "totalAttempts": 94294,
+      "totalCompleted": 10591,
+      "totalStars": 777,
+      "voteScore": 1194,
       "tags": [
         "Puzzles",
         "Lists",
@@ -6085,10 +6192,10 @@
         "url": "https://www.codewars.com/users/hvaara"
       },
       "description": "How can you tell an extrovert from an\nintrovert at NSA? Va gur ryringbef,\ngur rkgebireg ybbxf ng gur BGURE thl'f fubrf.\n\nI found this joke on USENET, but the punchline is scrambled. Maybe you can decipher it?\nAccording to Wikipedia, ROT13 (http://en.wikipedia.org/wiki/ROT13) is frequently used to obfuscate jokes on USENET.\n\nHint: For this task you're only supposed to substitue characters. Not spaces, punctuation, numbers etc.\nTest examples:\n```\nrot13(\"EBG13 rknzcyr.\") == \"ROT13 example.\";\nrot13(\"This is my first ROT13 excercise!\" == \"Guvf vf zl svefg EBG13 rkprepvfr!\"\n```",
-      "totalAttempts": 33942,
-      "totalCompleted": 7438,
+      "totalAttempts": 34025,
+      "totalCompleted": 7464,
       "totalStars": 195,
-      "voteScore": 682,
+      "voteScore": 684,
       "tags": [
         "Algorithms",
         "Strings",
@@ -6144,10 +6251,10 @@
         "url": "https://www.codewars.com/users/jhoffner"
       },
       "description": "It's time to create an autocomplete function! Yay!\n\nThe autocomplete function will take in an input string and a dictionary array and return the values from the dictionary that start with the input string.  If there are more than 5 matches, restrict your output to the first 5 results.  If there are no matches, return an empty array.\n\nExample:\n\n```javascript\nautocomplete('ai', ['airplane','airport','apple','ball']) = ['airplane','airport']\n```\n```python\nautocomplete('ai', ['airplane','airport','apple','ball']) = ['airplane','airport']\n```\n\n\nFor this kata, the dictionary will always be a valid array of strings.\nPlease return all results in the order given in the dictionary, even if they're not always alphabetical.\nThe search should NOT be case sensitive, but the case of the word should be preserved when it's returned.\n\nFor example, \"Apple\" and \"airport\" would both return for an input of 'a'.  However, they should return as \"Apple\" and \"airport\" in their original cases.\n\n<div style=\"background:#ffa; color:#000; padding:10px;\">\n<p>Important note:\n<p>Any input that is NOT a letter should be treated as if it is not there.  For example, an input of \"$%^\" should be treated as \"\" and an input of \"ab*&1cd\" should be treated as \"abcd\".\n<p>(Thanks to wthit56 for the suggestion!)\n</div>\n",
-      "totalAttempts": 58011,
-      "totalCompleted": 3867,
-      "totalStars": 208,
-      "voteScore": 474,
+      "totalAttempts": 58190,
+      "totalCompleted": 3878,
+      "totalStars": 210,
+      "voteScore": 476,
       "tags": [
         "Fundamentals",
         "Strings",
@@ -6203,10 +6310,10 @@
         "url": "https://www.codewars.com/users/jhoffner"
       },
       "description": "Given: an array containing hashes of names\n\nReturn: a string formatted as a list of names separated by commas except for the last two names, which should be separated by an ampersand.\n\nExample:\n\n``` ruby\nlist([ {name: 'Bart'}, {name: 'Lisa'}, {name: 'Maggie'} ])\n# returns 'Bart, Lisa & Maggie'\n\nlist([ {name: 'Bart'}, {name: 'Lisa'} ])\n# returns 'Bart & Lisa'\n\nlist([ {name: 'Bart'} ])\n# returns 'Bart'\n\nlist([])\n# returns ''\n```\n``` elixir\nlist([ %{name: \"Bart\"}, %{name: \"Lisa\"}, %{name: \"Maggie\"} ])\n# returns 'Bart, Lisa & Maggie'\n\nlist([ %{name: \"Bart\"}, %{name: \"Lisa\"} ])\n# returns 'Bart & Lisa'\n\nlist([ %{name: \"Bart\"} ])\n# returns 'Bart'\n\nlist([])\n# returns ''\n```\n``` javascript\nlist([ {name: 'Bart'}, {name: 'Lisa'}, {name: 'Maggie'} ])\n// returns 'Bart, Lisa & Maggie'\n\nlist([ {name: 'Bart'}, {name: 'Lisa'} ])\n// returns 'Bart & Lisa'\n\nlist([ {name: 'Bart'} ])\n// returns 'Bart'\n\nlist([])\n// returns ''\n```\n```python\nnamelist([ {'name': 'Bart'}, {'name': 'Lisa'}, {'name': 'Maggie'} ])\n# returns 'Bart, Lisa & Maggie'\n\nnamelist([ {'name': 'Bart'}, {'name': 'Lisa'} ])\n# returns 'Bart & Lisa'\n\nnamelist([ {'name': 'Bart'} ])\n# returns 'Bart'\n\nnamelist([])\n# returns ''\n```\n\nNote: all the hashes are pre-validated and will only contain A-Z, a-z, '-' and '.'.\n",
-      "totalAttempts": 264399,
-      "totalCompleted": 53361,
-      "totalStars": 1033,
-      "voteScore": 4303,
+      "totalAttempts": 264952,
+      "totalCompleted": 53592,
+      "totalStars": 1039,
+      "voteScore": 4315,
       "tags": [
         "Fundamentals",
         "Strings",
@@ -6217,7 +6324,7 @@
       ],
       "contributorsWanted": true,
       "unresolved": {
-        "issues": 4,
+        "issues": 5,
         "suggestions": 5
       }
     }
@@ -6258,10 +6365,10 @@
         "url": "https://www.codewars.com/users/jhoffner"
       },
       "description": "Prior to having fancy iPhones, teenagers would wear out their thumbs sending SMS\nmessages on candybar-shaped feature phones with 3x4 numeric keypads.\n\n    ------- ------- -------\n    |     | | ABC | | DEF |\n    |  1  | |  2  | |  3  |\n    ------- ------- -------\n    ------- ------- -------\n    | GHI | | JKL | | MNO |\n    |  4  | |  5  | |  6  |\n    ------- ------- -------\n    ------- ------- -------\n    |PQRS | | TUV | | WXYZ|\n    |  7  | |  8  | |  9  |\n    ------- ------- -------\n    ------- ------- -------\n    |     | |space| |     |\n    |  *  | |  0  | |  #  |\n    ------- ------- -------\n\nPrior to the development of T9 (predictive text entry) systems, the method to\ntype words was called \"multi-tap\" and involved pressing a button repeatedly to\ncycle through the possible values.\n\nFor example, to type a letter `\"R\"` you would press the `7` key three times (as\nthe screen display for the current character cycles through `P->Q->R->S->7`).  A\ncharacter is \"locked in\" once the user presses a different key or pauses for a\nshort period of time (thus, no extra button presses are required beyond what is\nneeded for each letter individually). The zero key handles spaces, with one press of the key producing a space and two presses producing a zero.\n\nIn order to send the message `\"WHERE DO U WANT 2 MEET L8R\"` a teen would have to\nactually do 47 button presses.  No wonder they abbreviated.\n\nFor this assignment, write a module that can calculate the amount of button\npresses required for any phrase. Punctuation can be ignored for this exercise. Likewise, you can assume the phone doesn't distinguish between upper/lowercase characters (but you should allow your module to accept input in either for convenience).\n\nHint: While it wouldn't take too long to hard code the amount of keypresses for\nall 26 letters by hand, try to avoid doing so! (Imagine you work at a phone\nmanufacturer who might be testing out different keyboard layouts, and you want\nto be able to test new ones rapidly.)",
-      "totalAttempts": 69536,
-      "totalCompleted": 8848,
+      "totalAttempts": 69683,
+      "totalCompleted": 8865,
       "totalStars": 531,
-      "voteScore": 856,
+      "voteScore": 858,
       "tags": [
         "Fundamentals"
       ],
@@ -6310,10 +6417,10 @@
         "url": "https://www.codewars.com/users/jhoffner"
       },
       "description": "Write a function named `first_non_repeating_letter` that takes a string input, and returns the first character that is not repeated anywhere in the string.\n\nFor example, if given the input `'stress'`, the function should return `'t'`, since the letter *t* only occurs once in the string, and occurs first in the string.\n\nAs an added challenge, upper- and lowercase letters are considered the **same character**, but the function should return the correct case for the initial letter.  For example, the input `'sTreSS'` should return `'T'`.\n\nIf a string contains *all repeating characters*, it should return an empty string (`\"\"`) or `None` -- see sample tests.",
-      "totalAttempts": 176720,
-      "totalCompleted": 24653,
-      "totalStars": 535,
-      "voteScore": 2238,
+      "totalAttempts": 177572,
+      "totalCompleted": 24780,
+      "totalStars": 537,
+      "voteScore": 2247,
       "tags": [
         "Algorithms",
         "Strings",
@@ -6366,10 +6473,10 @@
         "url": "https://www.codewars.com/users/Voile"
       },
       "description": "As a part of this Kata, you need to create a function that when provided with a triplet, returns the index of the numerical element that lies between the other two elements.\n\nThe input to the function will be an array of three distinct numbers (Haskell: a tuple).\n\nFor example:\n\n    gimme([2, 3, 1]) => 0\n\n*2* is the number that fits between *1* and *3* and the index of *2* in the input array is *0*.\n\nAnother example (just to make sure it is clear):\n\n    gimme([5, 10, 14]) => 1\n    \n*10* is the number that fits between *5* and *14* and the index of *10* in the input array is *1*.",
-      "totalAttempts": 39524,
-      "totalCompleted": 11131,
+      "totalAttempts": 39619,
+      "totalCompleted": 11184,
       "totalStars": 161,
-      "voteScore": 1666,
+      "voteScore": 1672,
       "tags": [
         "Fundamentals",
         "Arrays",
@@ -6426,10 +6533,10 @@
         "url": "https://www.codewars.com/users/matt%20c"
       },
       "description": "Your task is to create a function that does four basic mathematical operations.\n\nThe function should take three arguments - operation(string/char), value1(number), value2(number).  \nThe function should return result of numbers after applying the chosen operation.\n\n### Examples\n\n```javascript\nbasicOp('+', 4, 7)         // Output: 11\nbasicOp('-', 15, 18)       // Output: -3\nbasicOp('*', 5, 5)         // Output: 25\nbasicOp('/', 49, 7)        // Output: 7\n```\n```php\nbasicOp('+', 4, 7)         // Output: 11\nbasicOp('-', 15, 18)       // Output: -3\nbasicOp('*', 5, 5)         // Output: 25\nbasicOp('/', 49, 7)        // Output: 7\n```\n```csharp\nbasicOp('+', 4, 7)         // Output: 11\nbasicOp('-', 15, 18)       // Output: -3\nbasicOp('*', 5, 5)         // Output: 25\nbasicOp('/', 49, 7)        // Output: 7\n```\n```c\nbasicOp('+', 4, 7)         // Output: 11\nbasicOp('-', 15, 18)       // Output: -3\nbasicOp('*', 5, 5)         // Output: 25\nbasicOp('/', 49, 7)        // Output: 7\n```\n```java\nbasicOp('+', 4, 7)         // Output: 11\nbasicOp('-', 15, 18)       // Output: -3\nbasicOp('*', 5, 5)         // Output: 25\nbasicOp('/', 49, 7)        // Output: 7\n```\n```haskell\nbasicOp '+' 4 7            -- Output: 11\nbasicOp '-' 15 18          -- Output: -3\nbasicOp '*' 5 5            -- Output: 25\nbasicOp '/' 49 7           -- Output: 7\n\nbasicOp '/' 50 7           -- Output: 7 -- because integer division\n```\n```python\nbasic_op('+', 4, 7)         # Output: 11\nbasic_op('-', 15, 18)       # Output: -3\nbasic_op('*', 5, 5)         # Output: 25\nbasic_op('/', 49, 7)        # Output: 7\n```\n```ruby\nbasic_op('+', 4, 7)         # Output: 11\nbasic_op('-', 15, 18)       # Output: -3\nbasic_op('*', 5, 5)         # Output: 25\nbasic_op('/', 49, 7)        # Output: 7\n```\n```nasm\nmov dil, '+'\nmov rax, __float64__(4.0)\nmov rdx, __float64__(7.0)\nmovq xmm0, rax\nmovq xmm1, rdx\ncall basic_op        ; XMM0 <- 11.0\n\nmov dil, '-'\nmov rax, __float64__(15.0)\nmov rdx, __float64__(18.0)\nmovq xmm0, rax\nmovq xmm1, rdx\ncall basic_op        ; XMM0 <- -3.0\n\nmov dil, '*'\nmov rax, __float64__(5.0)\nmovq xmm0, rax\nmovq xmm1, rax\ncall basic_op        ; XMM0 <- 25.0\n\nmov dil, '/'\nmov rax, __float64__(49.0)\nmov rdx, __float64__(7.0)\nmovq xmm0, rax\nmovq xmm1, rdx\ncall basic_op        ; XMM0 <- 7.0\n```\n```elixir\nSimpleMath.basic_op(\"+\", 4, 7)     # Output: 11\nSimpleMath.basic_op(\"-\", 15, 18)   # Output: -3\nSimpleMath.basic_op(\"*\", 5, 5)     # Output: 25\nSimpleMath.basic_op(\"/\", 49, 7)    # Output: 7\n```",
-      "totalAttempts": 120620,
-      "totalCompleted": 52191,
-      "totalStars": 389,
-      "voteScore": 4490,
+      "totalAttempts": 121090,
+      "totalCompleted": 52451,
+      "totalStars": 390,
+      "voteScore": 4509,
       "tags": [
         "Fundamentals",
         "Mathematics",
@@ -6508,10 +6615,10 @@
         "url": "https://www.codewars.com/users/NaMe613"
       },
       "description": "In a factory a printer prints labels for boxes. For one kind of boxes\nthe printer has to use colors which, for the sake of simplicity,\nare named with letters from `a to m`. \n\nThe colors used by the printer are\nrecorded in a control string. For example a \"good\" control string would be\n`aaabbbbhaijjjm` meaning that the printer used three times color a, four times\ncolor b, one time color h then one time color a...\n\nSometimes there are problems: lack of colors, technical malfunction and a \"bad\" \ncontrol string is produced e.g. `aaaxbbbbyyhwawiwjjjwwm` with letters not from `a to m`.\n\nYou have to write a function `printer_error` which given a string will return\nthe error rate of the printer as a **string** representing a rational whose numerator \nis the number of errors and the denominator the length of the control string.\nDon't reduce this fraction to a simpler expression.\n\nThe string has a length greater or equal to one and contains only letters \nfrom `a`to `z`.\n\n## Examples:\n\n```\ns=\"aaabbbbhaijjjm\"\nerror_printer(s) => \"0/14\"\n\ns=\"aaaxbbbbyyhwawiwjjjwwm\"\nerror_printer(s) => \"8/22\"\n\n```",
-      "totalAttempts": 224649,
-      "totalCompleted": 62904,
-      "totalStars": 730,
-      "voteScore": 6285,
+      "totalAttempts": 225121,
+      "totalCompleted": 63132,
+      "totalStars": 731,
+      "voteScore": 6304,
       "tags": [
         "Fundamentals"
       ],
@@ -6584,10 +6691,10 @@
         "url": "https://www.codewars.com/users/ineiti"
       },
       "description": "### Description:\n\nMake a simple function called **greet** that returns the most-famous \"hello world!\".\n\n### Style Points\n\nSure, this is about as easy as it gets. But how clever can you be to create the most creative hello world you can think of? What is a \"hello world\" solution you would want to show your friends?\n",
-      "totalAttempts": 154123,
-      "totalCompleted": 53907,
-      "totalStars": 291,
-      "voteScore": 2607,
+      "totalAttempts": 154629,
+      "totalCompleted": 54127,
+      "totalStars": 292,
+      "voteScore": 2623,
       "tags": [
         "Fundamentals",
         "Functions",
@@ -6638,10 +6745,10 @@
         "url": "https://www.codewars.com/users/jhoffner"
       },
       "description": "In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.\n\n### Example\n\n```python\nfilter_list([1,2,'a','b']) == [1,2]\nfilter_list([1,'a','b',0,15]) == [1,0,15]\nfilter_list([1,2,'aasf','1','123',123]) == [1,2,123]\n```\n```csharp\nListFilterer.GetIntegersFromList(new List<object>(){1, 2, \"a\", \"b\"}) => {1, 2}\nListFilterer.GetIntegersFromList(new List<object>(){1, 2, \"a\", \"b\", 0, 15}) => {1, 2, 0, 15}\nListFilterer.GetIntegersFromList(new List<object>(){1, 2, \"a\", \"b\", \"aasf\", \"1\", \"123\", 231}) => {1, 2, 231}\n```",
-      "totalAttempts": 275561,
-      "totalCompleted": 88618,
-      "totalStars": 622,
-      "voteScore": 8309,
+      "totalAttempts": 276668,
+      "totalCompleted": 89168,
+      "totalStars": 626,
+      "voteScore": 8356,
       "tags": [
         "Fundamentals",
         "Lists",
@@ -6707,10 +6814,10 @@
         "url": "https://www.codewars.com/users/jhoffner"
       },
       "description": "Complete the solution so that it reverses the string passed into it. \n\n```\n'world'  =>  'dlrow'\n```",
-      "totalAttempts": 174061,
-      "totalCompleted": 78907,
-      "totalStars": 445,
-      "voteScore": 5716,
+      "totalAttempts": 175142,
+      "totalCompleted": 79482,
+      "totalStars": 449,
+      "voteScore": 5769,
       "tags": [
         "Fundamentals",
         "Strings",
@@ -6788,10 +6895,10 @@
         "url": "https://www.codewars.com/users/jhoffner"
       },
       "description": "```if-not:sql\nCreate a function (or write a script in Shell) that takes an integer as an argument and returns \"Even\" for even numbers or \"Odd\" for odd numbers.\n```\n<!-- SQL Notes -->\n```if:sql\n## SQL Notes:\nYou will be given a table, `numbers`, with one column `number`.</br>\n\nReturn a table with a column `is_even` containing \"Even\" or \"Odd\" depending on `number` column values.\n\n### numbers table schema\n* number INT\n\n### output table schema\n* is_even STRING\n```\n<!-- End SQL Notes -->\n",
-      "totalAttempts": 322281,
-      "totalCompleted": 134443,
-      "totalStars": 781,
-      "voteScore": 11688,
+      "totalAttempts": 323610,
+      "totalCompleted": 135165,
+      "totalStars": 782,
+      "voteScore": 11740,
       "tags": [
         "Fundamentals",
         "Mathematics",
@@ -6889,10 +6996,10 @@
         "url": "https://www.codewars.com/users/alchemy"
       },
       "description": "This code does not execute properly. Try to figure out why.",
-      "totalAttempts": 4170981,
-      "totalCompleted": 3315241,
-      "totalStars": 1138,
-      "voteScore": 8566,
+      "totalAttempts": 4186056,
+      "totalCompleted": 3328681,
+      "totalStars": 1143,
+      "voteScore": 8625,
       "tags": [
         "Bugs"
       ],
