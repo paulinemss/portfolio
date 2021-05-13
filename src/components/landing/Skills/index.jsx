@@ -18,8 +18,7 @@ export const Skills = () => {
           <h1>More about me</h1>
           <p>
             After 5 years working as project manager in the European tech industry, I became a developer in March 2020.
-            Passionate about UX, intuitive designs, diversity in tech, and accessibility, I'm looking for a new
-            challenge.
+            I'm particularly interested in UX, intuitive designs, diversity in tech, and accessibility.
           </p>
           <Button as={AnchorLink} href="#contact">
             Contact
